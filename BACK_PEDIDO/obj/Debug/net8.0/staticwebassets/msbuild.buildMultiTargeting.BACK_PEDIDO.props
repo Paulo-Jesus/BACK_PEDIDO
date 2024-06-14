@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BACK_PEDIDO.props" />
+</Project>

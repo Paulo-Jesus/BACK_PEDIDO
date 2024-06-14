@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\workspace\\back_pedido\\back_pedido\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\workspace\\back_pedido\\back_pedido\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\workspace\\back_pedido\\back_pedido\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\appsettings.json",
+              "RelativeDocumentMoniker": "BACK_PEDIDO\\appsettings.json",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\appsettings.json",
+              "RelativeToolTip": "BACK_PEDIDO\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-14T13:26:58.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "BACK_PEDIDO\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "BACK_PEDIDO\\Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T12:57:46.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\Program.cs",
+              "RelativeDocumentMoniker": "BACK_PEDIDO\\Program.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\Program.cs",
+              "RelativeToolTip": "BACK_PEDIDO\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T19:57:37.263Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

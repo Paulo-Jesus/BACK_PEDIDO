@@ -1,0 +1,6 @@
+@BACK_PEDIDO_HostAddress = http://localhost:5258
+
+GET {{BACK_PEDIDO_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
