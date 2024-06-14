@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\",
+  "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\workspace\\back_pedido\\back_pedido\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\businessslayer\\services\\estados act inac\\estadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|solutionrelative:businessslayer\\services\\estados act inac\\estadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\workspace\\back_pedido\\back_pedido\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\back_pedido\\controllers\\estadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\controllers\\estadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\workspace\\back_pedido\\back_pedido\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\entitylayer\\model\\estadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\model\\estadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\entitylayer\\model\\estadoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\model\\estadoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\appsettings.json",
-              "RelativeDocumentMoniker": "BACK_PEDIDO\\appsettings.json",
-              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\appsettings.json",
-              "RelativeToolTip": "BACK_PEDIDO\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-14T13:26:58.841Z",
+              "DocumentIndex": 3,
+              "Title": "EstadoProfile.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\EstadoProfile.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Model\\EstadoProfile.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\EstadoProfile.cs",
+              "RelativeToolTip": "EntityLayer\\Model\\EstadoProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T19:11:37.24Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "BACK_PEDIDO\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "BACK_PEDIDO\\Controllers\\UsuarioController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA6AAAA",
+              "Title": "EstadoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\EstadoDTO.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Model\\EstadoDTO.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\EstadoDTO.cs",
+              "RelativeToolTip": "EntityLayer\\Model\\EstadoDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T12:57:46.216Z"
+              "WhenOpened": "2024-06-14T17:28:17.317Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\Program.cs",
-              "RelativeDocumentMoniker": "BACK_PEDIDO\\Program.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\Program.cs",
-              "RelativeToolTip": "BACK_PEDIDO\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAArAAAA",
+              "Title": "EstadoController.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\EstadoController.cs",
+              "RelativeDocumentMoniker": "BACK_PEDIDO\\Controllers\\EstadoController.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\EstadoController.cs",
+              "RelativeToolTip": "BACK_PEDIDO\\Controllers\\EstadoController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABcAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T19:57:37.263Z",
+              "WhenOpened": "2024-06-14T17:07:49.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EstadoService.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
+              "RelativeDocumentMoniker": "BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
+              "RelativeToolTip": "BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAcwCcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T17:02:27.794Z",
               "EditorCaption": ""
             }
           ]

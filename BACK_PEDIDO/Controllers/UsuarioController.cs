@@ -12,9 +12,6 @@ namespace BACK_PEDIDO.Controllers
         {
             _context = context;
         }
-        [HttpGet]
-        public IEnumerable<Usuario> obtenerTodos() {
-            return Ok(_service.obtenerTodos());
-        }
+       
     }
 }
