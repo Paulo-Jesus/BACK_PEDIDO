@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/NACSM7+kSL2BhxcBD8qMQOZZT/BrdDJzxOK7jo6+tn44lIYylxZqeKQ9hQOPSH9bhygtihjWZWcrRCzwNv09w==",
+  "dgSpecHash": "BCOXsdIwZE0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj",
+  "projectFilePath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\VIAMATICA\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\VIAMATICA\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\VIAMATICA\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\VIAMATICA\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

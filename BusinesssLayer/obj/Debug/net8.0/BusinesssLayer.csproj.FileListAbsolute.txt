@@ -17,3 +17,4 @@ C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\BusinesssLayer\obj\Debug\net8.0\refi
 C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\BusinesssLayer\obj\Debug\net8.0\BusinesssLayer.pdb
 C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\BusinesssLayer\obj\Debug\net8.0\BusinesssLayer.genruntimeconfig.cache
 C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\BusinesssLayer\obj\Debug\net8.0\ref\BusinesssLayer.dll
+C:\Users\VIAMATICA\Source\Repos\BACK_PEDIDO\BusinesssLayer\obj\Debug\net8.0\BusinesssLayer.sourcelink.json

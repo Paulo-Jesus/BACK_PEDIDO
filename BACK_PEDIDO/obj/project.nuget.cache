@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yHljjNRlXZ0OAzMk6I1y1CI1tUL4L4PLIMKiHGK8TiGz9Yokt8zl4b8C5yLOQeVI0Uy30KiSefPcWZINVOGOMg==",
+  "dgSpecHash": "fHs9kaEhqWI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\BACK_PEDIDO\\BACK_PEDIDO.csproj",
+  "projectFilePath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BACK_PEDIDO\\BACK_PEDIDO.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\VIAMATICA\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\VIAMATICA\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\VIAMATICA\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\VIAMATICA\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

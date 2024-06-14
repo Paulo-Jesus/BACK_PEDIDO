@@ -140,3 +140,5 @@ C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\BACK_PEDIDO\obj\Debug\net8.0\refint\
 C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\BACK_PEDIDO\obj\Debug\net8.0\BACK_PEDIDO.pdb
 C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\BACK_PEDIDO\obj\Debug\net8.0\BACK_PEDIDO.genruntimeconfig.cache
 C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\BACK_PEDIDO\obj\Debug\net8.0\ref\BACK_PEDIDO.dll
+C:\Users\VIAMATICA\Source\Repos\BACK_PEDIDO\BACK_PEDIDO\obj\Debug\net8.0\BACK_PEDIDO.sourcelink.json
+C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\BACK_PEDIDO\bin\Debug\net8.0\AutoMapper.dll

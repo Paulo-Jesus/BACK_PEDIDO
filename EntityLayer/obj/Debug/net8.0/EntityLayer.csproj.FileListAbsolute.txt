@@ -12,3 +12,4 @@ C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\refint\
 C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
 C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.genruntimeconfig.cache
 C:\Users\VIAMATICA\source\repos\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
+C:\Users\VIAMATICA\Source\Repos\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.sourcelink.json
