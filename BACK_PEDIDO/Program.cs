@@ -1,6 +1,7 @@
 using BACK_PEDIDO.Models;
 using BusinesssLayer.Services.Estados_Act_Inac;
 using BusinesssLayer.Services.Roles;
+using EntityLayer.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Reflection;
@@ -8,9 +9,6 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-//automapper
-builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 //Add Servicio de roles
 builder.Services.AddScoped<RolService>();

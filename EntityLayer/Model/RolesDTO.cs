@@ -6,18 +6,12 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Model
 {
-    public class EstadoDTO
+    public class RolesDTO
     {
-        
-
-   
-        public string Nombre { get; set; }
-
-        public EstadoDTO(string nombre)
+        public RolesDTO(string nombre)
         {
-
             Nombre = nombre;
         }
-
+        public string Nombre { get; set; } = null!;
     }
 }

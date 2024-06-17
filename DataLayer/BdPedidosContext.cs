@@ -15,19 +15,19 @@ public partial class BdPedidosContext : DbContext
     {
     }
 
-    public virtual DbSet<Categorium> Categoria { get; set; }
+    public  DbSet<Categorium> Categoria { get; set; }
 
-    public virtual DbSet<Empresa> Empresas { get; set; }
+    public  DbSet<Empresa> Empresas { get; set; }
 
-    public virtual DbSet<Estado> Estados { get; set; }
+    public  DbSet<Estado> Estados { get; set; }
 
-    public virtual DbSet<Pedido> Pedidos { get; set; }
+    public  DbSet<Pedido> Pedidos { get; set; }
 
-    public virtual DbSet<Producto> Productos { get; set; }
+    public  DbSet<Producto> Productos { get; set; }
 
-    public virtual DbSet<Rol> Rols { get; set; }
+    public  DbSet<Rol> Rols { get; set; }
 
-    public virtual DbSet<Usuario> Usuarios { get; set; }
+    public  DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
 

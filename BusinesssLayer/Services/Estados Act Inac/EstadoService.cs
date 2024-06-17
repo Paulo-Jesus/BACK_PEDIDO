@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿
 using BACK_PEDIDO.Models;
 using EntityLayer.Model;
 using Microsoft.EntityFrameworkCore;
@@ -14,25 +14,24 @@ namespace BusinesssLayer.Services.Estados_Act_Inac
     {
 
         private readonly BdPedidosContext _context;
-        private readonly IMapper _mapper;
         Modelo modelo = new Modelo();
 
-        public EstadoService(BdPedidosContext context, IMapper mapper)
+        public EstadoService(BdPedidosContext context)
         {
             _context = context;
-            _mapper = mapper;
+         
         }
 
         public async Task<Modelo> GetListEstados()
         {
             try
             {
-                
-                var estados = await _context.Estados.ToListAsync();
-                var estadoDTO = _mapper.Map<IEnumerable<EstadoDTO>>(estados);
 
-
-                modelo.data = estadoDTO;
+                List<EstadoDTO> estados =await _context.Estados
+                               .Take(2)
+                               .Select(r => new EstadoDTO(r.Nombre))
+                               .ToListAsync();
+                modelo.data = estados;
                 modelo.message = "Lista Generada con éxito";
                 modelo.error = false;
                 return modelo;

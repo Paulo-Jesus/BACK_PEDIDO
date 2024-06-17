@@ -68,6 +68,10 @@
               "target": "Package",
               "version": "[8.0.2, )"
             },
+            "Riok.Mapperly": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -155,6 +159,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Riok.Mapperly": {
+              "target": "Package",
+              "version": "[3.5.1, )"
             }
           },
           "imports": [
@@ -223,10 +231,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -240,6 +244,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Riok.Mapperly": {
+              "target": "Package",
+              "version": "[3.5.1, )"
             }
           },
           "imports": [
@@ -304,10 +312,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -321,6 +325,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Riok.Mapperly": {
+              "target": "Package",
+              "version": "[3.5.1, )"
             }
           },
           "imports": [

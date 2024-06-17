@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\businessslayer\\services\\estados act inac\\estadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|solutionrelative:businessslayer\\services\\estados act inac\\estadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\businessslayer\\services\\roles\\rolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|solutionrelative:businessslayer\\services\\roles\\rolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\back_pedido\\controllers\\estadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\controllers\\estadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\entitylayer\\model\\rolesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\model\\rolesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\entitylayer\\model\\estadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\model\\estadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\entitylayer\\model\\estadoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\model\\estadoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\businessslayer\\services\\estados act inac\\estadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|solutionrelative:businessslayer\\services\\estados act inac\\estadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EstadoProfile.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\EstadoProfile.cs",
-              "RelativeDocumentMoniker": "EntityLayer\\Model\\EstadoProfile.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\EstadoProfile.cs",
-              "RelativeToolTip": "EntityLayer\\Model\\EstadoProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAArAAAA",
+              "Title": "EstadoService.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
+              "RelativeDocumentMoniker": "BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
+              "RelativeToolTip": "BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwB8AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T19:11:37.24Z",
+              "WhenOpened": "2024-06-17T17:20:42.361Z",
               "EditorCaption": ""
             },
             {
@@ -49,35 +49,35 @@
               "RelativeDocumentMoniker": "EntityLayer\\Model\\EstadoDTO.cs",
               "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\EstadoDTO.cs",
               "RelativeToolTip": "EntityLayer\\Model\\EstadoDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T17:28:17.317Z",
+              "WhenOpened": "2024-06-17T17:20:22.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EstadoController.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\EstadoController.cs",
-              "RelativeDocumentMoniker": "BACK_PEDIDO\\Controllers\\EstadoController.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\EstadoController.cs",
-              "RelativeToolTip": "BACK_PEDIDO\\Controllers\\EstadoController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAABcAAAA3AAAA",
+              "Title": "RolesDTO.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\RolesDTO.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Model\\RolesDTO.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\RolesDTO.cs",
+              "RelativeToolTip": "EntityLayer\\Model\\RolesDTO.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T17:07:49.183Z",
+              "WhenOpened": "2024-06-17T17:11:11.461Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EstadoService.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
-              "RelativeDocumentMoniker": "BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
-              "RelativeToolTip": "BusinesssLayer\\Services\\Estados Act Inac\\EstadoService.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAcwCcAAAAMAAAA",
+              "Title": "RolService.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\Services\\Roles\\RolService.cs",
+              "RelativeDocumentMoniker": "BusinesssLayer\\Services\\Roles\\RolService.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\Services\\Roles\\RolService.cs",
+              "RelativeToolTip": "BusinesssLayer\\Services\\Roles\\RolService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwB0AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T17:02:27.794Z",
+              "WhenOpened": "2024-06-17T16:57:49.864Z",
               "EditorCaption": ""
             }
           ]

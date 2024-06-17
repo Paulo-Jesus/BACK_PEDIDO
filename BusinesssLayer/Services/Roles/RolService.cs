@@ -27,7 +27,7 @@ namespace BusinesssLayer.Services.Roles
         {
             try
             {
-                List<Rol> lisRol = await _context.Rols.ToListAsync();
+                List<RolesDTO> lisRol = await _context.Rols.Take(4).Select(r => new RolesDTO(r.Nombre)).ToListAsync();
                 modelo.data = lisRol;
                 modelo.message = "Lista Generada con éxito";
                 modelo.error = false;
