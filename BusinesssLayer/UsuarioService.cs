@@ -27,7 +27,7 @@ namespace BusinesssLayer
         }
         public IEnumerable<UsuarioBlockDTO> obtenerTodosUsuarios()
         {          
-            using (SqlConnection conn = new SqlConnection(_connectionString))
+            using (SqlConnection conn = new (_connectionString))
             {
                 SqlCommand command = new SqlCommand(Common.SP_ObtenerTodosBloqueados, conn);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -55,24 +55,26 @@ namespace BusinesssLayer
             UsuarioBlockDTO user = new UsuarioBlockDTO();
             try
             {
-                using (SqlConnection conn = new SqlConnection(_connectionString)) {
-                    SqlCommand command = new SqlCommand(Common.SP_Buscar_NombreUsuario, conn);
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue(Common.nombreUsuarioColumna, nombreUsuario);
-                    conn.Open();
+                if (validarNombreUsuarioVacio(nombreUsuario)) {
+                    using (SqlConnection conn = new(_connectionString)) {
+                        SqlCommand command = new SqlCommand(Common.SP_Buscar_NombreUsuario, conn);
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue(Common.nombreUsuarioColumna, nombreUsuario);
+                        conn.Open();
 
-                    command.ExecuteNonQuery();
+                        command.ExecuteNonQuery();
 
-                    SqlDataReader reader = command.ExecuteReader();
+                        SqlDataReader reader = command.ExecuteReader();
 
-                    while (reader.Read()) {
-                        user = new UsuarioBlockDTO
-                        {
-                            Nombre = reader[Common.nombre].ToString()!,
-                            NombreUsuario = reader[Common.nombreUsuario].ToString()!,
-                            IdEstado = Convert.ToInt32(reader[Common.estadoId])
-                        };
-                        return user;
+                        while (reader.Read()) {
+                            user = new UsuarioBlockDTO
+                            {
+                                Nombre = reader[Common.nombre].ToString()!,
+                                NombreUsuario = reader[Common.nombreUsuario].ToString()!,
+                                IdEstado = Convert.ToInt32(reader[Common.estadoId])
+                            };
+                            return user;
+                        }
                     }
                 }
             }
@@ -82,6 +84,38 @@ namespace BusinesssLayer
             return user;
         }
 
+        public String DesbloquearUsuario(string nombreUsuario ) {
+            String msj = String.Empty;
+            if (validarNombreUsuarioVacio(nombreUsuario))
+            {
+                try
+                {
+                    using (SqlConnection conn = new(_connectionString))
+                    {
+                        SqlCommand command = new SqlCommand(Common.SP_Desbloquear_Usuario, conn);
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue(Common.nombreUsuarioColumna, nombreUsuario);
 
+                        conn.Open();
+
+                        command.ExecuteNonQuery();
+
+                        msj = Common.msjUserUnBlock;
+                    }
+                }
+                catch (Exception ex) { 
+                    msj = Common.msjUserNoUnBlock + ex.ToString();
+                }
+            }
+            return msj;
+        }
+
+        public bool validarNombreUsuarioVacio(string nombre) {
+            bool validar = false;
+            if (!string.IsNullOrWhiteSpace(nombre)) { 
+                validar = true;
+            }
+            return validar;
+        }
     }
 }

@@ -35,5 +35,14 @@ namespace BACK_PEDIDO.Controllers
                 data
             });
         }
+
+        [HttpPut]
+        [Route(Common.getAPIDesbloquearUsuario)] 
+        public ActionResult<String> DesbloquearUsuario(string nombreUsuario) {
+            String data = _service.DesbloquearUsuario(nombreUsuario);
+            return Ok(new { 
+                data
+            });
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace EntityLayer
     {
         public UserProfile()
         {
-            CreateMap<Usuario, UsuarioBlockDTO>();
+            CreateMap<Usuario, UsuarioBlockDTO>().ReverseMap();
             CreateMap<UsuarioBlockDTO, Usuario>();
         }
     }
