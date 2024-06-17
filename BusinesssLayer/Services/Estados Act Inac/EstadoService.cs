@@ -1,6 +1,7 @@
 ﻿
 using BACK_PEDIDO.Models;
 using EntityLayer.Model;
+using EntityLayer.Response;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace BusinesssLayer.Services.Estados_Act_Inac
     {
 
         private readonly BdPedidosContext _context;
-        Modelo modelo = new Modelo();
+        Response response= new Response();
 
         public EstadoService(BdPedidosContext context)
         {
@@ -22,7 +23,7 @@ namespace BusinesssLayer.Services.Estados_Act_Inac
          
         }
 
-        public async Task<Modelo> GetListEstados()
+        public async Task<Response> GetListEstados()
         {
             try
             {
@@ -31,10 +32,10 @@ namespace BusinesssLayer.Services.Estados_Act_Inac
                                .Take(2)
                                .Select(r => new EstadoDTO(r.Nombre))
                                .ToListAsync();
-                modelo.data = estados;
-                modelo.message = "Lista Generada con éxito";
-                modelo.error = false;
-                return modelo;
+                response.Data = estados;
+                response.Message = "Lista Generada con éxito";
+                response.Code = ResponseType.Success;
+                return response;
             }
             catch (Exception ex)
             {
