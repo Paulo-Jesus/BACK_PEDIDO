@@ -1,6 +1,8 @@
-﻿using BACK_PEDIDO.Models;
+﻿using AutoMapper;
+using BACK_PEDIDO.Models;
 using BusinesssLayer.Interfaces;
 using DataLayer.COMMON;
+using EntityLayer.DTO;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -15,13 +17,15 @@ namespace BusinesssLayer
     public class UsuarioService : IUsuario
     {
         private readonly string _connectionString;
-        private readonly List<Usuario> lista = new();
+        private readonly List<UsuarioBlockDTO> lista = new();
+        private readonly IMapper _mapper;
 
-        public UsuarioService(IConfiguration configuration)
+        public UsuarioService(IConfiguration configuration, IMapper mapper)
         {
-            _connectionString = configuration.GetConnectionString(Common.nombreConexion); 
+            _connectionString = configuration.GetConnectionString(Common.nombreConexion)!;
+            _mapper = mapper;
         }
-        public IEnumerable<Usuario> obtenerTodosUsuarios()
+        public IEnumerable<UsuarioBlockDTO> obtenerTodosUsuarios()
         {          
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
@@ -33,11 +37,11 @@ namespace BusinesssLayer
                 {
                     while (reader.Read())
                     {
-                        Usuario usuario = new Usuario
+                        UsuarioBlockDTO usuario = new UsuarioBlockDTO
                         {
                             Nombre = reader[Common.nombre].ToString()!,
                             NombreUsuario = reader[Common.nombreUsuario].ToString()!,
-                            EstadoIdEstado = Convert.ToInt32(reader[Common.estadoId])
+                            IdEstado = Convert.ToInt32(reader[Common.estadoId])
                         };
                         lista.Add(usuario);
                     }
@@ -46,9 +50,9 @@ namespace BusinesssLayer
             return lista;        
         }
 
-        public Usuario buscarUsuarioBloqueado(string nombreUsuario)
+        public UsuarioBlockDTO buscarUsuarioBloqueado(string nombreUsuario)
         {
-            Usuario personaEncontrada = new Usuario();
+            UsuarioBlockDTO user = new UsuarioBlockDTO();
             try
             {
                 using (SqlConnection conn = new SqlConnection(_connectionString)) {
@@ -57,23 +61,25 @@ namespace BusinesssLayer
                     command.Parameters.AddWithValue(Common.nombreUsuarioColumna, nombreUsuario);
                     conn.Open();
 
+                    command.ExecuteNonQuery();
+
                     SqlDataReader reader = command.ExecuteReader();
 
-                    if (reader.Read()) {
-                        personaEncontrada = new Usuario
+                    while (reader.Read()) {
+                        user = new UsuarioBlockDTO
                         {
                             Nombre = reader[Common.nombre].ToString()!,
                             NombreUsuario = reader[Common.nombreUsuario].ToString()!,
-                            EstadoIdEstado = Convert.ToInt32(reader[Common.estadoId])
+                            IdEstado = Convert.ToInt32(reader[Common.estadoId])
                         };
-                        return personaEncontrada;
+                        return user;
                     }
                 }
             }
-            catch (Exception ex) { 
-            
+            catch (Exception ex) {
+                Console.WriteLine(ex.ToString());
             }
-            return personaEncontrada!;
+            return user;
         }
 
 

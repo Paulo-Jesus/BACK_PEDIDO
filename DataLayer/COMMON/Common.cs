@@ -26,7 +26,7 @@ namespace DataLayer.COMMON
         public const string nombreUsuario = "NombreUsuario";
         public const string estadoId = "Estado_IdEstado";
 
-        /*NOMBRE COLUMNAS*/
+        /*NOMBRE PARAMETROS*/
         public const string nombreUsuarioColumna = "@Nombre_Usuario";
     }
 }

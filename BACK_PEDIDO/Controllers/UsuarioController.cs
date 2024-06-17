@@ -1,6 +1,8 @@
-﻿using BACK_PEDIDO.Models;
+﻿using AutoMapper;
+using BACK_PEDIDO.Models;
 using BusinesssLayer;
 using DataLayer.COMMON;
+using EntityLayer.DTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BACK_PEDIDO.Controllers
@@ -12,7 +14,6 @@ namespace BACK_PEDIDO.Controllers
     {
 
         private readonly UsuarioService _service;
-
         public UsuarioController(UsuarioService service)
         {
             _service = service;
@@ -20,7 +21,7 @@ namespace BACK_PEDIDO.Controllers
         [HttpGet]
         [Route(Common.getAPIObtenerUsuariosBloqueados)]
         public ActionResult<IEnumerable<Usuario>> obtenerUsuariosBloqueados() {
-            IEnumerable<Usuario> data = _service.obtenerTodosUsuarios();
+            IEnumerable<UsuarioBlockDTO> data = _service.obtenerTodosUsuarios();
             return Ok(new { 
                 data
             });
@@ -28,8 +29,8 @@ namespace BACK_PEDIDO.Controllers
 
         [HttpPost]
         [Route(Common.getAPIBuscarUsuarioBloqueado)]
-        public ActionResult<Usuario> buscarUsuarioBloqueado(string nombreUsuario) {
-            Usuario data = _service.buscarUsuarioBloqueado(nombreUsuario);
+        public ActionResult<UsuarioBlockDTO> buscarUsuarioBloqueado(string nombreUsuario) {
+            UsuarioBlockDTO data = _service.buscarUsuarioBloqueado(nombreUsuario);
             return Ok(new { 
                 data
             });
