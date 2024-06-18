@@ -11,10 +11,6 @@ namespace BACK_PEDIDO.Controllers
         public UsuarioController(BdPedidosContext context)
         {
             _context = context;
-        }
-        [HttpGet]
-        public IEnumerable<Usuario> obtenerTodos() {
-            return Ok(_service.obtenerTodos());
-        }
+        }   
     }
 }
