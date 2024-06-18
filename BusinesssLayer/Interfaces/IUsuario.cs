@@ -11,5 +11,9 @@ namespace BusinesssLayer.Interfaces
     public interface IUsuario
     {
         IEnumerable<UsuarioBlockDTO> obtenerTodosUsuarios();
+        UsuarioBlockDTO buscarUsuarioBloqueado(string nombreUsuario);
+        String DesbloquearUsuario(string nombreUsuario);
+        UsuarioLoginDTO validarLogin(UsuarioLoginDTO usuario);
+
+        }
     }
-}

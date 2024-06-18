@@ -3,6 +3,8 @@ using BACK_PEDIDO.Models;
 using BusinesssLayer;
 using DataLayer.COMMON;
 using EntityLayer.DTO;
+using EntityLayer.Responses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BACK_PEDIDO.Controllers
@@ -12,14 +14,18 @@ namespace BACK_PEDIDO.Controllers
     [Route(Common.generalRoute)]
     public class UsuarioController : Controller
     {
-
+        Response response = new ();
+        ResponseType rt = new();
         private readonly UsuarioService _service;
         public UsuarioController(UsuarioService service)
         {
             _service = service;
         }
+
+        
         [HttpGet]
         [Route(Common.getAPIObtenerUsuariosBloqueados)]
+        [Authorize]
         public ActionResult<IEnumerable<Usuario>> obtenerUsuariosBloqueados() {
             IEnumerable<UsuarioBlockDTO> data = _service.obtenerTodosUsuarios();
             return Ok(new { 
@@ -43,6 +49,21 @@ namespace BACK_PEDIDO.Controllers
             return Ok(new { 
                 data
             });
+        }
+
+        [HttpPost]
+        [Route(Common.getAPIValidarLogin)]
+        public ActionResult<Response> ValidarLogin([FromBody] UsuarioLoginDTO usuario) {
+            
+
+            UsuarioLoginDTO data = _service.validarLogin(usuario);
+
+            response.data = response.setData(data);
+            response.Message = Common.msjLoginValido;
+            response.Code = ResponseType.Success;
+            return Ok(
+                   response
+            );  
         }
     }
 }
