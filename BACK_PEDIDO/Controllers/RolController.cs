@@ -1,6 +1,7 @@
 ﻿using BACK_PEDIDO.Models;
 using BusinesssLayer.Services.Roles;
 using EntityLayer.Model;
+using EntityLayer.Response;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
@@ -29,10 +30,17 @@ namespace BACK_PEDIDO.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Post(Rol rol)
+        public IActionResult Post(Rol rol)
         {
-                var roles=_service.AddRol(rol);
-                return Ok(roles);
+            Response roles = _service.AddRol(rol);
+            return Ok(roles);
+        }
+
+        [HttpPut]
+        public IActionResult Put(RolesDTO rol)
+        {
+            Response rolMod = _service.updateRol(rol);
+            return Ok(rolMod);
         }
 
 

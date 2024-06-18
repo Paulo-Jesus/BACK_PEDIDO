@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,8 +27,6 @@ namespace BusinesssLayer.Services.Roles
             cadenaConexion= config.GetConnectionString("BD_PEDIDO");
 
         }
-
-
 
         public async Task<Response> GetListRoles()
         {
@@ -58,11 +57,10 @@ namespace BusinesssLayer.Services.Roles
                 try
                 {
                     connection.Open();
-
                     SqlCommand command = new SqlCommand("usp_crearRol", connection);
                     command.Parameters.AddWithValue("@Id", rol.IdRol);
                     command.Parameters.AddWithValue("@Nombre", rol.Nombre);
-                    command.Parameters.AddWithValue("@Estado", rol.Nombre);
+                    command.Parameters.AddWithValue("@Estado", rol.EstadoIdEstado);
                     command.ExecuteNonQuery();
                     connection.Close();
 
@@ -76,6 +74,35 @@ namespace BusinesssLayer.Services.Roles
                     response.Code = ResponseType.Error;
                 }
             }
+            return response;
+        }
+
+        public Response updateRol(RolesDTO rol)
+        {
+            using (SqlConnection connection = new SqlConnection(cadenaConexion))
+            {
+                try
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("sp_updateRol", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@NombreRol", rol.Nombre);
+                        command.Parameters.AddWithValue("@Estado", rol.Estado);
+                        command.ExecuteNonQuery();
+                        connection.Close();
+
+                        response.Data = rol;
+                        response.Code = ResponseType.Success;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = ex.Message;
+                }
+            }
+
             return response;
         }
 

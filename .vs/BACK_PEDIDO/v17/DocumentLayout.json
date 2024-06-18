@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|solutionrelative:businessslayer\\services\\roles\\rolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\entitylayer\\model\\rolesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\model\\rolesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\entitylayer\\model\\estadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\model\\estadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\back_pedido\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +23,8 @@
       "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\entitylayer\\model\\estadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\model\\estadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\entitylayer\\response\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\response\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\entitylayer\\model\\rolesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\model\\rolesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\appsettings.json",
               "RelativeDocumentMoniker": "BACK_PEDIDO\\appsettings.json",
@@ -50,19 +50,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "RolController.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\RolController.cs",
               "RelativeDocumentMoniker": "BACK_PEDIDO\\Controllers\\RolController.cs",
               "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\RolController.cs",
               "RelativeToolTip": "BACK_PEDIDO\\Controllers\\RolController.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAgwB8AAAAxAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwCsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T19:00:04.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Response.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Response\\Response.cs",
               "RelativeDocumentMoniker": "EntityLayer\\Response\\Response.cs",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "EstadoDTO.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\EstadoDTO.cs",
               "RelativeDocumentMoniker": "EntityLayer\\Model\\EstadoDTO.cs",
@@ -86,13 +86,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "RolesDTO.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\RolesDTO.cs",
               "RelativeDocumentMoniker": "EntityLayer\\Model\\RolesDTO.cs",
               "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\RolesDTO.cs",
               "RelativeToolTip": "EntityLayer\\Model\\RolesDTO.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T17:11:11.461Z"
             },
@@ -104,7 +104,7 @@
               "RelativeDocumentMoniker": "BusinesssLayer\\Services\\Roles\\RolService.cs",
               "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\Services\\Roles\\RolService.cs",
               "RelativeToolTip": "BusinesssLayer\\Services\\Roles\\RolService.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAmwDsAAAAmAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAwwFwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T16:57:49.864Z",
               "EditorCaption": ""
