@@ -8,8 +8,6 @@ namespace EntityLayer.Model
 {
     public class EstadoDTO
     {
-        
-
    
         public string Nombre { get; set; }
 

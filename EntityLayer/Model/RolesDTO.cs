@@ -8,12 +8,15 @@ namespace EntityLayer.Model
 {
     public class RolesDTO
     {
-        public RolesDTO(string nombre)
+
+        public string Nombre { get; set; }
+        public int? Estado { get; set; }
+
+
+        public RolesDTO(string nombre, int estado)
         {
             Nombre = nombre;
+            Estado = estado;
         }
-
-        public string Nombre { get; set; } = null!;
-        public string? Estado { get; set; }
     }
 }

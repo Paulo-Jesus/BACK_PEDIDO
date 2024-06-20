@@ -5,10 +5,12 @@ using EntityLayer.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Reflection;
+using System.Security.AccessControl;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
 
 //Add Servicio de roles
 builder.Services.AddScoped<RolService>();
@@ -24,6 +26,15 @@ builder.Services.AddDbContext<BdPedidosContext> (
     opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("BD_PEDIDO"))
 );
 
+//CORS PARA ANGULAR 
+//CORS
+builder.Services.AddCors(opt =>
+opt.AddPolicy("Cors", builder =>
+{
+    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+})
+);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -36,6 +47,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseCors("Cors");
 
 app.MapControllers();
 

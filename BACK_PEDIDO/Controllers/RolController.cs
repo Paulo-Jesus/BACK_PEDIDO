@@ -23,7 +23,7 @@ namespace BACK_PEDIDO.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var roles = await _service.GetListRoles();
+            Response roles = await _service.GetListRoles();
             return Ok(roles);
         }
 

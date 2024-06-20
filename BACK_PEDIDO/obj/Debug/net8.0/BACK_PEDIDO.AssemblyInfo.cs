@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BACK_PEDIDO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40dc28160405c31bb46010893fd3c437a7fc8f75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a45e8ec03962676aeba718853e3e137094f362b")]
 [assembly: System.Reflection.AssemblyProductAttribute("BACK_PEDIDO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BACK_PEDIDO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

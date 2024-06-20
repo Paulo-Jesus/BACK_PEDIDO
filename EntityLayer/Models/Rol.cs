@@ -9,7 +9,7 @@ public partial class Rol
 
     public string Nombre { get; set; } = null!;
 
-    public int? EstadoIdEstado { get; set; }
+    public int EstadoIdEstado { get; set; }
 
     public virtual Estado? EstadoIdEstadoNavigation { get; set; }
 

@@ -32,7 +32,7 @@ namespace BusinesssLayer.Services.Roles
         {
             try
             {
-                List<RolesDTO> lisRol = await _context.Rols.Select(r => new RolesDTO(r.Nombre)).ToListAsync();
+                List<RolesDTO> lisRol = await _context.Rols.Select(r => new RolesDTO(r.Nombre, r.EstadoIdEstado)).ToListAsync();
 
                 response.Data = lisRol;
                 response.Message = "Lista Generada con éxito";
