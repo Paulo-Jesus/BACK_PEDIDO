@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\back_pedido\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07463FE8-6D33-4AEE-998D-EF22366398CE}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\datalayer\\common\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07463FE8-6D33-4AEE-998D-EF22366398CE}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\common\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\entitylayer\\responses\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\responses\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\businessslayer\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|solutionrelative:businessslayer\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\businessslayer\\interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40D97EFD-75D7-4D36-9EB9-6F7D6E9821E4}|BusinesssLayer\\BusinesssLayer.csproj|solutionrelative:businessslayer\\interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\back_pedido\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\entitylayer\\dto\\usuarioblockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\dto\\usuarioblockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\entitylayer\\dto\\usuariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AED6BBF7-AC4F-4FFE-B122-4B4BE2B14688}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\dto\\usuariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,72 +26,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Response.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\Responses\\Response.cs",
-              "RelativeDocumentMoniker": "EntityLayer\\Responses\\Response.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\Responses\\Response.cs",
-              "RelativeToolTip": "EntityLayer\\Responses\\Response.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAMAAAA",
+              "Title": "UsuarioBlockDTO.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\DTO\\UsuarioBlockDTO.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\DTO\\UsuarioBlockDTO.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\DTO\\UsuarioBlockDTO.cs",
+              "RelativeToolTip": "EntityLayer\\DTO\\UsuarioBlockDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T19:43:34.191Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "BACK_PEDIDO\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "BACK_PEDIDO\\Controllers\\UsuarioController.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwEUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T19:40:52.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Common.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\DataLayer\\COMMON\\Common.cs",
-              "RelativeDocumentMoniker": "DataLayer\\COMMON\\Common.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\DataLayer\\COMMON\\Common.cs",
-              "RelativeToolTip": "DataLayer\\COMMON\\Common.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCcAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T18:56:32.919Z"
+              "WhenOpened": "2024-06-20T20:11:12.045Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "UsuarioLoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\DTO\\UsuarioLoginDTO.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\DTO\\UsuarioLoginDTO.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\DTO\\UsuarioLoginDTO.cs",
+              "RelativeToolTip": "EntityLayer\\DTO\\UsuarioLoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T20:11:08.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\UsuarioService.cs",
               "RelativeDocumentMoniker": "BusinesssLayer\\UsuarioService.cs",
               "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\UsuarioService.cs",
               "RelativeToolTip": "BusinesssLayer\\UsuarioService.cs",
-              "ViewState": "AQIAAIAAAAAAAAAAAAAlwIYAAAA1AAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwAkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T17:08:12.951Z"
+              "WhenOpened": "2024-06-19T16:28:10.811Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\Interfaces\\IUsuario.cs",
-              "RelativeDocumentMoniker": "BusinesssLayer\\Interfaces\\IUsuario.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\Interfaces\\IUsuario.cs",
-              "RelativeToolTip": "BusinesssLayer\\Interfaces\\IUsuario.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAswBAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "BACK_PEDIDO\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "BACK_PEDIDO\\Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAqwCgAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T17:10:34.739Z"
+              "WhenOpened": "2024-06-18T13:30:28.716Z"
             }
           ]
         }

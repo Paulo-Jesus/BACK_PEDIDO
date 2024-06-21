@@ -20,7 +20,7 @@ namespace DataLayer.COMMON
         /*RUTAS API*/
         public const string generalRoute = "api";
         public const string getAPIObtenerUsuariosBloqueados = "/UsuariosBloqueados";
-        public const string getAPIBuscarUsuarioBloqueado = "/BuscarUsuarioBloqueado";
+        public const string getAPIBuscarUsuarioBloqueado = "/BuscarUsuarioBloqueado/{nombreUsuario}";
         public const string getAPIDesbloquearUsuario = "/desbloquearUsuario/{nombreUsuario}";
         public const string getAPIValidarLogin = "/validarLogin";
 
@@ -40,5 +40,8 @@ namespace DataLayer.COMMON
         public const string msjLoginValido = "Datos correctos";
         public const string msjLoginNoValido = "Datos incorrectos";
 
+
+        /*CORS*/
+        public const string corsName = "AllowAnyConnection";
     }
 }

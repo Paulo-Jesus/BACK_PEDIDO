@@ -25,11 +25,16 @@ namespace BACK_PEDIDO.Controllers
         
         [HttpGet]
         [Route(Common.getAPIObtenerUsuariosBloqueados)]
-        [Authorize]
-        public ActionResult<IEnumerable<Usuario>> obtenerUsuariosBloqueados() {
+        //[Authorize]
+        public ActionResult<IEnumerable<Response>> obtenerUsuariosBloqueados() {
             IEnumerable<UsuarioBlockDTO> data = _service.obtenerTodosUsuarios();
+
+            response.data = response.setData(data);
+            response.Message = Common.msjLoginValido;
+            response.Code = ResponseType.Success;
+
             return Ok(new { 
-                data
+                response
             });
         }
 

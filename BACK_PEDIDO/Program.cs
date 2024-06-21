@@ -1,6 +1,7 @@
 using BACK_PEDIDO.Models;
 using BusinesssLayer;
 using BusinesssLayer.Interfaces;
+using DataLayer.COMMON;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Reflection;
@@ -22,6 +23,16 @@ builder.Services.AddDbContext<BdPedidosContext> (
     opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("BD_PEDIDO"))
 );
 
+/*CORS PRA CONECTAR ANGULAR*/
+builder.Services.AddCors(opt =>
+    opt.AddPolicy(Common.corsName, builder =>
+        {
+            builder.AllowAnyOrigin().
+            AllowAnyHeader().AllowAnyMethod();
+        })
+    );
+    
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -34,6 +45,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors(Common.corsName);
 
 app.MapControllers();
 
