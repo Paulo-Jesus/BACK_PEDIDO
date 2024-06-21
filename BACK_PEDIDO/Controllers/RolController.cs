@@ -30,7 +30,7 @@ namespace BACK_PEDIDO.Controllers
 
 
         [HttpPost]
-        public IActionResult Post(Rol rol)
+        public IActionResult Post(RolesDTO rol)
         {
             Response roles = _service.AddRol(rol);
             return Ok(roles);

@@ -50,7 +50,7 @@ namespace BusinesssLayer.Services.Roles
 
 
 
-        public Response AddRol(Rol rol)
+        public Response AddRol(RolesDTO rol)
         {
             using (SqlConnection connection = new SqlConnection(cadenaConexion))
             {
@@ -58,9 +58,9 @@ namespace BusinesssLayer.Services.Roles
                 {
                     connection.Open();
                     SqlCommand command = new SqlCommand("usp_crearRol", connection);
-                    command.Parameters.AddWithValue("@Id", rol.IdRol);
+                    command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@Nombre", rol.Nombre);
-                    command.Parameters.AddWithValue("@Estado", rol.EstadoIdEstado);
+                    command.Parameters.AddWithValue("@Estado_IdEstado", rol.Estado);
                     command.ExecuteNonQuery();
                     connection.Close();
 
