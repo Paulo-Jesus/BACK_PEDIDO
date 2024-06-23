@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using EntityLayer.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BACK_PEDIDO.Models;
@@ -28,6 +29,8 @@ public partial class BdPedidosContext : DbContext
     public virtual DbSet<Rol> Rols { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<Restaurante> Restaurantes { get; set; }
+
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
 

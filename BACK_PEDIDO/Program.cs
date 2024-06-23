@@ -17,7 +17,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<UsuarioService>();
+builder.Services.AddScoped<RestauranteService>();
+
 builder.Services.AddScoped<IUsuario, UsuarioService>();
+builder.Services.AddScoped<IRestaurantes, RestauranteService>();
 
 builder.Services.AddDbContext<BdPedidosContext> (
     opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("BD_PEDIDO"))

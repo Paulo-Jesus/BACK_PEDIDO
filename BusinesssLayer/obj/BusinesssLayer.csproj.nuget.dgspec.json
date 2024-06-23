@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj": {}
+    "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj",
         "projectName": "BusinesssLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj",
-        "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj"
+              "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -85,17 +85,17 @@
         }
       }
     },
-    "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\DataLayer\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -110,8 +110,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -166,17 +166,17 @@
         }
       }
     },
-    "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\Source\\Repos\\BACK_PEDIDO\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

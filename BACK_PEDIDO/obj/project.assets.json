@@ -4614,19 +4614,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VIAMATICA\\.nuget\\packages\\": {}
+    "C:\\Users\\Dell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BACK_PEDIDO\\BACK_PEDIDO.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\BACK_PEDIDO\\BACK_PEDIDO.csproj",
       "projectName": "BACK_PEDIDO",
-      "projectPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BACK_PEDIDO\\BACK_PEDIDO.csproj",
-      "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BACK_PEDIDO\\obj\\",
+      "projectPath": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\BACK_PEDIDO\\BACK_PEDIDO.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dell\\Source\\Repos\\BACK_PEDIDO\\BACK_PEDIDO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4641,8 +4641,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj": {
-              "projectPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj"
+            "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj": {
+              "projectPath": "C:\\Users\\Dell\\source\\repos\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj"
             }
           }
         }

@@ -17,6 +17,7 @@ namespace BACK_PEDIDO.Controllers
         Response response = new ();
         ResponseType rt = new();
         private readonly UsuarioService _service;
+
         public UsuarioController(UsuarioService service)
         {
             _service = service;

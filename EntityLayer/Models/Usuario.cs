@@ -35,8 +35,4 @@ public partial class Usuario
 
     public virtual Rol? RolIdRolNavigation { get; set; }
 
-    public Usuario()
-    {
-        
-    }
 }
