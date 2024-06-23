@@ -2853,6 +2853,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "DataLayer": "1.0.0",
+          "EntityLayer": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
           "Riok.Mapperly": "3.5.1"
@@ -8360,19 +8361,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VIAMATICA\\.nuget\\packages\\": {}
+    "C:\\Users\\Michael\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\BACK_PEDIDO.csproj",
+      "projectUniqueName": "C:\\Users\\Michael\\Desktop\\BACK_PEDIDO\\BACK_PEDIDO\\BACK_PEDIDO.csproj",
       "projectName": "BACK_PEDIDO",
-      "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\BACK_PEDIDO.csproj",
-      "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\obj\\",
+      "projectPath": "C:\\Users\\Michael\\Desktop\\BACK_PEDIDO\\BACK_PEDIDO\\BACK_PEDIDO.csproj",
+      "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Michael\\Desktop\\BACK_PEDIDO\\BACK_PEDIDO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8380,15 +8381,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj": {
-              "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj"
+            "C:\\Users\\Michael\\Desktop\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj": {
+              "projectPath": "C:\\Users\\Michael\\Desktop\\BACK_PEDIDO\\BusinesssLayer\\BusinesssLayer.csproj"
             }
           }
         }
@@ -8454,7 +8454,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

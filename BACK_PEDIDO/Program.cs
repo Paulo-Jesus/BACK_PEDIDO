@@ -1,5 +1,6 @@
 using BACK_PEDIDO.Models;
 using BusinesssLayer.Services.Estados_Act_Inac;
+using BusinesssLayer.Services.Pedidos;
 using BusinesssLayer.Services.Roles;
 using EntityLayer.Model;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<RolService>();
 //Add Servicio de Estados
 builder.Services.AddScoped<EstadoService>();
+//Add Servicio de Pedidos
+builder.Services.AddScoped<PedidosService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

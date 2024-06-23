@@ -1928,6 +1928,7 @@
       "BusinesssLayer/1.0.0": {
         "dependencies": {
           "DataLayer": "1.0.0",
+          "EntityLayer": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
           "Riok.Mapperly": "3.5.1"
