@@ -1,10 +1,8 @@
-﻿using BACK_PEDIDO.Models;
+﻿
 using BusinesssLayer.Services.Roles;
 using EntityLayer.Model;
 using EntityLayer.Response;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace BACK_PEDIDO.Controllers
 {
