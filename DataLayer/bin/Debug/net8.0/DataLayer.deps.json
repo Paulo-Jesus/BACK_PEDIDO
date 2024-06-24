@@ -659,6 +659,14 @@
           }
         }
       },
+      "Riok.Mapperly/3.5.1": {
+        "runtime": {
+          "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll": {
+            "assemblyVersion": "3.5.1.0",
+            "fileVersion": "3.5.1.0"
+          }
+        }
+      },
       "System.CodeDom/4.4.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
@@ -922,7 +930,7 @@
       },
       "EntityLayer/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6"
+          "Riok.Mapperly": "3.5.1"
         },
         "runtime": {
           "EntityLayer.dll": {}
@@ -1229,6 +1237,13 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "Riok.Mapperly/3.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ECFSdemqIN7HoCu8lOtGYW15fYK5XgSg9tpaspdevi4rj6Z4KomMQz6bKID1L5WMHxjyexix250wP5eAF0iKNw==",
+      "path": "riok.mapperly/3.5.1",
+      "hashPath": "riok.mapperly.3.5.1.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",

@@ -1,0 +1,48 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://0.0.0.0:2022",
+      "sslPort": 44340
+    }
+  },
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://0.0.0.0:5092",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionString": "Server=localhost\\SQLEXPRESS; Database=Pedidos_Database; Trusted_Connection=True; MultipleActiveResultSets=true; TrustServerCertificate=true"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://0.0.0.0:7029;http://0.0.0.0:5092",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionString": "Server=localhost\\SQLEXPRESS; Database=Pedidos_Database; Trusted_Connection=True; MultipleActiveResultSets=true; TrustServerCertificate=true"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionString": "Server=localhost\\SQLEXPRESS; Database=Pedidos_Database; Trusted_Connection=True; MultipleActiveResultSets=true; TrustServerCertificate=true"
+      }
+    }
+  }
+}
+
+//"Server=localhost\\SQLEXPRESS; Database=master; Trusted_Connection=True; MultipleActiveResultSets=true; TrustServerCertificate=true"
+
+//Scaffold-DbContext "Server=DESKTOP-TLP5NC9\SQLEXPRESS; Database=Relaciones; Trusted_Connection=True; MultipleActiveResultSets=true; TrustServerCertificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models

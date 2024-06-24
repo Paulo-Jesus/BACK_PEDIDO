@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {}
+    "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\Pedidos_Backend\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\Pedidos_Backend\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\Pedidos_Backend\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\Pedidos_Backend\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\workspace\\BACK_PEDIDO\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\Pedidos_Backend\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,15 +45,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Riok.Mapperly": {
               "target": "Package",
-              "version": "[8.0.6, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[3.5.1, )"
             }
           },
           "imports": [
