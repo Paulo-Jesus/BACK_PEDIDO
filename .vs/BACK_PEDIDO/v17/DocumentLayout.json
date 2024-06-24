@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\back_pedido\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|c:\\users\\viamatica\\desktop\\pedidos\\back_pedido\\back_pedido\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2EA4139-6135-45F6-9CD7-E9DA6B5222C4}|BACK_PEDIDO\\BACK_PEDIDO.csproj|solutionrelative:back_pedido\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,11 +37,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\appsettings.json",
+              "RelativeDocumentMoniker": "BACK_PEDIDO\\appsettings.json",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\appsettings.json",
+              "RelativeToolTip": "BACK_PEDIDO\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-24T19:56:18.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RolesDTO.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Model\\RolesDTO.cs",
               "RelativeDocumentMoniker": "EntityLayer\\Model\\RolesDTO.cs",
@@ -49,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Response.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\AppData\\Local\\SourceServer\\914706e365551721b18dd700911055811d2e4da9940501756cbe1a3e6ae9e02f\\EntityLayer\\Response\\Response.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\914706e365551721b18dd700911055811d2e4da9940501756cbe1a3e6ae9e02f\\EntityLayer\\Response\\Response.cs",
@@ -61,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Rol.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\EntityLayer\\Models\\Rol.cs",
               "RelativeDocumentMoniker": "EntityLayer\\Models\\Rol.cs",
@@ -73,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\Program.cs",
               "RelativeDocumentMoniker": "BACK_PEDIDO\\Program.cs",
@@ -85,20 +102,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RolController.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\RolController.cs",
               "RelativeDocumentMoniker": "BACK_PEDIDO\\Controllers\\RolController.cs",
               "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BACK_PEDIDO\\Controllers\\RolController.cs",
               "RelativeToolTip": "BACK_PEDIDO\\Controllers\\RolController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAwwCUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T19:00:04.568Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RolService.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\PEDIDOS\\BACK_PEDIDO\\BusinesssLayer\\Services\\Roles\\RolService.cs",
               "RelativeDocumentMoniker": "BusinesssLayer\\Services\\Roles\\RolService.cs",
