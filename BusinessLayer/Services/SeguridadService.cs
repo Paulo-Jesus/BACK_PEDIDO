@@ -31,7 +31,7 @@ namespace BusinessLayer.Services
         {
             response = await _seguridadRepository.UsuariosBuscar(Cedula, Nombre, IdEmpresa);
             return response;
-        }
+        } 
 
         public async Task<Response> UsuariosEditar(UsuarioDTO usuarioDTO)
         {
