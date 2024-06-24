@@ -1,4 +1,5 @@
-﻿using DataLayer.Database;
+﻿using DataLayer.Common;
+using DataLayer.Database;
 using DataLayer.Repositories.Interfaces;
 using EntityLayer.Models.DTO;
 using EntityLayer.Models.Entities;
@@ -27,22 +28,23 @@ namespace DataLayer.Repositories
         {
             try
             {
-                
                 List<Usuario> usuarios = await _context.Usuarios
                     .Where(u => u.IdEstado == 1)
                     .ToListAsync();
-                List<UsuarioDTO> usuariosDTOs = usuarios.Select(usuarios => usuarioMapper.UsuarioToUsuarioDTO(usuarios)).ToList();
+                List<UsuarioDTO> usuariosDTO = usuarios.Select(usuarios => usuarioMapper.UsuarioToUsuarioDTO(usuarios)).ToList();
 
                 if (usuarios.Count < 1) 
                 {
                     response.Code = ResponseType.Success;
-                    response.Message = "No hay usuarios registrados";
-                    response.Data = usuariosDTOs;
+                    response.Message = DLMessages.NoUsuariosRegistrados;
+                    response.Data = null;
+
+                    return response;
                 }
 
                 response.Code = ResponseType.Success;
-                response.Message = "Listado de Usuarios";
-                response.Data = usuariosDTOs;
+                response.Message = DLMessages.ListadoUsuarios;
+                response.Data = usuariosDTO;
             }
             catch (Exception ex)
             {
@@ -53,58 +55,59 @@ namespace DataLayer.Repositories
             return response;
         }
 
-        public async Task<Response> UsuariosAgregar(UsuarioDTO usuarioDTO)
+        public async Task MetodoUsuariosAgregar(SqlConnection connection, UsuarioDTO usuarioDTO)
         {
-            List<Usuario> usuarios = await _context.Usuarios
-                .Where(u => u.Cedula == usuarioDTO.Cedula && u.IdEstado == 1)
-                .ToListAsync();
+            SqlCommand command = new("SP_UsuariosAgregar", connection);
+            command.Parameters.Add(new SqlParameter("@Cedula", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
+            command.Parameters.Add(new SqlParameter("@Nombre", SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
+            command.Parameters.Add(new SqlParameter("@Correo", SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
+            command.Parameters.Add(new SqlParameter("@Telefono", SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
+            command.Parameters.Add(new SqlParameter("@Direccion", SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
+            command.Parameters.Add(new SqlParameter("@Username", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
+            command.Parameters.Add(new SqlParameter("@Contrasena", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
+            command.Parameters.Add(new SqlParameter("@IdRol", SqlDbType.Int)).Value = usuarioDTO.IdRol;
+            command.Parameters.Add(new SqlParameter("@IdEmpresa ", SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
+            command.Parameters.Add(new SqlParameter("@IdEstado", SqlDbType.Int)).Value = usuarioDTO.IdEstado;
+            command.CommandType = CommandType.StoredProcedure;
 
-            if (usuarios.Count > 0)
+            int num = await command.ExecuteNonQueryAsync();
+
+            if (num > 0)
+            {
+                response.Code = ResponseType.Success;
+                response.Message = "Usuario agregado.";
+                response.Data = null;
+            }
+            else
             {
                 response.Code = ResponseType.Error;
-                response.Message = "Ya hay un usuario con este número de cédula";
+                response.Message = "Error, usuario no agregado.";
                 response.Data = null;
-
-                return response;
             }
+        }
 
-            if (response.Code == ResponseType.Error)
-            {
-                return response;
-            }
-
+        public async Task<Response> UsuariosAgregar(UsuarioDTO usuarioDTO)
+        {
             try
             {
-                connection = (SqlConnection)response.Data!;
-
-                SqlCommand command = new("SP_UsuariosAgregar", connection);
-                command.Parameters.Add(new SqlParameter("@Cedula", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
-                command.Parameters.Add(new SqlParameter("@Nombre", SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
-                command.Parameters.Add(new SqlParameter("@Correo", SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
-                command.Parameters.Add(new SqlParameter("@Telefono", SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
-                command.Parameters.Add(new SqlParameter("@Direccion", SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
-                command.Parameters.Add(new SqlParameter("@Username", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
-                command.Parameters.Add(new SqlParameter("@Contrasena", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
-                command.Parameters.Add(new SqlParameter("@IdRol", SqlDbType.Int)).Value = usuarioDTO.IdRol;
-                command.Parameters.Add(new SqlParameter("@IdEmpresa ", SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
-                command.Parameters.Add(new SqlParameter("@IdEstado", SqlDbType.Int)).Value = usuarioDTO.IdEstado;
-                command.CommandType = CommandType.StoredProcedure;
-
-                int num = await command.ExecuteNonQueryAsync();
-
-                if (num >= 0)
+                List<Usuario> usuarios = await _context.Usuarios
+                   .Where(u => u.Cedula == usuarioDTO.Cedula)
+                   .ToListAsync();
+               
+                if (usuarios.Count < 1)
                 {
-                    response.Code = ResponseType.Success;
-                    response.Message = "Usuario agregado.";
-                    response.Data = null;
-                }
-                else
-                {
-                    response.Code = ResponseType.Error;
-                    response.Message = "Usuario no agregado.";
-                    response.Data = null;
+                    if (response.Code == ResponseType.Error)
+                    {
+                        return response;
+                    }
+
+                    connection = (SqlConnection)response.Data!;
+                    await MetodoUsuariosAgregar(connection, usuarioDTO);
+                    return response;
+                    
                 }
 
+                await UsuariosEditar(usuarioDTO);
             }
             catch (Exception ex)
             {
@@ -126,8 +129,8 @@ namespace DataLayer.Repositories
         {
             try
             {
-                var query = _context.Usuarios.AsQueryable();
                 List<Usuario> usuarios = [];
+                var query = _context.Usuarios.AsQueryable();
 
                 if (!string.IsNullOrEmpty(Cedula))
                 {
@@ -148,8 +151,16 @@ namespace DataLayer.Repositories
                     usuarios = [.. usuarios, .. query3];
                 }
 
-                usuarios = usuarios.Distinct().ToList();
+                if (usuarios.Count < 1)
+                {
+                    response.Code = ResponseType.Success;
+                    response.Message = DLMessages.NoCoincidencia;
+                    response.Data = null;
 
+                    return response;
+                }
+
+                usuarios = usuarios.Distinct().ToList();
                 List<UsuarioDTO> usuariosDTOs = usuarios.Select(usuarios => usuarioMapper.UsuarioToUsuarioDTO(usuarios)).ToList();
 
                 response.Code = ResponseType.Success;
@@ -165,29 +176,9 @@ namespace DataLayer.Repositories
             return response;
         }
 
-        public async Task<Response> UsuariosEditarObtener(int IdUsuario) 
-        {
-            try 
-            {   
-                Usuario usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == IdUsuario);
-                UsuarioDTO usuarioDTO = usuarioMapper.UsuarioToUsuarioDTO(usuario!);
-
-                response.Code = ResponseType.Success;
-                response.Message = "Usuario";
-                response.Data = usuarioDTO;
-            }
-            catch (Exception ex)
-            {
-                response.Code = ResponseType.Error;
-                response.Message = ex.Message;
-                response.Data = ex.Data;
-            }
-            return response;
-        }
-
         public async Task<Response> UsuariosEditar(UsuarioDTO usuarioDTO)
         {
-            try 
+            try
             {
                 Usuario usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == usuarioDTO.IdUsuario);
 

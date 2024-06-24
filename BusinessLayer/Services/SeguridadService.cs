@@ -33,12 +33,6 @@ namespace BusinessLayer.Services
             return response;
         }
 
-        public async Task<Response> UsuariosEditarObtener(int IdUsuario)
-        {
-            response = await _seguridadRepository.UsuariosEditarObtener(IdUsuario);
-            return response;
-        }
-
         public async Task<Response> UsuariosEditar(UsuarioDTO usuarioDTO)
         {
             response = await _seguridadRepository.UsuariosEditar(usuarioDTO);

@@ -11,8 +11,6 @@ namespace BusinessLayer.Services.Interfaces
 
         public Task<Response> UsuariosBuscar(string? Cedula, string? Nombre, int? IdEmpresa);
 
-        public Task<Response> UsuariosEditarObtener(int IdUsuario);
-
         public Task<Response> UsuariosEditar(UsuarioDTO usuarioDTO);
     }
 }

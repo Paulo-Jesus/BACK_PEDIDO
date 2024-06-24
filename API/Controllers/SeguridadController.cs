@@ -55,18 +55,6 @@ namespace API.Controllers
             return Ok(response);
         }
 
-        [Route("Usuarios/EditarObtener")]
-        [HttpGet]
-        public async Task<IActionResult> UsuariosEditarObtener(int IdUsuario)
-        {
-            response = await _seguridadService.UsuariosEditarObtener(IdUsuario);
-
-            if (response.Code == ResponseType.Error)
-                return BadRequest(response);
-
-            return Ok(response);
-        }
-
         [Route("Usuarios/Editar")]
         [HttpPut]
         public async Task<IActionResult> UsuariosEditar(UsuarioDTO usuarioDTO)

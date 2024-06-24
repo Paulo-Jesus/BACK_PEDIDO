@@ -9,7 +9,9 @@ namespace DataLayer.Common
     public class DLMessages
     {
         public const string ConexionExitosa = "Conexion Exitosa";
-        public const string ListaPersonas = "Listado de Personas";
+        public const string ListadoUsuarios = "Listado de Usuarios";
         public const string ListaVacia = "Lista Vacia";
+        public const string NoUsuariosRegistrados = "No hay usuarios registrados.";
+        public const string NoCoincidencia = "No existen usuarios con los datos ingresados.";
     }
 }
