@@ -1,8 +1,10 @@
 using API.Common;
+using BusinessLayer.Services.Seguridad.DesbloquearCuenta;
 using BusinessLayer.Services.Seguridad.Usuarios;
 using DataLayer.Database;
 using DataLayer.Repositories.Seguridad.Usuarios;
 using Microsoft.EntityFrameworkCore;
+using static Azure.Core.HttpHeader;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<UsuarioService>();
+builder.Services.AddScoped<ProveedorService>();
+
+builder.Services.AddScoped<IUsuario, UsuarioService>();
+builder.Services.AddScoped<IProveedor, ProveedorService>();
 
 // Cors
 builder.Services.AddCors(options => options.AddPolicy(APIVariables.AllowWebapp,
@@ -32,6 +40,17 @@ builder.Services.AddDbContext<PedidosDatabaseContext>
         options => options.UseSqlServer(builder.Configuration.GetConnectionString(APIVariables.ConnectionString))
     );
 
+
+/*CORS PRA CONECTAR ANGULAR*/
+builder.Services.AddCors(opt =>
+    opt.AddPolicy(API.Common.APIVariables.Cors, builder =>
+    {
+        builder.AllowAnyOrigin().
+        AllowAnyHeader().AllowAnyMethod();
+    })
+    );
+
+
 var app = builder.Build();
 
 app.UseCors(Cors);
@@ -46,6 +65,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors(API.Common.APIVariables.Cors);
 
 app.MapControllers();
 

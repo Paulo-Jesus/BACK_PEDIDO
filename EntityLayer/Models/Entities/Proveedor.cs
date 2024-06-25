@@ -18,6 +18,8 @@ public partial class Proveedor
     public string Direccion { get; set; } = null!;
 
     public string Username { get; set; } = null!;
+    
+    public string Logotipo { get; set; } = null!;
 
     public string Contrasena { get; set; } = null!;
 

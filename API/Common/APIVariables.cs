@@ -3,7 +3,7 @@
     public class APIVariables
     {
         public const string ConnectionString = "ConnectionString";
-        public const string Cors = "Cors";
+        public const string Cors = "AllowAnyConnection";
         public const string AllowWebapp = "AllowWebapp";
     }
 }
