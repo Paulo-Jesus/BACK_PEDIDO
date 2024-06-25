@@ -428,3 +428,14 @@ C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\A
 C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\ref\API.dll
 C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\API.AssemblyInfo.cs
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\API.sourcelink.json
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\API.dll
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\refint\API.dll
+C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\API\obj\Debug\net8.0\API.pdb
