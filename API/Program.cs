@@ -1,9 +1,7 @@
 using API.Common;
-using BusinessLayer.Services;
-using BusinessLayer.Services.Interfaces;
+using BusinessLayer.Services.Seguridad.Usuarios;
 using DataLayer.Database;
-using DataLayer.Repositories;
-using DataLayer.Repositories.Interfaces;
+using DataLayer.Repositories.Seguridad.Usuarios;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,15 +23,8 @@ builder.Services.AddCors(options => options.AddPolicy(APIVariables.AllowWebapp,
                                                     .AllowAnyMethod()
                                                     ));
 
-builder.Services.AddScoped<IEstadoRepository, EstadoRepository>();
-builder.Services.AddScoped<IEstadoService, EstadoService>();
-
-builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
-builder.Services.AddScoped<IEmpresaService, EmpresaService>();
-
-builder.Services.AddScoped<ISeguridadRepository, SeguridadRepository>();
-builder.Services.AddScoped<ISeguridadService, SeguridadService>();
-
+builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
+builder.Services.AddScoped<IUsuariosService, UsuariosService>();
 
 //Add Context
 builder.Services.AddDbContext<PedidosDatabaseContext>
