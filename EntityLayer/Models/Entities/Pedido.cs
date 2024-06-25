@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EntityLayer.Models.Entities;
+namespace EntitiLayer.Models.Entities;
 
 public partial class Pedido
 {
@@ -11,13 +11,13 @@ public partial class Pedido
 
     public int IdUsuario { get; set; }
 
-    public int IdRestaurante { get; set; }
+    public int IdProveedor { get; set; }
 
     public int IdProducto { get; set; }
 
     public virtual Producto IdProductoNavigation { get; set; } = null!;
 
-    public virtual Proovedor IdRestauranteNavigation { get; set; } = null!;
+    public virtual Proveedor IdProveedorNavigation { get; set; } = null!;
 
     public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
 }

@@ -1,4 +1,7 @@
-﻿namespace EntityLayer.Models.Entities;
+﻿using System;
+using System.Collections.Generic;
+
+namespace EntitiLayer.Models.Entities;
 
 public partial class Empresa
 {

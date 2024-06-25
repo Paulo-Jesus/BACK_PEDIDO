@@ -1,7 +1,7 @@
 ﻿using DataLayer.Common;
 using DataLayer.Database;
+using EntitiLayer.Models.Entities;
 using EntityLayer.Models.DTO;
-using EntityLayer.Models.Entities;
 using EntityLayer.Models.Mappers;
 using EntityLayer.Responses;
 using Microsoft.Data.SqlClient;

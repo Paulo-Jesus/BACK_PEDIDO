@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EntityLayer.Models.Entities;
+namespace EntitiLayer.Models.Entities;
 
 public partial class Usuario
 {

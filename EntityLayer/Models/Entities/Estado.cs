@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EntityLayer.Models.Entities;
+namespace EntitiLayer.Models.Entities;
 
 public partial class Estado
 {
@@ -13,7 +13,7 @@ public partial class Estado
 
     public virtual ICollection<Producto> Productos { get; set; } = new List<Producto>();
 
-    public virtual ICollection<Proovedor> Proovedors { get; set; } = new List<Proovedor>();
+    public virtual ICollection<Proveedor> Proveedors { get; set; } = new List<Proveedor>();
 
     public virtual ICollection<Rol> Rols { get; set; } = new List<Rol>();
 

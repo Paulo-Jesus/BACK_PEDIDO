@@ -1,5 +1,5 @@
-﻿using EntityLayer.Models.DTO;
-using EntityLayer.Models.Entities;
+﻿using EntitiLayer.Models.Entities;
+using EntityLayer.Models.DTO;
 using Riok.Mapperly.Abstractions;
 
 namespace EntityLayer.Models.Mappers

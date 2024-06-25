@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EntityLayer.Models.Entities;
+namespace EntitiLayer.Models.Entities;
 
 public partial class Producto
 {
@@ -15,9 +15,9 @@ public partial class Producto
 
     public byte[]? Imagen { get; set; }
 
-    public int IdCategoria { get; set; }
+    public int IdProveedor { get; set; }
 
-    public int IdRestaurante { get; set; }
+    public int IdCategoria { get; set; }
 
     public int IdEstado { get; set; }
 
@@ -25,7 +25,9 @@ public partial class Producto
 
     public virtual Estado IdEstadoNavigation { get; set; } = null!;
 
-    public virtual Proovedor IdRestauranteNavigation { get; set; } = null!;
+    public virtual Proveedor IdProveedorNavigation { get; set; } = null!;
+
+    public virtual ICollection<MenuDetalle> MenuDetalles { get; set; } = new List<MenuDetalle>();
 
     public virtual ICollection<Pedido> Pedidos { get; set; } = new List<Pedido>();
 }

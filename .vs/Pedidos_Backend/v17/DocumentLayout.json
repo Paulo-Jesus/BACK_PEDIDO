@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\datalayer\\database\\pedidosdatabasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\database\\pedidosdatabasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\entitylayer\\models\\mappers\\usuariomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\mappers\\usuariomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\entitylayer\\models\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\entitylayer\\models\\entities\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\entitylayer\\models\\entities\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\entitylayer\\models\\entities\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\entitylayer\\models\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\entitylayer\\models\\entities\\menudetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\menudetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\entitylayer\\models\\entities\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\entitylayer\\models\\entities\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\api\\controllers\\seguridad\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\controllers\\seguridad\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\businesslayer\\services\\seguridad\\usuarios\\iusuariosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\seguridad\\usuarios\\iusuariosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\workspace\\pedidos_proyecto\\back_pedido\\datalayer\\repositories\\seguridad\\usuarios\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "IUsuariosRepository.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\IUsuariosRepository.cs",
               "RelativeDocumentMoniker": "DataLayer\\Repositories\\Seguridad\\Usuarios\\IUsuariosRepository.cs",
@@ -43,18 +83,17 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T13:08:07.928Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "UsuariosRepository.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
               "RelativeDocumentMoniker": "DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
               "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
               "RelativeToolTip": "DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T13:08:58.98Z",
               "IsPinned": true,
@@ -62,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 13,
               "Title": "IUsuariosService.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Usuarios\\IUsuariosService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Services\\Seguridad\\Usuarios\\IUsuariosService.cs",
@@ -71,12 +110,11 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T13:15:07.868Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "UsuariosService.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Usuarios\\UsuariosService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Services\\Seguridad\\Usuarios\\UsuariosService.cs",
@@ -85,21 +123,150 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T13:15:21.296Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\API\\Controllers\\Seguridad\\UsuariosController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\Seguridad\\UsuariosController.cs",
               "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\API\\Controllers\\Seguridad\\UsuariosController.cs",
               "RelativeToolTip": "API\\Controllers\\Seguridad\\UsuariosController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T13:20:42.393Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PedidosDatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\Database\\PedidosDatabaseContext.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Database\\PedidosDatabaseContext.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\Database\\PedidosDatabaseContext.cs",
+              "RelativeToolTip": "DataLayer\\Database\\PedidosDatabaseContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T14:17:00.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioMapper.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Mappers\\UsuarioMapper.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Mappers\\UsuarioMapper.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Mappers\\UsuarioMapper.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Mappers\\UsuarioMapper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T14:16:28.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Usuario.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T14:16:19.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Rol.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Rol.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Rol.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Rol.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T14:16:14.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Proveedor.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Proveedor.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Proveedor.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Proveedor.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Proveedor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T14:16:09.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Producto.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Producto.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Producto.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Producto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T14:16:04.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Pedido.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Pedido.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Pedido.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Pedido.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T14:15:59.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MenuDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\MenuDetalle.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\MenuDetalle.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\MenuDetalle.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\MenuDetalle.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T14:15:56.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Menu.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Menu.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Menu.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Menu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T14:15:52.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Estado.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Estado.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Estado.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Estado.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Estado.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T14:15:47.062Z",
               "EditorCaption": ""
             }
           ]
