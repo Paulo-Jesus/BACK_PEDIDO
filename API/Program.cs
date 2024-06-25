@@ -1,5 +1,8 @@
 using API.Common;
+using BusinessLayer.Services.Pedidos.Pedidos;
 using BusinessLayer.Services.Seguridad.Usuarios;
+using BusinesssLayer.Services.Estados_Act_Inac;
+using BusinesssLayer.Services.Roles;
 using DataLayer.Database;
 using DataLayer.Repositories.Seguridad.Usuarios;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +29,14 @@ builder.Services.AddCors(options => options.AddPolicy(APIVariables.AllowWebapp,
 builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
 builder.Services.AddScoped<IUsuariosService, UsuariosService>();
 
+
+//Add Servicio de roles
+builder.Services.AddScoped<RolService>();
+//Add Servicio de Estados
+builder.Services.AddScoped<EstadoService>();
+//Add Servicio de Pedidos
+builder.Services.AddScoped<PedidosService>();
+
 //Add Context
 builder.Services.AddDbContext<PedidosDatabaseContext>
     (
@@ -46,6 +57,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseCors(APIVariables.AllowWebapp);
 
 app.MapControllers();
 
