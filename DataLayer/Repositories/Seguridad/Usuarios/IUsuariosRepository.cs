@@ -13,6 +13,8 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 
         public Task<Response> UsuariosEditar(UsuarioDTO usuarioDTO);
 
+        public Task<Response> UsuarioEliminar(int IdUsuario);
+
     }
 
 }

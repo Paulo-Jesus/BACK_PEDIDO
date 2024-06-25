@@ -14,15 +14,15 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
     public class UsuariosRepository : IUsuariosRepository
     {
         private readonly PedidosDatabaseContext _context;
-        private readonly UsuarioMapper usuarioMapper = new();
         private readonly Response response = new PedidosDatabase().DatabaseConnection;
-        private SqlConnection connection = new();
+        private readonly UsuarioMapper usuarioMapper = new();
         private readonly Utility _utility;
+        private SqlConnection connection = new();
 
         public UsuariosRepository(PedidosDatabaseContext context, Utility utility)
         {
             _context = context;
-            _utility = utility;
+            _utility = utility; 
         }
 
         public async Task<Response> UsuariosObtener()
@@ -74,7 +74,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 
             int num = await command.ExecuteNonQueryAsync();
 
-            if (num > 0)
+            if (num < 0)
             {
                 response.Code = ResponseType.Success;
                 response.Message = "Usuario agregado.";
@@ -105,8 +105,8 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 
                     connection = (SqlConnection)response.Data!;
                     await MetodoUsuariosAgregar(connection, usuarioDTO);
-                    return response;
 
+                    return response;
                 }
 
                 await UsuariosEditar(usuarioDTO);
@@ -132,7 +132,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             try
             {
                 List<Usuario> usuarios = [];
-                var query = _context.Usuarios.AsQueryable();
+                IQueryable<Usuario> query = _context.Usuarios.AsQueryable();
 
                 if (!string.IsNullOrEmpty(Cedula))
                 {
@@ -184,6 +184,8 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             {
                 Usuario usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == usuarioDTO.IdUsuario);
 
+                //usuario!.Contrasena = _utility.encriptarPass(usuarioDTO.Cedula);
+
                 usuario!.Nombre = usuarioDTO.Nombre;
                 usuario.Correo = usuarioDTO.Correo;
                 usuario.Telefono = usuarioDTO.Telefono;
@@ -205,8 +207,11 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 response.Data = ex.Data;
             }
             return response;
+        }
 
+        public Task<Response> UsuarioEliminar(int IdUsuario)
+        {
+            throw new NotImplementedException();
         }
     }
-
 }
