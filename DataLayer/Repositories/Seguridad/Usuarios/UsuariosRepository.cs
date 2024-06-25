@@ -1,5 +1,6 @@
 ﻿using DataLayer.Common;
 using DataLayer.Database;
+using DataLayer.Utilities;
 using EntitiLayer.Models.Entities;
 using EntityLayer.Models.DTO;
 using EntityLayer.Models.Mappers;
@@ -15,12 +16,13 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
         private readonly PedidosDatabaseContext _context;
         private readonly UsuarioMapper usuarioMapper = new();
         private readonly Response response = new PedidosDatabase().DatabaseConnection;
-        private readonly DataSet dataSet = new();
         private SqlConnection connection = new();
+        private readonly Utility _utility;
 
-        public UsuariosRepository(PedidosDatabaseContext context)
+        public UsuariosRepository(PedidosDatabaseContext context, Utility utility)
         {
             _context = context;
+            _utility = utility;
         }
 
         public async Task<Response> UsuariosObtener()
@@ -56,6 +58,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 
         public async Task MetodoUsuariosAgregar(SqlConnection connection, UsuarioDTO usuarioDTO)
         {
+        
             SqlCommand command = new("SP_UsuariosAgregar", connection);
             command.Parameters.Add(new SqlParameter("@Cedula", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
             command.Parameters.Add(new SqlParameter("@Nombre", SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
@@ -63,7 +66,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             command.Parameters.Add(new SqlParameter("@Telefono", SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
             command.Parameters.Add(new SqlParameter("@Direccion", SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
             command.Parameters.Add(new SqlParameter("@Username", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
-            command.Parameters.Add(new SqlParameter("@Contrasena", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
+            command.Parameters.Add(new SqlParameter("@Contrasena", SqlDbType.VarChar, 100)).Value = _utility.encriptarPass(usuarioDTO.Cedula);
             command.Parameters.Add(new SqlParameter("@IdRol", SqlDbType.Int)).Value = usuarioDTO.IdRol;
             command.Parameters.Add(new SqlParameter("@IdEmpresa ", SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
             command.Parameters.Add(new SqlParameter("@IdEstado", SqlDbType.Int)).Value = usuarioDTO.IdEstado;
