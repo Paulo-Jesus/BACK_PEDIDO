@@ -89,11 +89,6 @@ namespace DataLayer.Database
                 entity.Property(e => e.FechaFin).HasColumnType("datetime");
                 entity.Property(e => e.FechaInicio).HasColumnType("datetime");
 
-                entity.HasOne(d => d.IdMenuDetalleNavigation).WithMany(p => p.Menus)
-                    .HasForeignKey(d => d.IdMenuDetalle)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Menu__IdMenuDeta__5812160E");
-
                 entity.HasOne(d => d.IdProveedorNavigation).WithMany(p => p.Menus)
                     .HasForeignKey(d => d.IdProveedor)
                     .OnDelete(DeleteBehavior.ClientSetNull)
@@ -109,7 +104,12 @@ namespace DataLayer.Database
                 entity.HasOne(d => d.IdProductoNavigation).WithMany(p => p.MenuDetalles)
                     .HasForeignKey(d => d.IdProducto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__MenuDetal__IdPro__5441852A");
+                    .HasConstraintName("FK__MenuDetal__IdPro__07C12930");
+
+                entity.HasOne(d => d.IdMenuNavigation).WithMany(p => p.MenuDetalles)
+                    .HasForeignKey(d => d.IdMenu)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__MenuDetal__IdMen__08B54D69");
             });
 
             modelBuilder.Entity<Pedido>(entity =>

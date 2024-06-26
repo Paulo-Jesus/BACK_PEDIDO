@@ -21,5 +21,8 @@ namespace DataLayer.Common
         public const string ProductoNoEncontrado = "No se encontro el producto a actualizar.";
         public const string ProductoActivado = "Se ha activado el producto satisfactoriamente.";
         public const string ProductoDesactivado = "Se ha inhabilitado el producto de manera correcta.";
+
+        // MENU
+        public const string MenuCreado = "Menu creado con exito.";
     }
 }

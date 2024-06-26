@@ -9,5 +9,6 @@ namespace DataLayer.Common
     public class DLStoredProcedures
     {
         public const string SP_GetPersonas = "SP_GetPersonas";
+        public const string SP_GetCurrentDate = "GET_CURRENTDATE";
     }
 }
