@@ -1,9 +1,9 @@
 ﻿using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
 
-namespace DataLayer.Repositories.Pedidos.Productos
+namespace BusinessLayer.Services.Pedidos.Productos
 {
-    public interface IProductoRepository
+    public interface IProductoService
     {
         Task<Response> ObtenerProductos(int IdProveedor);
         Task<Response> IngresarProducto(ProductoDTO productoDTO);

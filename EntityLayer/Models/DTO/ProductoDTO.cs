@@ -13,7 +13,7 @@ namespace EntityLayer.Models.DTO
         public string? Descripcion { get; set; }
         public double Precio { get; set; }
         //public byte[]? Imagen { get; set; }
-        public string? Base64 { get; set; }
+        public string? ImagenBase64 { get; set; }
         public int IdCategoria { get; set; }
         public int IdProveedor { get; set; }
         public int IdEstado { get; set; }

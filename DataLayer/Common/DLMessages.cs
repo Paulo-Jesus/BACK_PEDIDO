@@ -13,5 +13,13 @@ namespace DataLayer.Common
         public const string ListaVacia = "Lista Vacia";
         public const string NoUsuariosRegistrados = "No hay usuarios registrados.";
         public const string NoCoincidencia = "No existen usuarios con los datos ingresados.";
+        public const string IngresoProducto = "Producto ingresado correctamente";
+
+        // PRODUCTO
+        public const string ListaProductos = "Lista de Productos";
+        public const string ProductoActualizado = "Producto actualizado correctamente.";
+        public const string ProductoNoEncontrado = "No se encontro el producto a actualizar.";
+        public const string ProductoActivado = "Se ha activado el producto satisfactoriamente.";
+        public const string ProductoDesactivado = "Se ha inhabilitado el producto de manera correcta.";
     }
 }

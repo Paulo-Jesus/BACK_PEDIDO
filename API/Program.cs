@@ -1,8 +1,10 @@
 using API.Common;
+using BusinessLayer.Services.Pedidos.Productos;
 using BusinessLayer.Services.Seguridad.Parametros;
 using BusinessLayer.Services.Seguridad.Usuarios;
 using DataLayer.Database;
 using DataLayer.Repositories.Parametros;
+using DataLayer.Repositories.Pedidos.Productos;
 using DataLayer.Repositories.Seguridad.Usuarios;
 using DataLayer.Utilities;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +33,9 @@ builder.Services.AddScoped<IUsuariosService, UsuariosService>();
 
 builder.Services.AddScoped<IParametrosRepository, ParametrosRepository>();
 builder.Services.AddScoped<IParametrosService, ParametrosService>();
+
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<IProductoService, ProductoService>();
 
 builder.Services.AddSingleton<Utility>();
 

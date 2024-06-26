@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\datalayer\\repositories\\pedidos\\productos\\iproductorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\pedidos\\productos\\iproductorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\datalayer\\repositories\\pedidos\\productos\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\pedidos\\productos\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\entitylayer\\models\\dto\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\dto\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\datalayer\\common\\dlmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\common\\dlmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,54 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductoDTO.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\EntityLayer\\Models\\DTO\\ProductoDTO.cs",
-              "RelativeDocumentMoniker": "EntityLayer\\Models\\DTO\\ProductoDTO.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\EntityLayer\\Models\\DTO\\ProductoDTO.cs",
-              "RelativeToolTip": "EntityLayer\\Models\\DTO\\ProductoDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAsAAAA",
+              "DocumentIndex": 1,
+              "Title": "DLMessages.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\DataLayer\\Common\\DLMessages.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Common\\DLMessages.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\DataLayer\\Common\\DLMessages.cs",
+              "RelativeToolTip": "DataLayer\\Common\\DLMessages.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T19:46:04.281Z",
+              "WhenOpened": "2024-06-26T15:34:37.796Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsuariosRepository.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAUwCAAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T18:54:36.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IProductoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\DataLayer\\Repositories\\Pedidos\\Productos\\IProductoRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Pedidos\\Productos\\IProductoRepository.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\DataLayer\\Repositories\\Pedidos\\Productos\\IProductoRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repositories\\Pedidos\\Productos\\IProductoRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T18:53:22.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ProductoRepository.cs",
               "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\DataLayer\\Repositories\\Pedidos\\Productos\\ProductoRepository.cs",
               "RelativeDocumentMoniker": "DataLayer\\Repositories\\Pedidos\\Productos\\ProductoRepository.cs",
               "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\DataLayer\\Repositories\\Pedidos\\Productos\\ProductoRepository.cs",
               "RelativeToolTip": "DataLayer\\Repositories\\Pedidos\\Productos\\ProductoRepository.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAuwDQAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T18:53:01.819Z",
+              "WhenOpened": "2024-06-26T14:07:55.043Z",
               "EditorCaption": ""
             }
           ]
