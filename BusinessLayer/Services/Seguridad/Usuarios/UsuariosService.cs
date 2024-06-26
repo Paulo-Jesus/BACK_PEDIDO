@@ -14,29 +14,34 @@ namespace BusinessLayer.Services.Seguridad.Usuarios
             _usuariosRepository = usuariosRepository;
         }
 
-        public async Task<Response> UsuariosObtener()
+        public async Task<Response> ObtenerTodos()
         {
-            response = await _usuariosRepository.UsuariosObtener();
+            response = await _usuariosRepository.ObtenerTodos();
             return response;
         }
 
-        public async Task<Response> UsuariosAgregar(UsuarioDTO usuarioDTO)
+        public async Task<Response> Agregar(UsuarioDTO usuarioDTO)
         {
-            response = await _usuariosRepository.UsuariosAgregar(usuarioDTO);
+            response = await _usuariosRepository.Agregar(usuarioDTO);
             return response;
         }
 
-        public async Task<Response> UsuariosBuscar(string? Cedula, string? Nombre, int? IdEmpresa)
+        public async Task<Response> Buscar(string? Cedula, string? Nombre, int? IdEmpresa)
         {
-            response = await _usuariosRepository.UsuariosBuscar(Cedula, Nombre, IdEmpresa);
+            response = await _usuariosRepository.Buscar(Cedula, Nombre, IdEmpresa);
             return response;
         }
 
-        public async Task<Response> UsuariosEditar(UsuarioDTO usuarioDTO)
+        public async Task<Response> Editar(UsuarioDTO usuarioDTO)
         {
-            response = await _usuariosRepository.UsuariosEditar(usuarioDTO);
+            response = await _usuariosRepository.Editar(usuarioDTO);
             return response;
         }
 
+        public async Task<Response> Elminar(int IdUsuario)
+        {
+            response = await _usuariosRepository.Eliminar(IdUsuario);
+            return response;
+        }
     }
 }

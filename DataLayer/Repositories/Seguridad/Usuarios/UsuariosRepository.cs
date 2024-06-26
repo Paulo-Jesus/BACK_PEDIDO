@@ -25,7 +25,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             _utility = utility; 
         }
 
-        public async Task<Response> UsuariosObtener()
+        public async Task<Response> ObtenerTodos()
         {
             try
             {
@@ -56,13 +56,13 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             return response;
         }
 
-        public async Task MetodoUsuariosAgregar(SqlConnection connection, UsuarioDTO usuarioDTO)
+        public async Task MetodoAgregar(SqlConnection connection, UsuarioDTO usuarioDTO)
         {
         
             SqlCommand command = new("SP_UsuariosAgregar", connection);
             command.Parameters.Add(new SqlParameter("@Cedula", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
             command.Parameters.Add(new SqlParameter("@Nombre", SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
-            command.Parameters.Add(new SqlParameter("@Correo", SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
+            command.Parameters.Add(new SqlParameter("@Usuario", SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
             command.Parameters.Add(new SqlParameter("@Telefono", SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
             command.Parameters.Add(new SqlParameter("@Direccion", SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
             command.Parameters.Add(new SqlParameter("@Username", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
@@ -88,7 +88,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             }
         }
 
-        public async Task<Response> UsuariosAgregar(UsuarioDTO usuarioDTO)
+        public async Task<Response> Agregar(UsuarioDTO usuarioDTO)
         {
             try
             {
@@ -104,12 +104,12 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                     }
 
                     connection = (SqlConnection)response.Data!;
-                    await MetodoUsuariosAgregar(connection, usuarioDTO);
+                    await MetodoAgregar(connection, usuarioDTO);
 
                     return response;
                 }
 
-                await UsuariosEditar(usuarioDTO);
+                await Editar(usuarioDTO);
             }
             catch (Exception ex)
             {
@@ -127,7 +127,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             return response;
         }
 
-        public async Task<Response> UsuariosBuscar(string? Cedula, string? Nombre, int? IdEmpresa)
+        public async Task<Response> Buscar(string? Cedula, string? Nombre, int? IdEmpresa)
         {
             try
             {
@@ -178,7 +178,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             return response;
         }
 
-        public async Task<Response> UsuariosEditar(UsuarioDTO usuarioDTO)
+        public async Task<Response> Editar(UsuarioDTO usuarioDTO)
         {
             try
             {
@@ -209,9 +209,27 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             return response;
         }
 
-        public Task<Response> UsuarioEliminar(int IdUsuario)
+        public async Task<Response> Eliminar(int IdUsuario)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Usuario usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == IdUsuario);
+
+                usuario!.IdEstado = 2;
+
+                await _context.SaveChangesAsync();
+
+                response.Code = ResponseType.Success;
+                response.Message = "Usuario Eliminado";
+                response.Data = null;
+            }
+            catch (Exception ex)
+            {
+                response.Code = ResponseType.Error;
+                response.Message = ex.Message;
+                response.Data = ex.Data;
+            }
+            return response;
         }
     }
 }

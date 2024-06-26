@@ -17,24 +17,36 @@ namespace API.Controllers.Seguridad
             _usuariosService = usuariosService;
         }
 
-        [Route("Usuarios/Obtener")]
+        [Route("ObtenerTodos")]
         [HttpGet]
-        public async Task<IActionResult> UsuariosObtener()
+        public async Task<IActionResult> Obtener()
         {
-            response = await _usuariosService.UsuariosObtener();
+            response = await _usuariosService.ObtenerTodos();
+
+            if (response.Code == ResponseType.Error)    
+                return BadRequest(response);
+
+            return Ok(response);
+
+        }        
+
+        [Route("Buscar")]
+        [HttpGet]
+        public async Task<IActionResult> Buscar(string? Cedula, string? Nombre, int? IdEmpresa)
+        {
+            response = await _usuariosService.Buscar(Cedula, Nombre, IdEmpresa);
 
             if (response.Code == ResponseType.Error)
                 return BadRequest(response);
 
             return Ok(response);
-
         }
 
-        [Route("Usuarios/Agregar")]
+        [Route("Agregar")]
         [HttpPost]
-        public async Task<IActionResult> UsuariosAgregar([FromBody] UsuarioDTO usuarioDTO)
+        public async Task<IActionResult> Agregar([FromBody] UsuarioDTO usuarioDTO)
         {
-            response = await _usuariosService.UsuariosAgregar(usuarioDTO);
+            response = await _usuariosService.Agregar(usuarioDTO);
 
             if (response.Code == ResponseType.Error)
                 return BadRequest(response);
@@ -43,23 +55,23 @@ namespace API.Controllers.Seguridad
 
         }
 
-        [Route("Usuarios/Buscar")]
-        [HttpGet]
-        public async Task<IActionResult> UsuariosBuscar(string? Cedula, string? Nombre, int? IdEmpresa)
-        {
-            response = await _usuariosService.UsuariosBuscar(Cedula, Nombre, IdEmpresa);
-
-            if (response.Code == ResponseType.Error)
-                return BadRequest(response);
-
-            return Ok(response);
-        }
-
-        [Route("Usuarios/Editar")]
+        [Route("Editar")]
         [HttpPut]
-        public async Task<IActionResult> UsuariosEditar(UsuarioDTO usuarioDTO)
+        public async Task<IActionResult> Editar([FromBody] UsuarioDTO usuarioDTO)
         {
-            response = await _usuariosService.UsuariosEditar(usuarioDTO);
+            response = await _usuariosService.Editar(usuarioDTO);
+
+            if (response.Code == ResponseType.Error)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
+
+        [Route("Eliminar")]
+        [HttpDelete]
+        public async Task<IActionResult> Eliminar(int IdUsuario)
+        {
+            response = await _usuariosService.Elminar(IdUsuario);
 
             if (response.Code == ResponseType.Error)
                 return BadRequest(response);

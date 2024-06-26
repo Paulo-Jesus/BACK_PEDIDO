@@ -1,13 +1,20 @@
 using API.Common;
+using BusinessLayer.Services.Seguridad.Login;
 using BusinessLayer.Services.Seguridad.Parametros;
 using BusinessLayer.Services.Seguridad.Usuarios;
 using DataLayer.Database;
+using DataLayer.Repositories.Login;
 using DataLayer.Repositories.Parametros;
 using DataLayer.Repositories.Seguridad.Usuarios;
 using DataLayer.Utilities;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var key = Encoding.ASCII.GetBytes("@2024_cl@ve_de@ccesoApl1cac1on@2023_cl@_154920$#@_++&&//_2023$$0o_&%###9000");
+var jwtSettings = builder.Configuration.GetSection("Jwt");
 
 var Cors = APIVariables.Cors;
 
@@ -26,11 +33,20 @@ builder.Services.AddCors(options => options.AddPolicy(APIVariables.AllowWebapp,
                                                     .AllowAnyMethod()
                                                     ));
 
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+});
+
 builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
 builder.Services.AddScoped<IUsuariosService, UsuariosService>();
 
 builder.Services.AddScoped<IParametrosRepository, ParametrosRepository>();
 builder.Services.AddScoped<IParametrosService, ParametrosService>();
+
+builder.Services.AddScoped<ILoginRepository, LoginRepository>();
+builder.Services.AddScoped<ILoginService, LoginService>();
 
 builder.Services.AddSingleton<Utility>();
 
