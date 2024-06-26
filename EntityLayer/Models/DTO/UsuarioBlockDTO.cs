@@ -10,6 +10,8 @@ namespace EntityLayer.Models.DTO
     {
         public string Nombre { get; set; }
         public string NombreUsuario { get; set; }
-        public int IdEstado { get; set; }
+        public int idEstado { get; set; }
+        public string NombreEstado { get; set; }
+        public string NombreRol { get; set; }
     }
 }

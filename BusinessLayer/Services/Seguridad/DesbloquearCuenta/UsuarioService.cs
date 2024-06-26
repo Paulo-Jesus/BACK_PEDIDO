@@ -39,7 +39,9 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
                         {
                             Nombre = reader[DataLayer.Common.DLVariables.NombreU].ToString()!,
                             NombreUsuario = reader[DataLayer.Common.DLVariables.UsernameU].ToString()!,
-                            IdEstado = Convert.ToInt32(reader[DataLayer.Common.DLVariables.IdEstado])
+                            idEstado = Convert.ToInt32(reader[DataLayer.Common.DLVariables.IdEstado]),
+                            NombreEstado = reader.GetString(3),
+                            NombreRol = reader.GetString(4)
                         };
                         lista.Add(usuario);
                     }
@@ -72,7 +74,7 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
                             {
                                 Nombre = reader[DataLayer.Common.DLVariables.NombreU].ToString()!,
                                 NombreUsuario = reader[DataLayer.Common.DLVariables.UsernameU].ToString()!,
-                                IdEstado = Convert.ToInt32(reader[DataLayer.Common.DLVariables.IdEstado])
+                                idEstado = Convert.ToInt32(reader[DataLayer.Common.DLVariables.IdEstado])
                             };
                             return user;
                         }
