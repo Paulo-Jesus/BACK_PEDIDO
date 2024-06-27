@@ -1,5 +1,5 @@
 using API.Common;
-using BusinessLayer.Services.Seguridad.Login;
+using BusinessLayer.Services.Login;
 using BusinessLayer.Services.Seguridad.Parametros;
 using BusinessLayer.Services.Seguridad.Usuarios;
 using DataLayer.Database;

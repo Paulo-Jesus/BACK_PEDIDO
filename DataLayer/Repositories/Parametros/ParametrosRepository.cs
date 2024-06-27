@@ -1,4 +1,5 @@
-﻿using DataLayer.Database;
+﻿using DataLayer.Common;
+using DataLayer.Database;
 using EntityLayer.Models.DTO;
 using EntityLayer.Models.Entities;
 using EntityLayer.Responses;
@@ -21,9 +22,9 @@ namespace DataLayer.Repositories.Parametros
 
         public async Task MetodoEmpresasGuardar(SqlConnection connection, EmpresaDTO empresaDTO)
         {
-            SqlCommand command = new("SP_EmpresasAgregar", connection);
-            command.Parameters.Add(new SqlParameter("@RUC", SqlDbType.VarChar, 13)).Value = empresaDTO.Ruc;
-            command.Parameters.Add(new SqlParameter("@RazonSocial", SqlDbType.VarChar, 100)).Value = empresaDTO.RazonSocial;
+            SqlCommand command = new(DLStoredProcedures.SP_InsertarEmpresa, connection);
+            command.Parameters.Add(new SqlParameter(DLParameters.RUC, SqlDbType.VarChar, 13)).Value = empresaDTO.Ruc;
+            command.Parameters.Add(new SqlParameter(DLParameters.RazonSocial, SqlDbType.VarChar, 100)).Value = empresaDTO.RazonSocial;
             command.CommandType = CommandType.StoredProcedure;
 
             int num = await command.ExecuteNonQueryAsync();
@@ -31,13 +32,13 @@ namespace DataLayer.Repositories.Parametros
             if (num >= 0)
             {
                 response.Code = ResponseType.Success;
-                response.Message = "Empresa agregada.";
+                response.Message = DLMessages.EmpresaAgregada;
                 response.Data = null;
             }
             else
             {
                 response.Code = ResponseType.Error;
-                response.Message = "Error, empresa no agregada.";
+                response.Message = DLMessages.EmpresaNoAgregada;
                 response.Data = null;
             }
         }
@@ -85,7 +86,7 @@ namespace DataLayer.Repositories.Parametros
         {
             try
             {
-                Empresa empresa = await _context.Empresas.FirstOrDefaultAsync(u => u.IdEmpresa == empresaDTO.IdEmpresa);
+                Empresa? empresa = await _context.Empresas.FirstOrDefaultAsync(u => u.IdEmpresa == empresaDTO.IdEmpresa);
 
                 empresa!.Ruc = empresaDTO.Ruc;
                 empresa.RazonSocial = empresaDTO.RazonSocial;
@@ -94,7 +95,7 @@ namespace DataLayer.Repositories.Parametros
                 await _context.SaveChangesAsync();
 
                 response.Code = ResponseType.Success;
-                response.Message = "Empresa actualizada.";
+                response.Message = DLMessages.EmpresaEditada;
                 response.Data = null;
             }
             catch (Exception ex)

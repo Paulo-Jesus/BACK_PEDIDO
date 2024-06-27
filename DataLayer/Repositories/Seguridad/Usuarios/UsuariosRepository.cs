@@ -44,7 +44,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 }
 
                 response.Code = ResponseType.Success;
-                response.Message = DLMessages.ListadoUsuarios;
+                response.Message = DLMessages.ListadoDeUsuarios;
                 response.Data = usuariosDTO;
             }
             catch (Exception ex)
@@ -59,19 +59,19 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
         public async Task MetodoAgregar(SqlConnection connection, usuarioDTOEditar usuarioDTO)
         {
         
-            SqlCommand command = new("InsertarUsuarioConCuenta", connection);
+            SqlCommand command = new(DLStoredProcedures.SP_InsertarUsuarioConCuenta, connection);
 
-            command.Parameters.Add(new SqlParameter("@Correo", SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
-            command.Parameters.Add(new SqlParameter("@Contrasena", SqlDbType.VarChar, 100)).Value = _utility.encriptarContrasena(usuarioDTO.Cedula);
-            command.Parameters.Add(new SqlParameter("@IdRol", SqlDbType.Int)).Value = usuarioDTO.IdRol;
-            command.Parameters.Add(new SqlParameter("@IdEstado", SqlDbType.Int)).Value = usuarioDTO.IdEstado;
+            command.Parameters.Add(new SqlParameter(DLParameters.Correo, SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
+            command.Parameters.Add(new SqlParameter(DLParameters.Contrasena, SqlDbType.VarChar, 100)).Value = _utility.encriptarContrasena(usuarioDTO.Cedula);
+            command.Parameters.Add(new SqlParameter(DLParameters.IdRol, SqlDbType.Int)).Value = usuarioDTO.IdRol;
+            command.Parameters.Add(new SqlParameter(DLParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
 
 
-            command.Parameters.Add(new SqlParameter("@Cedula", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
-            command.Parameters.Add(new SqlParameter("@Nombre", SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
-            command.Parameters.Add(new SqlParameter("@Telefono", SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
-            command.Parameters.Add(new SqlParameter("@Direccion", SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
-            command.Parameters.Add(new SqlParameter("@IdEmpresa ", SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
+            command.Parameters.Add(new SqlParameter(DLParameters.Cedula, SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
+            command.Parameters.Add(new SqlParameter(DLParameters.Nombre, SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
+            command.Parameters.Add(new SqlParameter(DLParameters.Telefono, SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
+            command.Parameters.Add(new SqlParameter(DLParameters.Direccion, SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
+            command.Parameters.Add(new SqlParameter(DLParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
             
             command.CommandType = CommandType.StoredProcedure;
 
@@ -80,13 +80,13 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             if (num < 0)
             {
                 response.Code = ResponseType.Success;
-                response.Message = "Usuario agregado.";
+                response.Message = DLMessages.UsuarioAgregado;
                 response.Data = null;
             }
             else
             {
                 response.Code = ResponseType.Error;
-                response.Message = "Error, usuario no agregado.";
+                response.Message = DLMessages.UsuarioNoAgregado;
                 response.Data = null;
             }
         }
@@ -159,7 +159,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 if (usuarios.Count < 1)
                 {
                     response.Code = ResponseType.Success;
-                    response.Message = DLMessages.NoCoincidencia;
+                    response.Message = DLMessages.NoCoincidenciaBusqueda;
                     response.Data = null;
 
                     return response;
@@ -169,7 +169,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 List<UsuarioDTO> usuariosDTOs = usuarios.Select(usuarios => usuarioMapper.UsuarioToUsuarioDTO(usuarios)).ToList();
 
                 response.Code = ResponseType.Success;
-                response.Message = "Listado de Usuarios";
+                response.Message = DLMessages.ListadoDeUsuarios;
                 response.Data = usuariosDTOs;
             }
             catch (Exception ex)
@@ -202,7 +202,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 await _context.SaveChangesAsync();
 
                 response.Code = ResponseType.Success;
-                response.Message = "Correo Actualizado";
+                response.Message = DLMessages.CorreoActualizado;
                 response.Data = null;
             }
             catch (Exception ex)
@@ -225,7 +225,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 await _context.SaveChangesAsync();
 
                 response.Code = ResponseType.Success;
-                response.Message = "Correo Eliminado";
+                response.Message = DLMessages.CorreoEliminado;
                 response.Data = null;
             }
             catch (Exception ex)

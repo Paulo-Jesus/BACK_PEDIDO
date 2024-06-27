@@ -1,4 +1,5 @@
-﻿using DataLayer.Database;
+﻿using DataLayer.Common;
+using DataLayer.Database;
 using DataLayer.Utilities;
 using EntityLayer.Models.DTO;
 using EntityLayer.Models.Entities;
@@ -31,7 +32,7 @@ namespace DataLayer.Repositories.Login
                 if (Cuenta == null)
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = "No se pudo iniciar sesión, intente nuevamente.";
+                    response.Message = DLMessages.NoInicioSesion;
                     response.Data = new { issuccess = false, token = "" };
 
                     return response;
@@ -44,7 +45,7 @@ namespace DataLayer.Repositories.Login
                 string Nombre = usuario!.Nombre;
 
                 response.Code = ResponseType.Success;
-                response.Message = "bienvenido!";
+                response.Message = DLMessages.Bienvenido;
                 response.Data = new { issuccess = true, token = _utility.generarJWT(Rol, Nombre) };
 
                 return response;
@@ -52,30 +53,34 @@ namespace DataLayer.Repositories.Login
             catch (Exception ex)
             {
 
-                throw;
-            }
-        }
-
-        public async Task<Response> RecuperarContrasena(string Correo)
-        {
-            var correoExiste = await _context.Cuenta.Where(
-                    u => u.Correo == Correo
-                ).FirstOrDefaultAsync();
-
-            if (correoExiste == null)
-            {
                 response.Code = ResponseType.Error;
-                response.Message = "Ingrese un correo existente.";
+                response.Message = ex.Message;
                 response.Data = null;
 
                 return response;
             }
-
-            response.Code = ResponseType.Success;
-            response.Message = "Correo de recuperación enviado!";
-            response.Data = null;
-
-            return response;
         }
+
+        //public async Task<Response> RecuperarContrasena(string Correo)
+        //{
+        //    var correoExiste = await _context.Cuenta.Where(
+        //            u => u.Correo == Correo
+        //        ).FirstOrDefaultAsync();
+
+        //    if (correoExiste == null)
+        //    {
+        //        response.Code = ResponseType.Error;
+        //        response.Message = "Ingrese un correo existente.";
+        //        response.Data = null;
+
+        //        return response;
+        //    }
+
+        //    response.Code = ResponseType.Success;
+        //    response.Message = "Correo de recuperación enviado!";
+        //    response.Data = null;
+
+        //    return response;
+        //}
     }
 }
