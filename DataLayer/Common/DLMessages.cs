@@ -23,6 +23,9 @@ namespace DataLayer.Common
         public const string ProductoDesactivado = "Se ha inhabilitado el producto de manera correcta.";
 
         // MENU
+        public const string MenuExiste = "Ya se encuentra creado el menu del dia.";
         public const string MenuCreado = "Menu creado con exito.";
+        public const string MenuActualizado = "El menu se actualizo con exito.";
+        public const string ErrorMenuCreado = "Ocurrio un error al crear el Menu.";
     }
 }

@@ -1,9 +1,11 @@
 using API.Common;
+using BusinessLayer.Services.Pedidos.Menu;
 using BusinessLayer.Services.Pedidos.Productos;
 using BusinessLayer.Services.Seguridad.Parametros;
 using BusinessLayer.Services.Seguridad.Usuarios;
 using DataLayer.Database;
 using DataLayer.Repositories.Parametros;
+using DataLayer.Repositories.Pedidos.Menu;
 using DataLayer.Repositories.Pedidos.Productos;
 using DataLayer.Repositories.Seguridad.Usuarios;
 using DataLayer.Utilities;
@@ -36,6 +38,9 @@ builder.Services.AddScoped<IParametrosService, ParametrosService>();
 
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 builder.Services.AddScoped<IProductoService, ProductoService>();
+
+builder.Services.AddScoped<IMenuRepository, MenuRepository>();
+builder.Services.AddScoped<IMenuService, MenuService>();
 
 builder.Services.AddSingleton<Utility>();
 

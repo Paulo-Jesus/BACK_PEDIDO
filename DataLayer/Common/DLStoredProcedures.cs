@@ -10,5 +10,7 @@ namespace DataLayer.Common
     {
         public const string SP_GetPersonas = "SP_GetPersonas";
         public const string SP_GetCurrentDate = "GET_CURRENTDATE";
+        public const string SP_GeneralValidation = "GENERAL_VALIDATION";
+        public const string SP_RegistrarMenu = "INSERTAR_MENU";
     }
 }
