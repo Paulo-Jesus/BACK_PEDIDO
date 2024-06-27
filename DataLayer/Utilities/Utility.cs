@@ -1,9 +1,6 @@
-﻿using EntitiLayer.Models.Entities;
-using EntityLayer.Models.DTO;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System.Runtime.Intrinsics.Arm;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -19,7 +16,7 @@ namespace DataLayer.Utilities
             _configuration = configuration;
         }
 
-        public string encriptarPass(string texto)
+        public string encriptarContrasena(string texto)
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {
@@ -34,13 +31,13 @@ namespace DataLayer.Utilities
             }
         }
 
-        public string generarJWT(Usuario usuario)
+        public string generarJWT(string Rol, string Nombre)
         {
             Claim[] userClaims = [
                 //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
                 //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
-                new Claim("Nombre",usuario.Nombre),
-                new Claim("Rol",usuario.IdRol.ToString())
+                new Claim("Rol",Rol),
+                new Claim("Nombre",Nombre)
             ];
 
             SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));

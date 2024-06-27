@@ -7,6 +7,6 @@ namespace DataLayer.Repositories.Login
     {
         public Task<Response> IniciarSesion(LoginDTO request);
 
-        public Task<Response> RecuperarContrasena();
+        public Task<Response> RecuperarContrasena(string Correo);
     }
 }

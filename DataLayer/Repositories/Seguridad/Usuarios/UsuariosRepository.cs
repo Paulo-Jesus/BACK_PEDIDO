@@ -1,8 +1,8 @@
 ﻿using DataLayer.Common;
 using DataLayer.Database;
 using DataLayer.Utilities;
-using EntitiLayer.Models.Entities;
 using EntityLayer.Models.DTO;
+using EntityLayer.Models.Entities;
 using EntityLayer.Models.Mappers;
 using EntityLayer.Responses;
 using Microsoft.Data.SqlClient;
@@ -56,20 +56,23 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             return response;
         }
 
-        public async Task MetodoAgregar(SqlConnection connection, UsuarioDTO usuarioDTO)
+        public async Task MetodoAgregar(SqlConnection connection, usuarioDTOEditar usuarioDTO)
         {
         
-            SqlCommand command = new("SP_UsuariosAgregar", connection);
+            SqlCommand command = new("InsertarUsuarioConCuenta", connection);
+
+            command.Parameters.Add(new SqlParameter("@Correo", SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
+            command.Parameters.Add(new SqlParameter("@Contrasena", SqlDbType.VarChar, 100)).Value = _utility.encriptarContrasena(usuarioDTO.Cedula);
+            command.Parameters.Add(new SqlParameter("@IdRol", SqlDbType.Int)).Value = usuarioDTO.IdRol;
+            command.Parameters.Add(new SqlParameter("@IdEstado", SqlDbType.Int)).Value = usuarioDTO.IdEstado;
+
+
             command.Parameters.Add(new SqlParameter("@Cedula", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
             command.Parameters.Add(new SqlParameter("@Nombre", SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
-            command.Parameters.Add(new SqlParameter("@Usuario", SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
             command.Parameters.Add(new SqlParameter("@Telefono", SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
             command.Parameters.Add(new SqlParameter("@Direccion", SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
-            command.Parameters.Add(new SqlParameter("@Username", SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
-            command.Parameters.Add(new SqlParameter("@Contrasena", SqlDbType.VarChar, 100)).Value = _utility.encriptarPass(usuarioDTO.Cedula);
-            command.Parameters.Add(new SqlParameter("@IdRol", SqlDbType.Int)).Value = usuarioDTO.IdRol;
             command.Parameters.Add(new SqlParameter("@IdEmpresa ", SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
-            command.Parameters.Add(new SqlParameter("@IdEstado", SqlDbType.Int)).Value = usuarioDTO.IdEstado;
+            
             command.CommandType = CommandType.StoredProcedure;
 
             int num = await command.ExecuteNonQueryAsync();
@@ -88,7 +91,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             }
         }
 
-        public async Task<Response> Agregar(UsuarioDTO usuarioDTO)
+        public async Task<Response> Agregar(usuarioDTOEditar usuarioDTO)
         {
             try
             {
@@ -178,26 +181,28 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             return response;
         }
 
-        public async Task<Response> Editar(UsuarioDTO usuarioDTO)
+        public async Task<Response> Editar(usuarioDTOEditar usuarioDTOEditar)
         {
             try
             {
-                Usuario usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == usuarioDTO.IdUsuario);
+                var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == usuarioDTOEditar.IdUsuario);
 
-                //usuario!.Contrasena = _utility.encriptarPass(usuarioDTO.Cedula);
+                var cuenta = await _context.Cuenta.FirstOrDefaultAsync(c => c.IdCuenta == usuarioDTOEditar.IdCuenta);
 
-                usuario!.Nombre = usuarioDTO.Nombre;
-                usuario.Correo = usuarioDTO.Correo;
-                usuario.Telefono = usuarioDTO.Telefono;
-                usuario.Direccion = usuarioDTO.Direccion;
-                usuario.IdEmpresa = usuarioDTO.IdEmpresa;
-                usuario.IdRol = usuarioDTO.IdRol;
-                usuario.IdEstado = usuarioDTO.IdEstado;
+                //usuario!.Contrasena = _utility.encriptarContrasena(usuarioDTOEditar.Cedula);
+
+                usuario!.Nombre = usuarioDTOEditar.Nombre;
+                cuenta!.Correo = usuarioDTOEditar.Correo;
+                usuario.Telefono = usuarioDTOEditar.Telefono;
+                usuario.Direccion = usuarioDTOEditar.Direccion;
+                usuario.IdEmpresa = usuarioDTOEditar.IdEmpresa;
+                cuenta.IdRol = usuarioDTOEditar.IdRol;
+                usuario.IdEstado = usuarioDTOEditar.IdEstado;
 
                 await _context.SaveChangesAsync();
 
                 response.Code = ResponseType.Success;
-                response.Message = "Usuario Actualizado";
+                response.Message = "Correo Actualizado";
                 response.Data = null;
             }
             catch (Exception ex)
@@ -220,7 +225,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 await _context.SaveChangesAsync();
 
                 response.Code = ResponseType.Success;
-                response.Message = "Usuario Eliminado";
+                response.Message = "Correo Eliminado";
                 response.Data = null;
             }
             catch (Exception ex)

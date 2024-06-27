@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EntitiLayer.Models.Entities;
+namespace EntityLayer.Models.Entities;
 
 public partial class MenuDetalle
 {
@@ -9,7 +9,9 @@ public partial class MenuDetalle
 
     public int IdProducto { get; set; }
 
-    public virtual Producto IdProductoNavigation { get; set; } = null!;
+    public int IdMenu { get; set; }
 
-    public virtual ICollection<Menu> Menus { get; set; } = new List<Menu>();
+    public virtual Menu IdMenuNavigation { get; set; } = null!;
+
+    public virtual Producto IdProductoNavigation { get; set; } = null!;
 }

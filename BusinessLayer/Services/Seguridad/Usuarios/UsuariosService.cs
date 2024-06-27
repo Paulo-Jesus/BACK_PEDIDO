@@ -20,7 +20,7 @@ namespace BusinessLayer.Services.Seguridad.Usuarios
             return response;
         }
 
-        public async Task<Response> Agregar(UsuarioDTO usuarioDTO)
+        public async Task<Response> Agregar(usuarioDTOEditar usuarioDTO)
         {
             response = await _usuariosRepository.Agregar(usuarioDTO);
             return response;
@@ -32,7 +32,7 @@ namespace BusinessLayer.Services.Seguridad.Usuarios
             return response;
         }
 
-        public async Task<Response> Editar(UsuarioDTO usuarioDTO)
+        public async Task<Response> Editar(usuarioDTOEditar usuarioDTO)
         {
             response = await _usuariosRepository.Editar(usuarioDTO);
             return response;

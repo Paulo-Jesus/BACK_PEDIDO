@@ -1,7 +1,6 @@
 ﻿using BusinessLayer.Services.Seguridad.Login;
 using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers.Login

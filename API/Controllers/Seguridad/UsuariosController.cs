@@ -44,7 +44,7 @@ namespace API.Controllers.Seguridad
 
         [Route("Agregar")]
         [HttpPost]
-        public async Task<IActionResult> Agregar([FromBody] UsuarioDTO usuarioDTO)
+        public async Task<IActionResult> Agregar([FromBody] usuarioDTOEditar usuarioDTO)
         {
             response = await _usuariosService.Agregar(usuarioDTO);
 
@@ -57,7 +57,7 @@ namespace API.Controllers.Seguridad
 
         [Route("Editar")]
         [HttpPut]
-        public async Task<IActionResult> Editar([FromBody] UsuarioDTO usuarioDTO)
+        public async Task<IActionResult> Editar([FromBody] usuarioDTOEditar usuarioDTO)
         {
             response = await _usuariosService.Editar(usuarioDTO);
 

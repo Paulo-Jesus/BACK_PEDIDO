@@ -1,9 +1,7 @@
-﻿using Azure.Core;
-using DataLayer.Common;
-using DataLayer.Database;
+﻿using DataLayer.Database;
 using DataLayer.Utilities;
-using EntitiLayer.Models.Entities;
 using EntityLayer.Models.DTO;
+using EntityLayer.Models.Entities;
 using EntityLayer.Responses;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,23 +21,60 @@ namespace DataLayer.Repositories.Login
 
         public async Task<Response> IniciarSesion(LoginDTO request)
         {
-            var usuarioExiste = await _context.Usuarios.Where(
-                    u => u.Cedula == request.Usuario && u.Contrasena == _utility.encriptarPass(request.Contrasena)
+            try
+            {
+
+                Cuenta Cuenta = await _context.Cuenta.Where(
+                        u => u.Correo == request.Correo && u.Contrasena == _utility.encriptarContrasena(request.Contrasena)
+                    ).FirstOrDefaultAsync();
+
+                if (Cuenta == null)
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = "No se pudo iniciar sesión, intente nuevamente.";
+                    response.Data = new { issuccess = false, token = "" };
+
+                    return response;
+                }
+
+                string Rol = Cuenta!.IdRol.ToString();
+
+                Usuario usuario = await _context.Usuarios.Where(u => u.IdUsuario == Cuenta.IdCuenta).FirstOrDefaultAsync();
+
+                string Nombre = usuario!.Nombre;
+
+                response.Code = ResponseType.Success;
+                response.Message = "bienvenido!";
+                response.Data = new { issuccess = true, token = _utility.generarJWT(Rol, Nombre) };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        public async Task<Response> RecuperarContrasena(string Correo)
+        {
+            var correoExiste = await _context.Cuenta.Where(
+                    u => u.Correo == Correo
                 ).FirstOrDefaultAsync();
 
-            if (usuarioExiste == null)
+            if (correoExiste == null)
             {
                 response.Code = ResponseType.Error;
-                response.Message = "No se pudo iniciar sesión, intente nuevamente.";
-                response.Data = new { isSuccess = false, token = "" };
+                response.Message = "Ingrese un correo existente.";
+                response.Data = null;
 
                 return response;
             }
 
             response.Code = ResponseType.Success;
-            response.Message = "Bienvenido!";
-            response.Data = new { isSuccess = true, token = _utility.generarJWT(usuarioExiste) };
- 
+            response.Message = "Correo de recuperación enviado!";
+            response.Data = null;
+
             return response;
         }
     }
