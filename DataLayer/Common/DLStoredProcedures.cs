@@ -8,6 +8,10 @@ namespace DataLayer.Common
 {
     public class DLStoredProcedures
     {
-        public const string SP_GetPersonas = "SP_GetPersonas";
+        public const string SP_Buscar_Por_Correo = "SP_Buscar_Por_Correo";
+        public const string SP_Desbloquear_Usuario = "SP_Desbloquear_Usuario";
+        public const string SP_Obtener_Todos_Usuario_Bloqueados = "SP_Obtener_Todos_Usuario_Bloqueados";
+        public const string SP_ObtenerTodosProveedores = "SP_ObtenerTodosProveedores";
+        public const string SP_RegistrarProveedor = "SP_RegistrarProveedor";
     }
 }

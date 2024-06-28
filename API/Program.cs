@@ -1,4 +1,5 @@
 using API.Common;
+using BusinessLayer.Services.Seguridad.DesbloquearCuenta;
 using BusinessLayer.Services.Seguridad.Login;
 using BusinessLayer.Services.Seguridad.Parametros;
 using BusinessLayer.Services.Seguridad.Usuarios;
@@ -42,6 +43,13 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
 builder.Services.AddScoped<IUsuariosService, UsuariosService>();
 
+builder.Services.AddScoped<UsuarioService>();
+builder.Services.AddScoped<ProveedorService>();
+
+builder.Services.AddScoped<IUsuario, UsuarioService>();
+builder.Services.AddScoped<IProveedor, ProveedorService>();
+
+
 builder.Services.AddScoped<IParametrosRepository, ParametrosRepository>();
 builder.Services.AddScoped<IParametrosService, ParametrosService>();
 
@@ -56,6 +64,15 @@ builder.Services.AddDbContext<PedidosDatabaseContext>
         options => options.UseSqlServer(builder.Configuration.GetConnectionString(APIVariables.ConnectionString))
     );
 
+/*CORS PRA CONECTAR ANGULAR*/
+builder.Services.AddCors(opt =>
+    opt.AddPolicy(API.Common.APIVariables.Cors, builder =>
+    {
+        builder.AllowAnyOrigin().
+        AllowAnyHeader().AllowAnyMethod();
+    })
+    );
+
 var app = builder.Build();
 
 app.UseCors(Cors);
@@ -68,6 +85,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(API.Common.APIVariables.Cors);
 
 app.UseAuthorization();
 

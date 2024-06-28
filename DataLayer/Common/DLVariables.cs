@@ -2,6 +2,6 @@
 {
     public class DLVariables
     {
-        public const string ConnectionString = "ConnectionString";
+        public const string ConnectionString = "Pedidos_Database";
     }
 }
