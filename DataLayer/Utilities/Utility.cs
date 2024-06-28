@@ -31,7 +31,39 @@ namespace DataLayer.Utilities
             }
         }
 
-        public string generarJWT(string Rol, string Nombre)
+        public string contrasenaTemporal() 
+        {
+            string ValidChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=[]{}|;:,.<>?";
+            Random random = new();
+            StringBuilder password = new();
+            int length = 5;
+
+            for (int i = 0; i < length; i++)
+            {
+                int index = random.Next(ValidChars.Length);
+                password.Append(ValidChars[index]);
+            }
+
+            return password.ToString();
+        }
+
+        public string textoAleatorio()
+        {
+            string ValidChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=[]{}|;:,.<>?";
+            Random random = new();
+            StringBuilder password = new();
+            int length = 27;
+
+            for (int i = 0; i < length; i++)
+            {
+                int index = random.Next(ValidChars.Length);
+                password.Append(ValidChars[index]);
+            }
+
+            return password.ToString();
+        }
+
+        public string tokenInicioSesion(string Rol, string Nombre)
         {
             Claim[] userClaims = [
                 //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
@@ -40,13 +72,34 @@ namespace DataLayer.Utilities
                 new Claim("Nombre",Nombre)
             ];
 
-            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
             //SigningCredentials creadentials = new(key, SecurityAlgorithms.HmacSha256Signature); 
             SigningCredentials creadentials = new(key, "HS256");
 
             JwtSecurityToken jwtConfig = new(
                     claims: userClaims,
                     expires: DateTime.UtcNow.AddDays(1),
+                    signingCredentials: creadentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(jwtConfig);
+        }
+
+        public string tokenUrlRestablecerContrasena(string texto)
+        {
+            Claim[] userClaims = [
+                //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
+                //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
+                new Claim("Claim",texto)
+            ];
+
+            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
+            //SigningCredentials creadentials = new(key, SecurityAlgorithms.HmacSha256Signature); 
+            SigningCredentials creadentials = new(key, "HS256");
+
+            JwtSecurityToken jwtConfig = new(
+                    claims: userClaims,
+                    expires: DateTime.Now.AddMinutes(5),
                     signingCredentials: creadentials
                 );
 

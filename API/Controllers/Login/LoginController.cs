@@ -29,5 +29,18 @@ namespace API.Controllers.Login
             return Ok(response);
 
         }
+
+        [Route("GenerarContrasena")]
+        [HttpPost]
+        public async Task<IActionResult> GenerarContrasena([FromBody] string Correo)
+        {
+            response = await _loginService.GenerarContrasena(Correo);
+
+            if (response.Code == ResponseType.Error)
+                return BadRequest(response);
+
+            return Ok(response);
+
+        }
     }
 }

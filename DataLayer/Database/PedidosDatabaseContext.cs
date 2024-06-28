@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using DataLayer.Common;
+﻿using DataLayer.Common;
 using EntityLayer.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,6 +34,8 @@ public partial class PedidosDatabaseContext : DbContext
     public virtual DbSet<Proveedor> Proveedors { get; set; }
 
     public virtual DbSet<Rol> Rols { get; set; }
+
+    public virtual DbSet<Token> Tokens { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
@@ -239,6 +239,21 @@ public partial class PedidosDatabaseContext : DbContext
                 .HasForeignKey(d => d.IdEstado)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Rol__IdEstado__4BAC3F29");
+        });
+
+        modelBuilder.Entity<Token>(entity =>
+        {
+            entity.HasKey(e => e.IdToken).HasName("PK__Token__D63324478147FC08");
+
+            entity.ToTable("Token");
+
+            entity.Property(e => e.FechaExpiracion).HasColumnType("datetime");
+            entity.Property(e => e.TokenCuerpo).IsUnicode(false);
+
+            entity.HasOne(d => d.IdCuentaNavigation).WithMany(p => p.Tokens)
+                .HasForeignKey(d => d.IdCuenta)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Token__IdCuenta__02FC7413");
         });
 
         modelBuilder.Entity<Usuario>(entity =>

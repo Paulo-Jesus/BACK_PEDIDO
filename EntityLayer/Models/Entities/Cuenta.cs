@@ -20,6 +20,7 @@ public partial class Cuenta
     public virtual Rol IdRolNavigation { get; set; } = null!;
 
     public virtual ICollection<Proveedor> Proveedors { get; set; } = new List<Proveedor>();
+    public virtual ICollection<Token> Tokens { get; set; } = new List<Token>();
 
     public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
 }
