@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EntitiLayer.Models.Entities;
+namespace EntityLayer.Models.Entities;
 
 public partial class Categoria
 {

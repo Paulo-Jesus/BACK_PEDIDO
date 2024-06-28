@@ -5,13 +5,15 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 {
     public interface IUsuariosRepository
     {
-        public Task<Response> UsuariosObtener();
+        public Task<Response> ObtenerTodos();
 
-        public Task<Response> UsuariosAgregar(UsuarioDTO usuarioDTO);
+        public Task<Response> Agregar(usuarioDTOEditar usuarioDTO);
 
-        public Task<Response> UsuariosBuscar(string? Cedula, string? Nombre, int? IdEmpresa);
+        public Task<Response> Buscar(string? Cedula, string? Nombre, int? IdEmpresa);
 
-        public Task<Response> UsuariosEditar(UsuarioDTO usuarioDTO);
+        public Task<Response> Editar(usuarioDTOEditar usuarioDTOEditar);
+
+        public Task<Response> Eliminar(int IdUsuario);
 
     }
 

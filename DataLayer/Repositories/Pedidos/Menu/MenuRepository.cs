@@ -6,7 +6,6 @@ using EntityLayer.Responses;
 using Microsoft.Data.SqlClient;
 using DataLayer.Common;
 using System.Data;
-using EntitiLayer.Models.Entities;
 
 namespace DataLayer.Repositories.Pedidos.Menu
 {

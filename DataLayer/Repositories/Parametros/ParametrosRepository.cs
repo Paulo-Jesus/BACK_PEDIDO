@@ -1,6 +1,6 @@
 ﻿using DataLayer.Database;
-using EntitiLayer.Models.Entities;
 using EntityLayer.Models.DTO;
+using EntityLayer.Models.Entities;
 using EntityLayer.Responses;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;

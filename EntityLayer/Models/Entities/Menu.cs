@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EntitiLayer.Models.Entities;
+namespace EntityLayer.Models.Entities;
 
 public partial class Menu
 {
@@ -14,5 +14,6 @@ public partial class Menu
     public int IdProveedor { get; set; }
 
     public virtual Proveedor IdProveedorNavigation { get; set; } = null!;
+
     public virtual ICollection<MenuDetalle> MenuDetalles { get; set; } = new List<MenuDetalle>();
 }

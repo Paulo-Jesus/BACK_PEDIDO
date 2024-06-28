@@ -1,4 +1,4 @@
-﻿using EntitiLayer.Models.Entities;
+﻿using EntityLayer.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataLayer.Database
@@ -15,6 +15,8 @@ namespace DataLayer.Database
         }
 
         public virtual DbSet<Categoria> Categoria { get; set; }
+
+        public virtual DbSet<Cuenta> Cuenta { get; set; }
 
         public virtual DbSet<Empresa> Empresas { get; set; }
 
@@ -47,6 +49,28 @@ namespace DataLayer.Database
                 entity.Property(e => e.Nombre)
                     .HasMaxLength(100)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Cuenta>(entity =>
+            {
+                entity.HasKey(e => e.IdCuenta).HasName("PK__Cuenta__D41FD7064B8EE014");
+
+                entity.Property(e => e.Contrasena)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+                entity.Property(e => e.Correo)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.IdEstadoNavigation).WithMany(p => p.Cuenta)
+                    .HasForeignKey(d => d.IdEstado)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Cuenta__IdEstado__52593CB8");
+
+                entity.HasOne(d => d.IdRolNavigation).WithMany(p => p.Cuenta)
+                    .HasForeignKey(d => d.IdRol)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Cuenta__IdRol__5165187F");
             });
 
             modelBuilder.Entity<Empresa>(entity =>
@@ -97,24 +121,24 @@ namespace DataLayer.Database
 
             modelBuilder.Entity<MenuDetalle>(entity =>
             {
-                entity.HasKey(e => e.IdMenuDetalle).HasName("PK__MenuDeta__CAAB5862A305B664");
+                entity.HasKey(e => e.IdMenuDetalle).HasName("PK__MenuDeta__CAAB5862A0AEFFF6");
 
                 entity.ToTable("MenuDetalle");
-
-                entity.HasOne(d => d.IdProductoNavigation).WithMany(p => p.MenuDetalles)
-                    .HasForeignKey(d => d.IdProducto)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__MenuDetal__IdPro__07C12930");
 
                 entity.HasOne(d => d.IdMenuNavigation).WithMany(p => p.MenuDetalles)
                     .HasForeignKey(d => d.IdMenu)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__MenuDetal__IdMen__08B54D69");
+                    .HasConstraintName("FK__MenuDetal__IdMen__6E01572D");
+
+                entity.HasOne(d => d.IdProductoNavigation).WithMany(p => p.MenuDetalles)
+                    .HasForeignKey(d => d.IdProducto)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__MenuDetal__IdPro__6D0D32F4");
             });
 
             modelBuilder.Entity<Pedido>(entity =>
             {
-                entity.HasKey(e => e.IdPedido).HasName("PK__Pedido__9D335DC30D659384");
+                entity.HasKey(e => e.IdPedido).HasName("PK__Pedido__9D335DC3FE3FC86B");
 
                 entity.ToTable("Pedido");
 
@@ -125,22 +149,22 @@ namespace DataLayer.Database
                 entity.HasOne(d => d.IdProductoNavigation).WithMany(p => p.Pedidos)
                     .HasForeignKey(d => d.IdProducto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Pedido__IdProduc__5165187F");
+                    .HasConstraintName("FK__Pedido__IdProduc__6754599E");
 
                 entity.HasOne(d => d.IdProveedorNavigation).WithMany(p => p.Pedidos)
                     .HasForeignKey(d => d.IdProveedor)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Pedido__IdProvee__5070F446");
+                    .HasConstraintName("FK__Pedido__IdProvee__66603565");
 
                 entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Pedidos)
                     .HasForeignKey(d => d.IdUsuario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Pedido__IdUsuari__4F7CD00D");
+                    .HasConstraintName("FK__Pedido__IdUsuari__656C112C");
             });
 
             modelBuilder.Entity<Producto>(entity =>
             {
-                entity.HasKey(e => e.IdProducto).HasName("PK__Producto__0988921013150A9D");
+                entity.HasKey(e => e.IdProducto).HasName("PK__Producto__098892108DCEB2DC");
 
                 entity.ToTable("Producto");
 
@@ -155,31 +179,25 @@ namespace DataLayer.Database
                 entity.HasOne(d => d.IdCategoriaNavigation).WithMany(p => p.Productos)
                     .HasForeignKey(d => d.IdCategoria)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Producto__IdCate__4AB81AF0");
+                    .HasConstraintName("FK__Producto__IdCate__60A75C0F");
 
                 entity.HasOne(d => d.IdEstadoNavigation).WithMany(p => p.Productos)
                     .HasForeignKey(d => d.IdEstado)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Producto__IdEsta__4BAC3F29");
+                    .HasConstraintName("FK__Producto__IdEsta__619B8048");
 
                 entity.HasOne(d => d.IdProveedorNavigation).WithMany(p => p.Productos)
                     .HasForeignKey(d => d.IdProveedor)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Producto__IdProv__49C3F6B7");
+                    .HasConstraintName("FK__Producto__IdProv__5FB337D6");
             });
 
             modelBuilder.Entity<Proveedor>(entity =>
             {
-                entity.HasKey(e => e.IdProveedor).HasName("PK__Proveedo__E8B631AF939CF133");
+                entity.HasKey(e => e.IdProveedor).HasName("PK__Proveedo__E8B631AFEC980122");
 
                 entity.ToTable("Proveedor");
 
-                entity.Property(e => e.Contrasena)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-                entity.Property(e => e.Correo)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
                 entity.Property(e => e.Direccion)
                     .HasMaxLength(100)
                     .IsUnicode(false);
@@ -193,24 +211,21 @@ namespace DataLayer.Database
                 entity.Property(e => e.Telefono)
                     .HasMaxLength(10)
                     .IsUnicode(false);
-                entity.Property(e => e.Username)
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
+
+                entity.HasOne(d => d.IdCuentaNavigation).WithMany(p => p.Proveedors)
+                    .HasForeignKey(d => d.IdCuenta)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Proveedor__IdCue__59FA5E80");
 
                 entity.HasOne(d => d.IdEstadoNavigation).WithMany(p => p.Proveedors)
                     .HasForeignKey(d => d.IdEstado)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Proveedor__IdEst__44FF419A");
-
-                entity.HasOne(d => d.IdRolNavigation).WithMany(p => p.Proveedors)
-                    .HasForeignKey(d => d.IdRol)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Proveedor__IdRol__440B1D61");
+                    .HasConstraintName("FK__Proveedor__IdEst__5AEE82B9");
             });
 
             modelBuilder.Entity<Rol>(entity =>
             {
-                entity.HasKey(e => e.IdRol).HasName("PK__Rol__2A49584CF9B314BC");
+                entity.HasKey(e => e.IdRol).HasName("PK__Rol__2A49584C2F913DC2");
 
                 entity.ToTable("Rol");
 
@@ -221,23 +236,17 @@ namespace DataLayer.Database
                 entity.HasOne(d => d.IdEstadoNavigation).WithMany(p => p.Rols)
                     .HasForeignKey(d => d.IdEstado)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Rol__IdEstado__398D8EEE");
+                    .HasConstraintName("FK__Rol__IdEstado__4BAC3F29");
             });
 
             modelBuilder.Entity<Usuario>(entity =>
             {
-                entity.HasKey(e => e.IdUsuario).HasName("PK__Usuario__5B65BF971CA22615");
+                entity.HasKey(e => e.IdUsuario).HasName("PK__Usuario__5B65BF97B9FC8288");
 
                 entity.ToTable("Usuario");
 
                 entity.Property(e => e.Cedula)
                     .HasMaxLength(10)
-                    .IsUnicode(false);
-                entity.Property(e => e.Contrasena)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-                entity.Property(e => e.Correo)
-                    .HasMaxLength(100)
                     .IsUnicode(false);
                 entity.Property(e => e.Direccion)
                     .HasMaxLength(100)
@@ -248,24 +257,21 @@ namespace DataLayer.Database
                 entity.Property(e => e.Telefono)
                     .HasMaxLength(10)
                     .IsUnicode(false);
-                entity.Property(e => e.Username)
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
+
+                entity.HasOne(d => d.IdCuentaNavigation).WithMany(p => p.Usuarios)
+                    .HasForeignKey(d => d.IdCuenta)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Usuario__IdCuent__5535A963");
 
                 entity.HasOne(d => d.IdEmpresaNavigation).WithMany(p => p.Usuarios)
                     .HasForeignKey(d => d.IdEmpresa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Usuario__IdEmpre__403A8C7D");
+                    .HasConstraintName("FK__Usuario__IdEmpre__5629CD9C");
 
                 entity.HasOne(d => d.IdEstadoNavigation).WithMany(p => p.Usuarios)
                     .HasForeignKey(d => d.IdEstado)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Usuario__IdEstad__412EB0B6");
-
-                entity.HasOne(d => d.IdRolNavigation).WithMany(p => p.Usuarios)
-                    .HasForeignKey(d => d.IdRol)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Usuario__IdRol__3F466844");
+                    .HasConstraintName("FK__Usuario__IdEstad__571DF1D5");
             });
 
             OnModelCreatingPartial(modelBuilder);

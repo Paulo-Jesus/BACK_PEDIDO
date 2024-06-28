@@ -1,5 +1,4 @@
-﻿using EntityLayer.Models.DTO;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -17,13 +16,13 @@ namespace DataLayer.Utilities
             _configuration = configuration;
         }
 
-        public string encriptarPass(string texto)
+        public string encriptarContrasena(string texto)
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {
                 byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(texto));
 
-                StringBuilder builder = new StringBuilder();
+                StringBuilder builder = new();
                 for (int i = 0; i < bytes.Length; i++)
                 {
                     builder.Append(bytes[i].ToString("X2"));
@@ -32,22 +31,26 @@ namespace DataLayer.Utilities
             }
         }
 
-        //public string generarJWT(UsuarioDTO usuarioDTO)
-        //{
-        //    var userClaims = new[] 
-        //    {
-        //        new Claim(ClaimTypes.NameIdentifier,usuarioDTO.Correo)
-        //    };
+        public string generarJWT(string Rol, string Nombre)
+        {
+            Claim[] userClaims = [
+                //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
+                //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
+                new Claim("Rol",Rol),
+                new Claim("Nombre",Nombre)
+            ];
 
-        //    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-        //    var creadentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
+            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            //SigningCredentials creadentials = new(key, SecurityAlgorithms.HmacSha256Signature); 
+            SigningCredentials creadentials = new(key, "HS256");
 
-        //    var jwtConfig = new JwtSecurityToken(
-        //        claims: userClaims,
-        //        expires: DateTime.UtcNow.AddDays(1),
-        //        signingCredentials: creadentials
-        //        );
-        //    return new JwtSecurityTokenHandler().WriteToken(jwtConfig);
-        //}
+            JwtSecurityToken jwtConfig = new(
+                    claims: userClaims,
+                    expires: DateTime.UtcNow.AddDays(1),
+                    signingCredentials: creadentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(jwtConfig);
+        }
     }
 }

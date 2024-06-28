@@ -4,7 +4,7 @@ using EntityLayer.Models.DTO;
 using EntityLayer.Models.Mappers;
 using EntityLayer.Responses;
 using Microsoft.Data.SqlClient;
-using EntitiLayer.Models.Entities;
+using EntityLayer.Models.Entities;
 using DataLayer.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;

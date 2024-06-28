@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EntitiLayer.Models.Entities;
+namespace EntityLayer.Models.Entities;
 
 public partial class Rol
 {
@@ -11,9 +11,7 @@ public partial class Rol
 
     public int IdEstado { get; set; }
 
+    public virtual ICollection<Cuenta> Cuenta { get; set; } = new List<Cuenta>();
+
     public virtual Estado IdEstadoNavigation { get; set; } = null!;
-
-    public virtual ICollection<Proveedor> Proveedors { get; set; } = new List<Proveedor>();
-
-    public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
 }
