@@ -24,7 +24,7 @@ namespace DataLayer.Repositories.Login
             try
             {
 
-                Cuenta Cuenta = await _context.Cuenta.Where(
+                Cuenta? Cuenta = await _context.Cuenta.Where(
                         u => u.Correo == request.Correo && u.Contrasena == _utility.encriptarContrasena(request.Contrasena)
                     ).FirstOrDefaultAsync();
 
@@ -39,7 +39,7 @@ namespace DataLayer.Repositories.Login
 
                 string Rol = Cuenta!.IdRol.ToString();
 
-                Usuario usuario = await _context.Usuarios.Where(u => u.IdUsuario == Cuenta.IdCuenta).FirstOrDefaultAsync();
+                Usuario? usuario = await _context.Usuarios.Where(u => u.IdCuenta == Cuenta.IdCuenta).FirstOrDefaultAsync();
 
                 string Nombre = usuario!.Nombre;
 
@@ -49,10 +49,10 @@ namespace DataLayer.Repositories.Login
 
                 return response;
             }
-            catch (Exception ex)
+            catch (Exception  )
             {
 
-                throw;
+                throw ;
             }
         }
 

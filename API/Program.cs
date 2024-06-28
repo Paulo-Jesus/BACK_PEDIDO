@@ -1,7 +1,10 @@
 using API.Common;
+using BusinessLayer.Services.Pedidos.Pedidos;
 using BusinessLayer.Services.Seguridad.Login;
 using BusinessLayer.Services.Seguridad.Parametros;
 using BusinessLayer.Services.Seguridad.Usuarios;
+using BusinesssLayer.Services.Estados_Act_Inac;
+using BusinesssLayer.Services.Roles;
 using DataLayer.Database;
 using DataLayer.Repositories.Login;
 using DataLayer.Repositories.Parametros;
@@ -24,6 +27,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+//Add Servicio de roles
+builder.Services.AddScoped<RolService>();
+//Add Servicio de Estados
+builder.Services.AddScoped<EstadoService>();
+//Add Servicio de Pedidos
+builder.Services.AddScoped<PedidosService>();
 
 // Cors
 builder.Services.AddCors(options => options.AddPolicy(APIVariables.AllowWebapp,
@@ -72,5 +83,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(APIVariables.AllowWebapp);
 
 app.Run();

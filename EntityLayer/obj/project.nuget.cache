@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mGhZxCH0RgUGTcezZEzQ5K+3kXMRT+OXtfBy+l+pBd9aLd52w6wu8M2IcaHc6Czff8a4qGmLL0CwPj5ukDxD/A==",
+  "dgSpecHash": "AZflboUShyQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+  "projectFilePath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VIAMATICA\\.nuget\\packages\\riok.mapperly\\3.5.1\\riok.mapperly.3.5.1.nupkg.sha512"
   ],
