@@ -30,5 +30,18 @@ namespace API.Controllers.Pedidos.Menu
             return Ok(response);
 
         }
+
+        [Route("Menu/Actualizar")]
+        [HttpPut]
+        public async Task<IActionResult> ActualizarMenu(int IdProveedor, string HoraInicio, string HoraFin, int[] IdProductos)
+        {
+            response = await _menuService.ActualizarMenu(IdProveedor, HoraInicio, HoraFin, IdProductos);
+
+            if (response.Code == ResponseType.Error)
+                return BadRequest(response);
+
+            return Ok(response);
+
+        }
     }
 }

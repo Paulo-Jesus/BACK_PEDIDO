@@ -25,7 +25,8 @@ namespace DataLayer.Common
         // MENU
         public const string MenuExiste = "Ya se encuentra creado el menu del dia.";
         public const string MenuCreado = "Menu creado con exito.";
-        public const string MenuActualizado = "El menu se actualizo con exito.";
         public const string ErrorMenuCreado = "Ocurrio un error al crear el Menu.";
+        public const string MenuActualizado = "El menu se actualizo con exito.";
+        public const string ErrorMenuActualizar = "Ocurrio un error al actualizar el producto.";
     }
 }

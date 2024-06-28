@@ -19,10 +19,15 @@ namespace BusinessLayer.Services.Pedidos.Menu
             response = await _menuRepository.RegistrarMenu(idProveedor, HoraInicio, HoraFin, IdProductos);
             return response;
         }
-
-        public async Task<Response> ExisteMenu(int idProveedor)
+        public async Task<Response> ActualizarMenu(int idProveedor, string HoraInicio, string HoraFin, int[] IdProductos)
         {
-            response = await _menuRepository.ExisteMenu(idProveedor);
+            response = await _menuRepository.ActualizarMenu(idProveedor, HoraInicio, HoraFin, IdProductos);
+            return response;
+        }
+
+        public async Task<Response> ExisteMenu(int idProveedor, string TipoTrx)
+        {
+            response = await _menuRepository.DatosMenu(idProveedor, TipoTrx);
             return response;
         }
     }

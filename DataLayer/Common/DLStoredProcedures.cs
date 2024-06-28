@@ -12,5 +12,6 @@ namespace DataLayer.Common
         public const string SP_GetCurrentDate = "GET_CURRENTDATE";
         public const string SP_GeneralValidation = "GENERAL_VALIDATION";
         public const string SP_RegistrarMenu = "INSERTAR_MENU";
+        public const string SP_ActualizarMenu = "ACTUALIZAR_MENU";
     }
 }
