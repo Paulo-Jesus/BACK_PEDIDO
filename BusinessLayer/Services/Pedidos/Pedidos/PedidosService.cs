@@ -51,10 +51,10 @@ namespace BusinessLayer.Services.Pedidos.Pedidos
                         {
                             pedidos.Add(new PedidosDto
                             {
-                                FechaPedido = reader.GetDateTime(1).ToString(con.ParametroQuery),
-                                NombreUsuario = reader.GetString(2),
-                                NombrePedido = reader.GetString(3),
-                                PrecioProducto = reader.GetDecimal(4),
+                                FechaPedido = reader.GetDateTime(0).ToString(con.ParametroQuery),
+                                NombreUsuario = reader.GetString(1),
+                                NombrePedido = reader.GetString(2),
+                                PrecioProducto = reader.GetDecimal(3),
                                 Cantidad = 1
                             });
                         }

@@ -32,7 +32,7 @@ namespace DataLayer.Repositories.Login
                 {
                     response.Code = ResponseType.Error;
                     response.Message = "No se pudo iniciar sesión, intente nuevamente.";
-                    response.Data = new { issuccess = false, token = "" };
+                    response.Data = new LoginResponseData { Issuccess = false, Token = "" };
 
                     return response;
                 }
@@ -45,7 +45,7 @@ namespace DataLayer.Repositories.Login
 
                 response.Code = ResponseType.Success;
                 response.Message = "bienvenido!";
-                response.Data = new { issuccess = true, token = _utility.generarJWT(Rol, Nombre) };
+                response.Data = new LoginResponseData { Issuccess = true, Token = _utility.generarJWT(Rol, Nombre) };
 
                 return response;
             }
@@ -78,4 +78,12 @@ namespace DataLayer.Repositories.Login
             return response;
         }
     }
+
+
+      public class LoginResponseData
+    {
+        public bool Issuccess { get; set; }
+        public string Token { get; set; }
+    }
+
 }
