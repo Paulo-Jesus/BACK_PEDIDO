@@ -16,27 +16,23 @@ namespace DataLayer.Utilities
             _configuration = configuration;
         }
 
-        public string encriptarContrasena(string texto)
+        public string EncriptarContrasena(string texto)
         {
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(texto));
+            byte[] bytes = SHA256.HashData(Encoding.UTF8.GetBytes(texto));
 
-                StringBuilder builder = new();
-                for (int i = 0; i < bytes.Length; i++)
-                {
-                    builder.Append(bytes[i].ToString("X2"));
-                }
-                return builder.ToString();
+            StringBuilder builder = new();
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                builder.Append(bytes[i].ToString("X2"));
             }
+            return builder.ToString();
         }
 
-        public string contrasenaTemporal() 
+        public string GenerarTexto(int length)
         {
             string ValidChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=[]{}|;:,.<>?";
             Random random = new();
             StringBuilder password = new();
-            int length = 5;
 
             for (int i = 0; i < length; i++)
             {
@@ -47,23 +43,7 @@ namespace DataLayer.Utilities
             return password.ToString();
         }
 
-        public string textoAleatorio()
-        {
-            string ValidChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=[]{}|;:,.<>?";
-            Random random = new();
-            StringBuilder password = new();
-            int length = 27;
-
-            for (int i = 0; i < length; i++)
-            {
-                int index = random.Next(ValidChars.Length);
-                password.Append(ValidChars[index]);
-            }
-
-            return password.ToString();
-        }
-
-        public string tokenInicioSesion(string Rol, string Nombre)
+        public string TokenInicioSesion(string Rol, string Nombre)
         {
             Claim[] userClaims = [
                 //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
@@ -78,19 +58,19 @@ namespace DataLayer.Utilities
 
             JwtSecurityToken jwtConfig = new(
                     claims: userClaims,
-                    expires: DateTime.UtcNow.AddDays(1),
+                    expires: DateTime.Now.AddDays(1),
                     signingCredentials: creadentials
                 );
 
             return new JwtSecurityTokenHandler().WriteToken(jwtConfig);
         }
 
-        public string tokenUrlRestablecerContrasena(string texto)
+        public string TokenRestablecerContrasena(string texto)
         {
             Claim[] userClaims = [
                 //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
                 //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
-                new Claim("Claim",texto)
+                new Claim("Claim:",texto)
             ];
 
             SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
@@ -99,7 +79,7 @@ namespace DataLayer.Utilities
 
             JwtSecurityToken jwtConfig = new(
                     claims: userClaims,
-                    expires: DateTime.Now.AddMinutes(5),
+                    //expires: DateTime.Now.AddMinutes(5),
                     signingCredentials: creadentials
                 );
 

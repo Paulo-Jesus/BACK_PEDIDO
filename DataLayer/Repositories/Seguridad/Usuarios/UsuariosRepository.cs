@@ -62,7 +62,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             SqlCommand command = new(DLStoredProcedures.SP_InsertarUsuarioConCuenta, connection);
 
             command.Parameters.Add(new SqlParameter(DLParameters.Correo, SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
-            command.Parameters.Add(new SqlParameter(DLParameters.Contrasena, SqlDbType.VarChar, 100)).Value = _utility.encriptarContrasena(usuarioDTO.Cedula);
+            command.Parameters.Add(new SqlParameter(DLParameters.Contrasena, SqlDbType.VarChar, 100)).Value = _utility.EncriptarContrasena(usuarioDTO.Cedula);
             command.Parameters.Add(new SqlParameter(DLParameters.IdRol, SqlDbType.Int)).Value = usuarioDTO.IdRol;
             command.Parameters.Add(new SqlParameter(DLParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
 
@@ -189,7 +189,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 
                 var cuenta = await _context.Cuenta.FirstOrDefaultAsync(c => c.IdCuenta == usuarioDTOEditar.IdCuenta);
 
-                //usuario!.Contrasena = _utility.encriptarContrasena(usuarioDTOEditar.Cedula);
+                //usuario!.Contrasena = _utility.EncriptarContrasena(usuarioDTOEditar.Cedula);
 
                 usuario!.Nombre = usuarioDTOEditar.Nombre;
                 cuenta!.Correo = usuarioDTOEditar.Correo;

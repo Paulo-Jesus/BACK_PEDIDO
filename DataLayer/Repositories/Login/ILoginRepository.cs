@@ -9,6 +9,8 @@ namespace DataLayer.Repositories.Login
 
         public Task<Response> GenerarContrasena(string Correo);
 
+        public Task<Response> ComprobarToken(string tokenCuerpo);
 
+        public Task<Response> RestablecerContrasena(string tokenCuerpo, string claveTemporal, string claveNueva);
     }
 }
