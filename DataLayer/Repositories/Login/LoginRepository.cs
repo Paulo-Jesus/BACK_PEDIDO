@@ -83,7 +83,7 @@ namespace DataLayer.Repositories.Login
       public class LoginResponseData
     {
         public bool Issuccess { get; set; }
-        public string Token { get; set; }
+        public string? Token { get; set; }
     }
 
 }

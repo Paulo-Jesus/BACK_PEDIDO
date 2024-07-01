@@ -87,3 +87,5 @@ C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\BusinessLayer\obj\Debug\net8.0\B
 C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll
 C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\BusinessLayer\obj\Debug\net8.0\BusinessLayer.pdb
 C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\BusinessLayer\obj\Debug\net8.0\ref\BusinessLayer.dll
+C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\BusinessLayer\bin\Debug\net8.0\BusinessLayer.runtimeconfig.json
+C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\BusinessLayer\obj\Debug\net8.0\BusinessLayer.genruntimeconfig.cache

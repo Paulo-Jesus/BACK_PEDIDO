@@ -9,6 +9,7 @@
       "DataLayer/1.0.0": {
         "dependencies": {
           "EntityLayer": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.6"
         },
@@ -930,6 +931,8 @@
       },
       "EntityLayer/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
           "Riok.Mapperly": "3.5.1"
         },
         "runtime": {
