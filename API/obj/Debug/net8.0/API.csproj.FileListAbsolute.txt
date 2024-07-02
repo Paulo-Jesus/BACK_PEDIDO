@@ -715,3 +715,4 @@ C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\API\obj\Debug\net8.0\refint\API.
 C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\API\obj\Debug\net8.0\API.pdb
 C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\API\obj\Debug\net8.0\ref\API.dll
+C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "gyeOqy9xufcyHpFOuBplxh+n6z9H6OU26VpHnDrYKb9JnwmW1oNPJfKDJwZHSGnm7m9J9AcOQjawfTiXWXUvgg==",
+  "dgSpecHash": "POxuEU9Z/FQx1HAzVI8wMoywnmkgiDtUWF9SFuq7JgMGAdiRGUsPoxVzTee3TUcIvBaMvVeFBe3xDpslRmOcog==",
   "success": true,
   "projectFilePath": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michael\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
