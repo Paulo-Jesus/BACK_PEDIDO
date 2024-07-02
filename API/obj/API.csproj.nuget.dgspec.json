@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\API\\API.csproj": {}
+    "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\API\\API.csproj": {
+    "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\API\\API.csproj",
+        "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\API.csproj",
         "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\API\\obj\\",
+        "outputPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
               }
             }
           }
@@ -83,18 +84,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj",
+        "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\BusinessLayer\\obj\\",
+        "outputPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -105,14 +106,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj"
+              "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -147,18 +149,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
+        "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -169,14 +171,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -223,18 +226,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -245,6 +248,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -289,7 +293,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
