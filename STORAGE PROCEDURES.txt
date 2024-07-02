@@ -1,0 +1,68 @@
+
+CREATE PROCEDURE SP_Buscar_Por_Correo
+	@Correo AS VARCHAR(100)
+AS
+BEGIN
+	SELECT u.Nombre AS NombreUsuario, c.Correo, r.Nombre AS Rol, e.Nombre AS Estado
+	FROM Usuario u
+	INNER JOIN Cuenta c ON u.IdCuenta = c.IdCuenta
+	INNER JOIN Rol r ON c.IdRol = r.IdRol
+	INNER JOIN Estado e ON u.IdEstado = e.IdEstado
+	WHERE c.Correo = @Correo;
+END
+GO
+
+CREATE PROCEDURE SP_Desbloquear_Usuario
+(
+	@Correo VARCHAR(100)
+)
+AS 
+BEGIN
+	DECLARE @IdCuenta INT;
+	SELECT @IdCuenta = IdCuenta FROM Cuenta WHERE Correo = @Correo;
+
+	UPDATE Cuenta
+	SET IdEstado = 1 
+	WHERE Correo = @Correo;
+
+	UPDATE Usuario
+	SET IdEstado = 1
+	WHERE Usuario.IdCuenta = @IdCuenta	
+END
+
+CREATE PROCEDURE SP_Obtener_Todos_Usuario_Bloqueados
+AS
+BEGIN
+	SELECT u.Nombre AS NombreUsuario, c.Correo, r.Nombre AS Rol, e.Nombre AS Estado
+	FROM Usuario u
+	INNER JOIN Cuenta c ON u.IdCuenta = c.IdCuenta
+	INNER JOIN Rol r ON c.IdRol = r.IdRol
+	INNER JOIN Estado e ON u.IdEstado = e.IdEstado
+	WHERE e.IdEstado = 3
+END
+
+CREATE PROCEDURE SP_RegistrarProveedor
+(
+	@RUC AS VARCHAR(13),
+	@Nombre AS VARCHAR(100),
+	@Correo AS VARCHAR(100),
+	@Telefono AS VARCHAR(10),
+	@Direccion AS VARCHAR(100),
+	@Logotipo AS VARBINARY(MAX),
+	@Contrasena AS VARCHAR(10),
+	@IdRol AS INT,
+	@IdEstado AS INT
+)
+AS
+BEGIN
+	DECLARE @IdCuenta INT;
+
+	INSERT INTO Cuenta(Correo,Contrasena,IdRol,IdEstado)
+	VALUES (@Correo,@Contrasena, @IdRol,@IdEstado);
+
+	SET @IdCuenta = SCOPE_IDENTITY();
+
+	INSERT INTO Proveedor (RUC,Nombre, Telefono, Direccion, Logotipo, IdCuenta, IdEstado)
+	VALUES (@RUC,@Nombre,@Telefono,@Direccion, @Logotipo, @IdCuenta, @IdEstado)
+
+END

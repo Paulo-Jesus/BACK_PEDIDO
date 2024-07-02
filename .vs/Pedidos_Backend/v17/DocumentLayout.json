@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\businesslayer\\services\\seguridad\\desbloquearcuenta\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\seguridad\\desbloquearcuenta\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\api\\controllers\\seguridad\\desbloquearusuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\controllers\\seguridad\\desbloquearusuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\viamatica\\source\\repos\\back_pedido\\api\\common\\apiroutes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\common\\apiroutes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,45 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioService.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\DesbloquearCuenta\\UsuarioService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Services\\Seguridad\\DesbloquearCuenta\\UsuarioService.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\DesbloquearCuenta\\UsuarioService.cs",
-              "RelativeToolTip": "BusinessLayer\\Services\\Seguridad\\DesbloquearCuenta\\UsuarioService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAnwH0AAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T16:12:15.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "APIRoutes.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\API\\Common\\APIRoutes.cs",
-              "RelativeDocumentMoniker": "API\\Common\\APIRoutes.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\API\\Common\\APIRoutes.cs",
-              "RelativeToolTip": "API\\Common\\APIRoutes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T16:12:02.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DesbloquearUsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\API\\Controllers\\Seguridad\\DesbloquearUsuariosController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\Seguridad\\DesbloquearUsuariosController.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\API\\Controllers\\Seguridad\\DesbloquearUsuariosController.cs",
-              "RelativeToolTip": "API\\Controllers\\Seguridad\\DesbloquearUsuariosController.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAgwD4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T15:22:42.062Z",
-              "EditorCaption": ""
             }
           ]
         }
