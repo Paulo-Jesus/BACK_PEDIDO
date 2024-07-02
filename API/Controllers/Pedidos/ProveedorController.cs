@@ -19,10 +19,10 @@ namespace API.Controllers.Pedidos
 
         [HttpGet]
         [Route(API.Common.APIRoutes.APIObtenerProveedores)]
-        public ActionResult<IEnumerable<Proveedor>> GetRestaurantes()
+        public async  Task<ActionResult<IEnumerable<Proveedor>>> GetRestaurantes()
         {
 
-            IEnumerable<ProveedorDTO> data = _serviceR.GetRestaurantes();
+            IEnumerable<ProveedorDTO> data = await _serviceR.GetRestaurantes();
 
             response.Data = data;
             response.Message = DataLayer.Common.DLMessages.ListadoUsuarios;
@@ -33,9 +33,9 @@ namespace API.Controllers.Pedidos
 
         [HttpPost]
         [Route(API.Common.APIRoutes.APIRegistrarProveedores)]
-        public ActionResult<Response> GetRestaurantes([FromBody] ProveedorDTO restaurante)
+        public async Task<ActionResult<Response>> GetRestaurantes([FromBody] ProveedorDTO restaurante)
         {
-            Response data = _serviceR.registrar(restaurante);
+            Response data = await _serviceR.registrar(restaurante);
             return Ok(new
             {
                 data

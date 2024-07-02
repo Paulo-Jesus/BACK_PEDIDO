@@ -4623,9 +4623,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VIAMATICA\\Source\\Repos\\BACK_PEDIDO\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\VIAMATICA\\Source\\Repos\\BACK_PEDIDO\\API\\API.csproj",
+      "projectPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\API\\API.csproj",
       "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\VIAMATICA\\Source\\Repos\\BACK_PEDIDO\\API\\obj\\",
       "projectStyle": "PackageReference",
@@ -4645,8 +4645,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\VIAMATICA\\Source\\Repos\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\VIAMATICA\\Source\\Repos\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
             }
           }
         }

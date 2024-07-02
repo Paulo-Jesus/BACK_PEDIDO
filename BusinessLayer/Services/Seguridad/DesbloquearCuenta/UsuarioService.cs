@@ -1,4 +1,6 @@
-﻿using EntityLayer.Models.DTO;
+﻿using DataLayer.Common;
+using EntityLayer.Models.DTO;
+using EntityLayer.Responses;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -15,7 +17,8 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
     {
         private readonly string _connectionString;
         private readonly IConfiguration _configuration;
-        private readonly List<UsuarioBlockDTO> lista = new();
+        private readonly List<UsuarioBlockDTO> lista = new ();
+        private readonly Response response = new Response ();
 
         public UsuarioService(IConfiguration configuration)
         {
@@ -23,17 +26,17 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
             _configuration = configuration;
         }
 
-        public IEnumerable<UsuarioBlockDTO> obtenerTodosUsuarios()
+        public async Task<Response> obtenerTodosUsuarios()
         {
             using (SqlConnection conn = new(_connectionString))
             {
                 SqlCommand command = new SqlCommand(DataLayer.Common.DLStoredProcedures.SP_Obtener_Todos_Usuario_Bloqueados, conn);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
-                conn.Open();
+                await conn.OpenAsync();
 
-                using (SqlDataReader reader = command.ExecuteReader())
+                using (SqlDataReader reader = await command.ExecuteReaderAsync())
                 {
-                    while (reader.Read())
+                    while (await reader.ReadAsync())
                     {
                         UsuarioBlockDTO usuario = new UsuarioBlockDTO
                         {
@@ -44,12 +47,17 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
                         };
                         lista.Add(usuario);
                     }
+                    response.Code = ResponseType.Success;
+                    response.Message = DLMessages.ListadoUsuarios;
+                    response.Data = lista;
+
                 }
+                await conn.CloseAsync();
             }
-            return lista;
+            return response;
         }
 
-        public UsuarioBlockDTO buscarUsuarioBloqueado(string correo)
+        public async Task<Response> buscarUsuarioBloqueado(string correo)
         {
             UsuarioBlockDTO user = new UsuarioBlockDTO();
             try
@@ -61,13 +69,13 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
                         SqlCommand command = new SqlCommand(DataLayer.Common.DLStoredProcedures.SP_Buscar_Por_Correo, conn);
                         command.CommandType = System.Data.CommandType.StoredProcedure;
                         command.Parameters.AddWithValue(BusinessLayer.Common.BLRows.CorreoU, correo);
-                        conn.Open();
+                        await conn.OpenAsync();
 
-                        command.ExecuteNonQuery();
+                        await command.ExecuteNonQueryAsync();
 
-                        SqlDataReader reader = command.ExecuteReader();
+                        SqlDataReader reader = await command.ExecuteReaderAsync();
 
-                        while (reader.Read())
+                        if (await reader.ReadAsync())
                         {
                             user = new UsuarioBlockDTO
                             {
@@ -76,9 +84,19 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
                                 NombreRol = reader.GetString(2),
                                 NombreEstado = reader.GetString(3),
                             };
-                            Console.WriteLine(user.ToString());
-                            return user;
+                            response.Code = ResponseType.Success;
+                            response.Message = DLMessages.ListadoUsuarios;
+                            response.Data = user;
+
+                            return response;
                         }
+                        else {
+                            response.Code = ResponseType.Error;
+                            response.Message = DLMessages.ListaVacia;
+                            response.Data = String.Empty;
+                        }
+
+                        await conn.CloseAsync();
                     }
                 }
             }
@@ -86,12 +104,11 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
             {
                 Console.WriteLine(ex.ToString());
             }
-            return user;
+            return response;
         }
 
-        public String DesbloquearUsuario(string correo)
+        public async Task<Response> DesbloquearUsuario(string correo)
         {
-            String msj = String.Empty;
             if (validarCampoVacio(correo))
             {
                 try
@@ -102,19 +119,21 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
                         command.CommandType = System.Data.CommandType.StoredProcedure;
                         command.Parameters.AddWithValue(BusinessLayer.Common.BLRows.CorreoU, correo);
 
-                        conn.Open();
+                        await conn.OpenAsync();
 
-                        command.ExecuteNonQuery();
+                        await command.ExecuteNonQueryAsync();
 
-                        msj = DataLayer.Common.DLMessages.Msj_Usuario_Unblock;
+                        response.Code = ResponseType.Success;
+                        response.Message = DLMessages.Msj_Usuario_Unblock;
                     }
                 }
                 catch (Exception ex)
                 {
-                    msj = DataLayer.Common.DLMessages.Msj_Usuario_block + ex.ToString();
+                    response.Code = ResponseType.Error;
+                    response.Message = DLMessages.Msj_Usuario_block;
                 }
             }
-            return msj;
+            return response;
         }
 
 

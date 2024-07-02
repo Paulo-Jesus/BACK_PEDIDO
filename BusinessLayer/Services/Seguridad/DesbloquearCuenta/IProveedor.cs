@@ -11,7 +11,7 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
 {
     public interface IProveedor
     {
-        IEnumerable<ProveedorDTO> GetRestaurantes();
-        Response registrar(ProveedorDTO proveedor);
+        Task<IEnumerable<ProveedorDTO>> GetRestaurantes();
+        Task<Response> registrar(ProveedorDTO proveedor);
     }
 }

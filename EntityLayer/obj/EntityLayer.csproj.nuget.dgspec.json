@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VIAMATICA\\Source\\Repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {}
+    "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VIAMATICA\\Source\\Repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\Source\\Repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\Source\\Repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\VIAMATICA\\source\\repos\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\VIAMATICA\\Source\\Repos\\BACK_PEDIDO\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",

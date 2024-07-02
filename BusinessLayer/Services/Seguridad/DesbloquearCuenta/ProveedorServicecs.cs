@@ -26,19 +26,19 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
         }
 
 
-        public IEnumerable<ProveedorDTO> GetRestaurantes()
+        public async Task<IEnumerable<ProveedorDTO>> GetRestaurantes()
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                conn.Open();
+                await conn.OpenAsync();
 
                 using (SqlCommand command = new SqlCommand(DataLayer.Common.DLStoredProcedures.SP_ObtenerTodosProveedores, conn))
                 {
                     command.CommandType = System.Data.CommandType.StoredProcedure;
                     
-                    SqlDataReader reader = command.ExecuteReader();
+                    SqlDataReader reader = await command.ExecuteReaderAsync();
 
-                    while (reader.Read())
+                    while (await reader.ReadAsync())
                     {
                         byte[] logotipoByte = (byte[])reader[BusinessLayer.Common.BLRows.Logotipo];
 
@@ -49,13 +49,13 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
                         };
                         listaRestaurante.Add(rs);
                     }
-                    conn.Close();
+                    await conn.CloseAsync();
                 }
             }
             return listaRestaurante;
         }
 
-        public Response registrar(ProveedorDTO restaurante)
+        public async Task<Response> registrar(ProveedorDTO restaurante)
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
@@ -71,10 +71,10 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
                 command.Parameters.AddWithValue(BusinessLayer.Common.BLRows.colIdRol, BusinessLayer.Common.BLRows.idRolProveedor);
                 command.Parameters.AddWithValue(BusinessLayer.Common.BLRows.colIdEstado, BusinessLayer.Common.BLRows.idEstadoBloqueado);
 
-                conn.Open();
-                SqlDataReader reader = command.ExecuteReader();
+                await conn.OpenAsync();
+                SqlDataReader reader = await command.ExecuteReaderAsync();
 
-                if (reader.Read())
+                if (await reader.ReadAsync())
                 {
                     response.Message = DataLayer.Common.DLMessages.Msj_Registro_Exito;
                     response.Code = ResponseType.Success;

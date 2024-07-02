@@ -18,13 +18,13 @@ namespace API.Controllers.Seguridad
 
         [HttpGet]
         [Route(API.Common.APIRoutes.getAPIObtenerUsuariosBloqueados)]
-        public ActionResult<IEnumerable<Response>> obtenerUsuariosBloqueados()
+        public async Task<ActionResult> obtenerUsuariosBloqueados()
         {
-            IEnumerable<UsuarioBlockDTO> data = _service.obtenerTodosUsuarios();
+            response = await _service.obtenerTodosUsuarios();
 
-            response.Data = data;
-            response.Message = DataLayer.Common.DLMessages.ListadoUsuarios;
-            response.Code = ResponseType.Success;
+            if (response.Code == ResponseType.Error) { 
+                return BadRequest(response);
+            }
 
             return Ok(new
             {
@@ -34,23 +34,35 @@ namespace API.Controllers.Seguridad
 
         [HttpPost]
         [Route(API.Common.APIRoutes.getAPIBuscarUsuarioBloqueado)]
-        public ActionResult<UsuarioBlockDTO> buscarUsuarioBloqueado(string nombreUsuario)
+        public async Task<ActionResult> buscarUsuarioBloqueado(string nombreUsuario)
         {
-            UsuarioBlockDTO data = _service.buscarUsuarioBloqueado(nombreUsuario);
+            response = await _service.buscarUsuarioBloqueado(nombreUsuario);
+
+            if (response.Code == ResponseType.Error)
+            {
+                return BadRequest(response);
+            }
+
             return Ok(new
             {
-                data
+                response
             });
         }
 
         [HttpPut]
         [Route(API.Common.APIRoutes.getAPIDesbloquearUsuario)]
-        public ActionResult<String> DesbloquearUsuario(string nombreUsuario)
+        public async Task<ActionResult> DesbloquearUsuario(string correo)
         {
-            String data = _service.DesbloquearUsuario(nombreUsuario);
+            response = await _service.DesbloquearUsuario(correo);
+
+            if (response.Code == ResponseType.Error)
+            {
+                return BadRequest(response);
+            }
+
             return Ok(new
             {
-                data
+                response
             });
         }
 

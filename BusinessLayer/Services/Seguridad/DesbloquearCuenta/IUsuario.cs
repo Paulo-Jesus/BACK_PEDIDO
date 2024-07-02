@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Models.DTO;
+using EntityLayer.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
 {
     public interface IUsuario
     {
-        IEnumerable<UsuarioBlockDTO> obtenerTodosUsuarios();
-        UsuarioBlockDTO buscarUsuarioBloqueado(string nombreUsuario);
-        String DesbloquearUsuario(string nombreUsuario);
+        Task<Response> obtenerTodosUsuarios();
+        Task<Response> buscarUsuarioBloqueado(string nombreUsuario);
+        Task<Response> DesbloquearUsuario(string nombreUsuario);
 
     }
 }
