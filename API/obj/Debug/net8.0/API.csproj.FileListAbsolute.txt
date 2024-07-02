@@ -427,3 +427,4 @@ C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\r
 C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\API.pdb
 C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\ref\API.dll
+C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs

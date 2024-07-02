@@ -48,8 +48,6 @@ namespace DataLayer.Repositories.Login
                     return response;
                 }
 
-                await _context.SaveChangesAsync();
-
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.Bienvenido;
                 response.Data = new { token = _utility.TokenInicioSesion(cuenta.IdRol.ToString(), usuario.Nombre) };
@@ -115,7 +113,7 @@ namespace DataLayer.Repositories.Login
                     return response;
             }
 
-                string textoAleatorio = _utility.GenerarTexto(50);
+                string textoAleatorio = _utility.GenerarTexto(35);
 
                 string tokenCuerpo = _utility.GenerarToken(textoAleatorio);
 
@@ -144,7 +142,8 @@ namespace DataLayer.Repositories.Login
 
                 response.Code = ResponseType.Success;
                 response.Message = "Contraseña temporal creada y token creado";
-                response.Data = $"{contrasenaTemporal}, {Correo}, {tokenCuerpo}";
+                response.Data = $"Su contraseña temporal es: {contrasenaTemporal} \n" +
+                    $"Visite el siguiente link para continuar con el proceso: login/recuperarContrasena/{tokenCuerpo}";
             }
             catch (Exception ex)
             {
