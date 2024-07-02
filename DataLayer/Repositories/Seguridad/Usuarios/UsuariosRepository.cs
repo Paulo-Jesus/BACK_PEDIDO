@@ -218,7 +218,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
         {
             try
             {
-                Usuario usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == IdUsuario);
+                Usuario? usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == IdUsuario);
 
                 usuario!.IdEstado = 2;
 

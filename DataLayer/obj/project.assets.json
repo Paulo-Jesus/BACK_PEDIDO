@@ -1556,6 +1556,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
           "Riok.Mapperly": "3.5.1"
         },
         "compile": {
@@ -4218,25 +4220,29 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "EntityLayer >= 1.0.0",
+<<<<<<< HEAD
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
+=======
+      "Microsoft.EntityFrameworkCore >= 8.0.6",
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.6"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Michael\\.nuget\\packages\\": {}
+    "C:\\Users\\VIAMATICA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
+      "projectUniqueName": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
-      "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\DataLayer\\obj\\",
+      "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
+      "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4244,14 +4250,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
-              "projectPath": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj"
+            "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
+              "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj"
             }
           }
         }
@@ -4271,9 +4278,15 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+<<<<<<< HEAD
           "Microsoft.AspNetCore.Http.Abstractions": {
             "target": "Package",
             "version": "[2.2.0, )"
+=======
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[8.0.6, )"
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
@@ -4302,7 +4315,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

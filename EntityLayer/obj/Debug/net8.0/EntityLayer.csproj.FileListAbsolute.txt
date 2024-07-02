@@ -62,3 +62,5 @@ C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\Ent
 C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
 C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
 C:\Users\Michael\Desktop\Back-Sispe\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
+C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\EntityLayer\bin\Debug\net8.0\EntityLayer.runtimeconfig.json
+C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.genruntimeconfig.cache

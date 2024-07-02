@@ -1,16 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\",
+  "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\michael\\desktop\\back-sispe\\back_pedido\\api\\controllers\\seguridad\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\controllers\\seguridad\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\datalayer\\repositories\\login\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\login\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\michael\\desktop\\back-sispe\\back_pedido\\businesslayer\\services\\seguridad\\login\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\businesslayer\\services\\seguridad\\login\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\seguridad\\login\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\michael\\desktop\\back-sispe\\back_pedido\\datalayer\\repositories\\login\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\login\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -20,13 +26,32 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\michael\\desktop\\back-sispe\\back_pedido\\api\\controllers\\login\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\api\\controllers\\login\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
       "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\controllers\\login\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\michael\\desktop\\back-sispe\\back_pedido\\datalayer\\utilities\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\entitylayer\\responses\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\responses\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VIAMATICA\\AppData\\Local\\SourceServer\\40da358f7446b331ec5bd6c4d76fca23ddf77e3d4ac043a8232e96c795f5e6a8\\API\\Controllers\\Login\\LoginController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\api\\controllers\\seguridad\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\controllers\\seguridad\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\datalayer\\utilities\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\utilities\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\michael\\desktop\\back-sispe\\back_pedido\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,6 +62,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\michael\\desktop\\back-sispe\\back_pedido\\businesslayer\\common\\blrows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\common\\blrows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\datalayer\\repositories\\login\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\login\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\businesslayer\\services\\seguridad\\login\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\seguridad\\login\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\businesslayer\\services\\seguridad\\usuarios\\iusuariosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\seguridad\\usuarios\\iusuariosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\businesslayer\\services\\seguridad\\usuarios\\usuariosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\seguridad\\usuarios\\usuariosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\desktop\\pedido3\\back_pedido\\datalayer\\repositories\\seguridad\\usuarios\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\seguridad\\usuarios\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
     }
   ],
   "DocumentGroupContainers": [
@@ -46,6 +95,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -82,13 +132,27 @@
               "RelativeDocumentMoniker": "API\\Program.cs",
               "ToolTip": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\API\\Program.cs",
               "RelativeToolTip": "API\\Program.cs",
+=======
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IUsuariosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\IUsuariosRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Seguridad\\Usuarios\\IUsuariosRepository.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\IUsuariosRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\Seguridad\\Usuarios\\IUsuariosRepository.cs",
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T04:59:39Z",
+              "WhenOpened": "2024-06-27T14:52:58.552Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
               "Title": "LoginRepository.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\DataLayer\\Repositories\\Login\\LoginRepository.cs",
@@ -96,12 +160,23 @@
               "ToolTip": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\DataLayer\\Repositories\\Login\\LoginRepository.cs",
               "RelativeToolTip": "DataLayer\\Repositories\\Login\\LoginRepository.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAYwBwAAAAoAAAA",
+=======
+              "DocumentIndex": 10,
+              "Title": "UsuariosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
+              "ViewState": "AQIAAMoAAAAAAAAAAAAuwNwAAAAYAAAA",
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T04:39:08.836Z",
+              "WhenOpened": "2024-06-27T14:52:59.153Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "LoginService.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Login\\LoginService.cs",
@@ -109,12 +184,23 @@
               "ToolTip": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Login\\LoginService.cs",
               "RelativeToolTip": "BusinessLayer\\Services\\Seguridad\\Login\\LoginService.cs",
               "ViewState": "AQIAACMAAAAAAAAAAAAgwDwAAAAJAAAA",
+=======
+              "DocumentIndex": 11,
+              "Title": "IUsuariosService.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Usuarios\\IUsuariosService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\Seguridad\\Usuarios\\IUsuariosService.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Usuarios\\IUsuariosService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\Seguridad\\Usuarios\\IUsuariosService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T04:36:36.951Z",
+              "WhenOpened": "2024-06-27T14:53:12.663Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 4,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\API\\Controllers\\Login\\LoginController.cs",
@@ -137,10 +223,23 @@
               "ViewState": "AQIAAB0AAAAAAAAAAAAswDQAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T06:05:09.372Z",
+=======
+              "DocumentIndex": 12,
+              "Title": "UsuariosService.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Usuarios\\UsuariosService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\Seguridad\\Usuarios\\UsuariosService.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Usuarios\\UsuariosService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\Seguridad\\Usuarios\\UsuariosService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:53:13.38Z",
+              "IsPinned": true,
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 8,
               "Title": "BLRows.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\BusinessLayer\\Common\\BLRows.cs",
@@ -150,10 +249,133 @@
               "ViewState": "AQIAABIAAAAAAAAAAAAYwCQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-29T23:54:10.029Z",
+=======
+              "DocumentIndex": 6,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\Controllers\\Seguridad\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\Seguridad\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\Controllers\\Seguridad\\UsuariosController.cs",
+              "RelativeToolTip": "API\\Controllers\\Seguridad\\UsuariosController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:53:17.441Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Utility.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\Utilities\\Utility.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Utilities\\Utility.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\Utilities\\Utility.cs",
+              "RelativeToolTip": "DataLayer\\Utilities\\Utility.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wC4AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:53:43.009Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ILoginRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\Repositories\\Login\\ILoginRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Login\\ILoginRepository.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\Repositories\\Login\\ILoginRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\Login\\ILoginRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:53:28.674Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\Repositories\\Login\\LoginRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Login\\LoginRepository.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\Repositories\\Login\\LoginRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\Login\\LoginRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAA5wCUAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:53:29.302Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ILoginService.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Login\\ILoginService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\Seguridad\\Login\\ILoginService.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Login\\ILoginService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\Seguridad\\Login\\ILoginService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:53:31.45Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Login\\LoginService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\Seguridad\\Login\\LoginService.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Login\\LoginService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\Seguridad\\Login\\LoginService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:53:32.379Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\Controllers\\Login\\LoginController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\Login\\LoginController.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\Controllers\\Login\\LoginController.cs",
+              "RelativeToolTip": "API\\Controllers\\Login\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:53:34.969Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\AppData\\Local\\SourceServer\\40da358f7446b331ec5bd6c4d76fca23ddf77e3d4ac043a8232e96c795f5e6a8\\API\\Controllers\\Login\\LoginController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\40da358f7446b331ec5bd6c4d76fca23ddf77e3d4ac043a8232e96c795f5e6a8\\API\\Controllers\\Login\\LoginController.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\AppData\\Local\\SourceServer\\40da358f7446b331ec5bd6c4d76fca23ddf77e3d4ac043a8232e96c795f5e6a8\\API\\Controllers\\Login\\LoginController.cs [Solo lectura]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\40da358f7446b331ec5bd6c4d76fca23ddf77e3d4ac043a8232e96c795f5e6a8\\API\\Controllers\\Login\\LoginController.cs [Solo lectura]",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAmwBoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T18:34:11.597Z",
+              "EditorCaption": " [Solo lectura]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T16:27:33.944Z",
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 7,
               "Title": "PedidosService.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\BusinessLayer\\Services\\Pedidos\\Pedidos\\PedidosService.cs",
@@ -161,8 +383,17 @@
               "ToolTip": "C:\\Users\\Michael\\Desktop\\Back-Sispe\\BACK_PEDIDO\\BusinessLayer\\Services\\Pedidos\\Pedidos\\PedidosService.cs",
               "RelativeToolTip": "BusinessLayer\\Services\\Pedidos\\Pedidos\\PedidosService.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAwwCQAAAAMAAAA",
+=======
+              "DocumentIndex": 4,
+              "Title": "Response.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\Responses\\Response.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Responses\\Response.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\Responses\\Response.cs",
+              "RelativeToolTip": "EntityLayer\\Responses\\Response.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T21:54:05.77Z",
+              "WhenOpened": "2024-07-01T15:22:18.363Z",
               "EditorCaption": ""
             }
           ]

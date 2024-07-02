@@ -9,7 +9,11 @@
       "API/1.0.0": {
         "dependencies": {
           "BusinessLayer": "1.0.0",
+<<<<<<< HEAD
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.6",
+=======
+          "Microsoft.EntityFrameworkCore": "8.0.6",
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.6",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -917,7 +921,9 @@
       },
       "BusinessLayer/1.0.0": {
         "dependencies": {
-          "DataLayer": "1.0.0"
+          "DataLayer": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6"
         },
         "runtime": {
           "BusinessLayer.dll": {}
@@ -926,7 +932,11 @@
       "DataLayer/1.0.0": {
         "dependencies": {
           "EntityLayer": "1.0.0",
+<<<<<<< HEAD
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+=======
+          "Microsoft.EntityFrameworkCore": "8.0.6",
+>>>>>>> 3a74509291b74b5a5d65f82afc2489a4dbe72dc4
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6"
         },
         "runtime": {
@@ -935,6 +945,8 @@
       },
       "EntityLayer/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
           "Riok.Mapperly": "3.5.1"
         },
         "runtime": {

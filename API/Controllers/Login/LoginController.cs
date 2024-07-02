@@ -3,6 +3,9 @@ using DataLayer.Repositories.Login;
 using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
 
 namespace API.Controllers.Login
 {
@@ -27,12 +30,13 @@ namespace API.Controllers.Login
             if (response.Code == ResponseType.Error)
                 return BadRequest(response);
 
+
             if (response.Data is LoginResponseData responseData && responseData.Issuccess)
             {
                 var cookieOptions = new CookieOptions
                 {
                     HttpOnly = true,
-                    Secure = true, // Set to true in production for HTTPS
+                    Secure = true,
                     Expires = DateTime.UtcNow.AddHours(1)
                 };
                 Response.Cookies.Append("token", responseData.Token, cookieOptions);
