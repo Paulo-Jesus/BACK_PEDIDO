@@ -24,49 +24,53 @@ namespace DataLayer.Repositories.Login
         {
             try
             {
-                var Cuenta = await _context.Cuenta.Where(
+                var cuenta = await _context.Cuenta.Where(
                         c => c.Correo == request.Correo && c.Contrasena == _utility.EncriptarContrasena(request.Contrasena)
                     ).FirstOrDefaultAsync();
 
-                if (Cuenta == null)
+                if (cuenta == null)
                 {
                     response.Code = ResponseType.Error;
                     response.Message = DLMessages.NoInicioSesion;
-                    response.Data = new { issuccess = false, token = "" };
+                    response.Data = null;
 
                     return response;
                 }
 
-                string Rol = Cuenta!.IdRol.ToString();
+                var usuario = await _context.Usuarios.Where(u => u.IdUsuario == cuenta.IdCuenta).FirstOrDefaultAsync();
 
-                var usuario = await _context.Usuarios.Where(u => u.IdUsuario == Cuenta.IdCuenta).FirstOrDefaultAsync();
+                if (usuario == null)
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = "Usuario no encontrado";
+                    response.Data = null;
 
-                string Nombre = usuario!.Nombre;
+                    return response;
+                }
+
+                await _context.SaveChangesAsync();
 
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.Bienvenido;
-                response.Data = new { issuccess = true, token = _utility.TokenInicioSesion(Rol, Nombre) };
+                response.Data = new { token = _utility.TokenInicioSesion(cuenta.IdRol.ToString(), usuario.Nombre) };
 
-                return response;
             }
             catch (Exception ex)
             {
-
                 response.Code = ResponseType.Error;
                 response.Message = ex.Message;
                 response.Data = null;
-
-                return response;
             }
+            return response;
         }
 
         public async Task<Response> GenerarContrasena(string Correo)
         {
             try 
             {
-                var cuentaExiste = await _context.Cuenta.Where(u => u.Correo == Correo).FirstOrDefaultAsync();
+                var cuenta = await _context.Cuenta.Where(u => u.Correo == Correo).FirstOrDefaultAsync();
 
-                if (cuentaExiste == null)
+                if (cuenta == null)
                 {
                     response.Code = ResponseType.Error;
                     response.Message = "Ingrese un correo existente";
@@ -75,116 +79,122 @@ namespace DataLayer.Repositories.Login
                     return response;
                 }
 
-                int IdCuenta = cuentaExiste.IdCuenta;
+                response = await EnviarCorreo(Correo, cuenta.IdCuenta);
 
-                response.Code = ResponseType.Success;
-                response.Message = "Correo existente";
-                response.Data = null;
-
-                await EnviarCorreo(Correo, IdCuenta);
-
-                return response;
+                //response.Code = ResponseType.Success;
+                //response.Message = "Correo existente";
+                //response.Data = null;
             }
             catch(Exception ex) 
             {
                 response.Code = ResponseType.Error;
                 response.Message = ex.Message;
                 response.Data = null;
-
-                return response;
             }
+
+            return response;
         }
 
         //Enviar Correo
         public async Task<Response> EnviarCorreo(string Correo, int IdCuenta) 
         {
+            using var tx = await _context.Database.BeginTransactionAsync();
+
             try
             {
-                var tokenExiste = await _context.Tokens.Where(u => u.IdCuenta == IdCuenta).FirstOrDefaultAsync();
+                var token = await _context.Tokens.Where(u => u.IdCuenta == IdCuenta).FirstOrDefaultAsync();
 
-                var cuentaExiste = await _context.Cuenta.Where(u => u.Correo == Correo).FirstOrDefaultAsync();
+                var cuenta = await _context.Cuenta.Where(u => u.Correo == Correo).FirstOrDefaultAsync();
+
+                if (cuenta == null) 
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = "Cuenta inexistente";
+                    response.Data = null;
+                    
+                    return response;
+            }
 
                 string textoAleatorio = _utility.GenerarTexto(50);
 
-                string tokenUrl = _utility.TokenRestablecerContrasena(textoAleatorio);
+                string tokenCuerpo = _utility.GenerarToken(textoAleatorio);
 
                 string contrasenaTemporal = _utility.GenerarTexto(10);
 
-                if (tokenExiste == null)
+                if (token == null)
                 {
                     Token tokenDTO = new()
                     {
-                        TokenCuerpo = tokenUrl,
+                        TokenCuerpo = tokenCuerpo,
                         IdCuenta = IdCuenta,
                         FechaExpiracion = DateTime.Now.AddMinutes(5)
                     };
                     _context.Tokens.Add(tokenDTO);
-                    _context.SaveChanges();
                 }
                 else
                 {
-                    tokenExiste!.TokenCuerpo = tokenUrl;
-                    tokenExiste.FechaExpiracion = DateTime.Now.AddMinutes(5);
-                    _context.SaveChanges();
+                    token.TokenCuerpo = tokenCuerpo;
+                    token.FechaExpiracion = DateTime.Now.AddMinutes(5);
                 }
 
-                cuentaExiste!.Contrasena = _utility.EncriptarContrasena(contrasenaTemporal);
-                _context.SaveChanges();
+                cuenta.Contrasena = _utility.EncriptarContrasena(contrasenaTemporal);
+
+                await _context.SaveChangesAsync();
+                await tx.CommitAsync();
 
                 response.Code = ResponseType.Success;
                 response.Message = "Contraseña temporal creada y token creado";
-                response.Data = $"{contrasenaTemporal}, {Correo}, {tokenUrl}";
-
-                return response;
+                response.Data = $"{contrasenaTemporal}, {Correo}, {tokenCuerpo}";
             }
             catch (Exception ex)
             {
+                await tx.RollbackAsync();
+
                 response.Code = ResponseType.Error;
                 response.Message = ex.Message;
                 response.Data = null;
-
-                return response;
             }
+            return response;
         }
 
         public async Task<Response> ComprobarToken(string tokenCuerpo)
         {
             try
             {
-                var tokenExiste = await _context.Tokens.Where(u => u.TokenCuerpo == tokenCuerpo).FirstOrDefaultAsync();
+                var token = await _context.Tokens.Where(u => u.TokenCuerpo == tokenCuerpo).FirstOrDefaultAsync();
 
-                if (tokenExiste != null)
+                if (token == null)
                 {
+
                     response.Code = ResponseType.Error;
-                    response.Message = "Se mantiene en el login";
-                    response.Data = true;
+                    response.Message = "Se va a el login";
+                    response.Data = false;
 
                     return response;
                 }
 
                 response.Code = ResponseType.Success;
-                response.Message = "Se va a el login";
-                response.Data = false;
-
-                return response;
+                response.Message = "Se mantiene en la pantalla";
+                response.Data = true;
             }
             catch (Exception ex)
             {
                 response.Code = ResponseType.Error;
                 response.Message = ex.Message;
                 response.Data = null;
-
-                return response;
             }
+            return response;
         }
 
-        public async Task<Response> RestablecerContrasena(string tokenCuerpo, string claveTemporal, string claveNueva) 
+        public async Task<Response> RestablecerContrasena(string tokenCuerpo, string contrasenaTemporal, string contrasenaNueva) 
         {
+            using var tx = await _context.Database.BeginTransactionAsync();
+            
             try
             {
-                var tokenExiste = await _context.Tokens.Where(u => u.TokenCuerpo == tokenCuerpo).FirstOrDefaultAsync();
+                var token = await _context.Tokens.Where(u => u.TokenCuerpo == tokenCuerpo).FirstOrDefaultAsync();
 
-                if (tokenExiste == null)
+                if (token == null)
                 {
                     response.Code = ResponseType.Error;
                     response.Message = "Error, token invalido";
@@ -193,11 +203,9 @@ namespace DataLayer.Repositories.Login
                     return response;
                 }
 
-                int IdCuenta = tokenExiste.IdCuenta;
-
-                var cuentaExiste = await _context.Cuenta.Where(u => u.IdCuenta == IdCuenta).FirstOrDefaultAsync();
+                var cuenta = await _context.Cuenta.Where(u => u.IdCuenta == token.IdCuenta).FirstOrDefaultAsync();
                 
-                if (cuentaExiste == null)
+                if (cuenta == null)
                 {
                     response.Code = ResponseType.Error;
                     response.Message = "Error, cuenta inexistente";
@@ -206,7 +214,7 @@ namespace DataLayer.Repositories.Login
                     return response;
                 }
 
-                if(!(cuentaExiste.Contrasena == _utility.EncriptarContrasena(claveTemporal))) 
+                if (!cuenta.Contrasena.Equals(_utility.EncriptarContrasena(contrasenaTemporal)))
                 {
                     response.Code = ResponseType.Error;
                     response.Message = "Error, clave temporal incorrecta";
@@ -215,23 +223,24 @@ namespace DataLayer.Repositories.Login
                     return response;
                 }
 
-                cuentaExiste.Contrasena = _utility.EncriptarContrasena(claveNueva);
-                _context.SaveChanges();
+                cuenta.Contrasena = _utility.EncriptarContrasena(contrasenaNueva);
+                
+                await _context.SaveChangesAsync();
+                await tx.CommitAsync();
 
                 response.Code = ResponseType.Success;
-                response.Message = "Cmabio de clave exitoso";
+                response.Message = "Cambio de clave exitoso";
                 response.Data = null;
-
-                return response;
             }
             catch (Exception ex)
             {
+                await tx.RollbackAsync();
+
                 response.Code = ResponseType.Error;
                 response.Message = ex.Message;
                 response.Data = null;
-
-                return response;
             }
+            return response;
         }
     }
 }

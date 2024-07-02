@@ -65,7 +65,7 @@ namespace DataLayer.Utilities
             return new JwtSecurityTokenHandler().WriteToken(jwtConfig);
         }
 
-        public string TokenRestablecerContrasena(string texto)
+        public string GenerarToken(string texto)
         {
             Claim[] userClaims = [
                 //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),

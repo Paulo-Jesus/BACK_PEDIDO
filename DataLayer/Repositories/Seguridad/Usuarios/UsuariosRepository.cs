@@ -58,41 +58,49 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 
         public async Task MetodoAgregar(SqlConnection connection, usuarioDTOEditar usuarioDTO)
         {
-        
-            SqlCommand command = new(DLStoredProcedures.SP_InsertarUsuarioConCuenta, connection);
-
-            command.Parameters.Add(new SqlParameter(DLParameters.Correo, SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
-            command.Parameters.Add(new SqlParameter(DLParameters.Contrasena, SqlDbType.VarChar, 100)).Value = _utility.EncriptarContrasena(usuarioDTO.Cedula);
-            command.Parameters.Add(new SqlParameter(DLParameters.IdRol, SqlDbType.Int)).Value = usuarioDTO.IdRol;
-            command.Parameters.Add(new SqlParameter(DLParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
-
-
-            command.Parameters.Add(new SqlParameter(DLParameters.Cedula, SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
-            command.Parameters.Add(new SqlParameter(DLParameters.Nombre, SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
-            command.Parameters.Add(new SqlParameter(DLParameters.Telefono, SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
-            command.Parameters.Add(new SqlParameter(DLParameters.Direccion, SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
-            command.Parameters.Add(new SqlParameter(DLParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
-            
-            command.CommandType = CommandType.StoredProcedure;
-
-            int num = await command.ExecuteNonQueryAsync();
-
-            if (num < 0)
+            try 
             {
-                response.Code = ResponseType.Success;
-                response.Message = DLMessages.UsuarioAgregado;
-                response.Data = null;
+                SqlCommand command = new(DLStoredProcedures.SP_InsertarUsuarioConCuenta, connection);
+
+                command.Parameters.Add(new SqlParameter(DLParameters.Correo, SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
+                command.Parameters.Add(new SqlParameter(DLParameters.Contrasena, SqlDbType.VarChar, 100)).Value = _utility.EncriptarContrasena(usuarioDTO.Cedula);
+                command.Parameters.Add(new SqlParameter(DLParameters.IdRol, SqlDbType.Int)).Value = usuarioDTO.IdRol;
+                command.Parameters.Add(new SqlParameter(DLParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
+
+
+                command.Parameters.Add(new SqlParameter(DLParameters.Cedula, SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
+                command.Parameters.Add(new SqlParameter(DLParameters.Nombre, SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
+                command.Parameters.Add(new SqlParameter(DLParameters.Telefono, SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
+                command.Parameters.Add(new SqlParameter(DLParameters.Direccion, SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
+                command.Parameters.Add(new SqlParameter(DLParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
+
+                command.CommandType = CommandType.StoredProcedure;
+
+                int num = await command.ExecuteNonQueryAsync();
+
+                if (num < 0)
+                {
+                    response.Code = ResponseType.Success;
+                    response.Message = DLMessages.UsuarioAgregado;
+                    response.Data = null;
+                }
+                else
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = DLMessages.UsuarioNoAgregado;
+                    response.Data = null;
+                }
             }
-            else
+            catch 
             {
-                response.Code = ResponseType.Error;
-                response.Message = DLMessages.UsuarioNoAgregado;
-                response.Data = null;
+                throw;
             }
         }
 
         public async Task<Response> Agregar(usuarioDTOEditar usuarioDTO)
         {
+            using var tx = await _context.Database.BeginTransactionAsync();
+
             try
             {
                 List<Usuario> usuarios = await _context.Usuarios
@@ -113,9 +121,14 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 }
 
                 await Editar(usuarioDTO);
+
+                await _context.SaveChangesAsync();
+                await tx.CommitAsync();
             }
             catch (Exception ex)
             {
+                await tx.RollbackAsync();
+
                 response.Code = ResponseType.Error;
                 response.Message = ex.Message;
                 response.Data = ex.Data;
@@ -183,6 +196,8 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 
         public async Task<Response> Editar(usuarioDTOEditar usuarioDTOEditar)
         {
+            using var tx = await _context.Database.BeginTransactionAsync();
+
             try
             {
                 var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == usuarioDTOEditar.IdUsuario);
@@ -200,6 +215,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 usuario.IdEstado = usuarioDTOEditar.IdEstado;
 
                 await _context.SaveChangesAsync();
+                await tx.CommitAsync();
 
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.CorreoActualizado;
@@ -207,6 +223,8 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             }
             catch (Exception ex)
             {
+                await tx.RollbackAsync();
+
                 response.Code = ResponseType.Error;
                 response.Message = ex.Message;
                 response.Data = ex.Data;
@@ -216,13 +234,25 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 
         public async Task<Response> Eliminar(int IdUsuario)
         {
+            using var tx = await _context.Database.BeginTransactionAsync();
+
             try
             {
-                Usuario usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == IdUsuario);
+                var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.IdUsuario == IdUsuario);
 
-                usuario!.IdEstado = 2;
+                if (usuario == null) 
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = "Usuario no encontrado";
+                    response.Data = null;
+
+                    return response;
+                }
+
+                usuario.IdEstado = 2;
 
                 await _context.SaveChangesAsync();
+                await tx.CommitAsync();
 
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.CorreoEliminado;
@@ -230,6 +260,8 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             }
             catch (Exception ex)
             {
+                await tx.RollbackAsync();
+
                 response.Code = ResponseType.Error;
                 response.Message = ex.Message;
                 response.Data = ex.Data;
