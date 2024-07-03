@@ -1,0 +1,119 @@
+
+ALTER PROCEDURE [dbo].[InsertarUsuarioConCuenta]
+    @Correo VARCHAR(100),
+    @Contrasena VARCHAR(100),
+    @IdRol INT,
+    @IdEstado INT,
+    @Cedula VARCHAR(10),
+    @Nombre VARCHAR(100),
+    @Telefono VARCHAR(10),
+    @Direccion VARCHAR(100),
+    @IdEmpresa INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Declarar variables para almacenar los IDs generados
+    DECLARE @IdCuenta INT;
+    DECLARE @IdUsuario INT;
+
+    -- Insertar en la tabla Cuenta
+    INSERT INTO Cuenta (Correo, Contrasena, IdRol, IdEstado)
+    VALUES (@Correo, @Contrasena, @IdRol, @IdEstado);
+
+    -- Obtener el IdCuenta generado
+    SET @IdCuenta = SCOPE_IDENTITY();
+
+    -- Insertar en la tabla Usuario
+    INSERT INTO Usuario (Cedula, Nombre, Telefono, Direccion, IdEmpresa, IdCuenta, IdEstado)
+    VALUES (@Cedula, @Nombre, @Telefono, @Direccion, @IdEmpresa, @IdCuenta, @IdEstado);
+
+    -- Obtener el IdUsuario generado
+    SET @IdUsuario = SCOPE_IDENTITY();
+END
+
+
+ALTER PROCEDURE [dbo].[sp_consultarPedidos]
+AS
+BEGIN
+       SELECT
+        p.IdPedido,
+        p.FechaPedido,
+        u.Nombre AS NombreUsuario,
+        pr.Nombre AS NombreProducto,
+        pr.Precio AS PrecioProducto,
+        1 AS Cantidad
+    FROM
+        dbo.Pedido p
+        INNER JOIN dbo.Usuario u ON p.IdUsuario = u.IdUsuario
+        INNER JOIN dbo.Producto pr ON p.IdProducto = pr.IdProducto
+END
+
+
+ALTER PROCEDURE [dbo].[sp_consultarPedidosRestaurante]
+@IdConsulta int
+AS
+BEGIN
+       SELECT
+        p.IdPedido,
+        p.FechaPedido,
+        u.Nombre AS NombreUsuario,
+        pr.Nombre AS NombreProducto,
+        pr.Precio AS PrecioProducto,
+        1 AS Cantidad 
+    FROM
+        dbo.Pedido p
+        INNER JOIN dbo.Usuario u ON p.IdUsuario = u.IdUsuario
+        INNER JOIN dbo.Producto pr ON p.IdProducto = pr.IdProducto
+		Where p.IdProveedor = @IdConsulta
+END
+
+
+ALTER PROCEDURE [dbo].[sp_consultarPedidosUsuario]
+@IdConsulta int
+AS
+BEGIN
+       SELECT
+        p.IdPedido,
+        p.FechaPedido,
+        u.Nombre AS NombreUsuario,
+        pr.Nombre AS NombreProducto,
+        pr.Precio AS PrecioProducto,
+        1 AS Cantidad 
+    FROM
+        dbo.Pedido p
+        INNER JOIN dbo.Usuario u ON p.IdUsuario = u.IdUsuario
+        INNER JOIN dbo.Producto pr ON p.IdProducto = pr.IdProducto
+		Where p.IdUsuario = @IdConsulta
+END
+
+ALTER PROCEDURE [dbo].[sp_updateRol]
+    @Nombre VARCHAR(30),
+    @IdEstado INT
+AS
+BEGIN
+    -- Actualizar la tabla ROL con el nombre del rol y el ID del estado
+    UPDATE ROL
+    SET
+        IdEstado = @IdEstado
+    WHERE Nombre = @Nombre
+END
+
+ALTER Procedure [dbo].[usp_crearRol]
+@Nombre varchar(50), @IdEstado int
+as 
+begin 
+insert into ROL(Nombre,IdEstado)values( @Nombre, @IdEstado);
+Select SCOPE_IDENTITY() as IdRol ,@Nombre as Nombre,@IdEstado as IdEstado;
+end
+
+ALTER PROCEDURE [dbo].[usp_EstadosAI]
+AS
+BEGIN
+    SELECT *
+    FROM (
+        SELECT *, ROW_NUMBER() OVER (ORDER BY IdEstado) AS RowNum
+        FROM ESTADO
+    ) AS T
+    WHERE RowNum <= 2;
+END
