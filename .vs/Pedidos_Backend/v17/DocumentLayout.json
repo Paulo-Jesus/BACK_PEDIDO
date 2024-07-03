@@ -38,8 +38,7 @@
               "RelativeToolTip": "EntityLayer\\Models\\DTO\\MenuDetalleDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T14:30:46.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T14:30:46.622Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "EntityLayer\\Models\\DTO\\MenuDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T14:30:29.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T14:30:29.595Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "DataLayer\\Repositories\\Pedidos\\Menu\\MenuRepository.cs",
               "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\DataLayer\\Repositories\\Pedidos\\Menu\\MenuRepository.cs",
               "RelativeToolTip": "DataLayer\\Repositories\\Pedidos\\Menu\\MenuRepository.cs",
-              "ViewState": "AQIAAJAAAAAAAAAAAAAAwKYAAAARAAAA",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAAwJwAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-03T14:28:04.747Z",
               "EditorCaption": ""
