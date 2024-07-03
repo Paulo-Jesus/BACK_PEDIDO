@@ -8,6 +8,7 @@ using EntityLayer.Models.Entities;
 using DataLayer.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Data;
 
 namespace DataLayer.Repositories.Pedidos.Productos
 {
@@ -19,6 +20,7 @@ namespace DataLayer.Repositories.Pedidos.Productos
         private readonly Response response = new PedidosDatabase().DatabaseConnection;
         private SqlConnection connection = new();
         private readonly Utility _utility;
+        SqlDataReader reader = null;
 
         public ProductoRepository(PedidosDatabaseContext context, Utility utility)
         {
@@ -28,16 +30,33 @@ namespace DataLayer.Repositories.Pedidos.Productos
 
         public async Task<Response> ObtenerProductos(int IdProveedor)
         {
+            connection = (SqlConnection)response.Data!;
             try
             {
-                List<Producto> productos = await _context.Productos
-                    .Where(u => u.IdEstado == 1 && u.IdProveedor == IdProveedor)
-                    .ToListAsync();
-                List<ProductoDTO> productoDTO = productos.Select(productos => productoMapper.ProductoToProductoDTO(productos)).ToList();
+                SqlCommand command = new SqlCommand(DLStoredProcedures.SP_GeneralValidation, connection);
+                command.Parameters.Add(new SqlParameter("@Type", SqlDbType.VarChar, 40)).Value = DLVariables.SP_ParamType_IP;
+                command.Parameters.Add(new SqlParameter("@IdProveedor", SqlDbType.Int)).Value = IdProveedor;
+                command.CommandType = CommandType.StoredProcedure;
+                reader = await command.ExecuteReaderAsync();
+
+                List<ProductoDTO> productosDTO = new List<ProductoDTO>();
+
+                while (await reader.ReadAsync())
+                {
+                    ProductoDTO productoDTO = new ProductoDTO();
+                    productoDTO.IdProducto = reader.GetInt32(reader.GetOrdinal("IdProducto"));
+                    productoDTO.Nombre = reader.GetString(reader.GetOrdinal("Nombre"));
+                    productoDTO.Precio = Convert.ToDouble(reader.GetDecimal(reader.GetOrdinal("Precio")));
+                    productoDTO.Categoria = reader.GetString(reader.GetOrdinal("Categoria"));
+                    productoDTO.IdCategoria = reader.GetInt32(reader.GetOrdinal("IdCategoria"));
+                    
+
+                    productosDTO.Add(productoDTO);
+                }
 
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.ListaProductos;
-                response.Data = productoDTO;
+                response.Data = productosDTO;
             }
             catch (Exception ex)
             {
@@ -47,6 +66,7 @@ namespace DataLayer.Repositories.Pedidos.Productos
             }
             return response;
         }
+
 
         public async Task<Response> IngresarProducto(ProductoDTO productoDTO)
         {

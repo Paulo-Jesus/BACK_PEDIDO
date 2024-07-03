@@ -46,8 +46,7 @@ namespace DataLayer.Repositories.Pedidos.Menu
 
                 if (Convert.ToInt32(getResp.Data) <= 0)
                 {
-                    SqlCommand command = new(DLStoredProcedures.SP_GeneralValidation, connection);
-                    command = new(DLStoredProcedures.SP_RegistrarMenu, connection);
+                    SqlCommand command = new(DLStoredProcedures.SP_RegistrarMenu, connection);
                     command.Parameters.Add(new SqlParameter("@IdProveedor", SqlDbType.Int)).Value = IdProveedor;
                     command.Parameters.Add(new SqlParameter("@HoraInicio", SqlDbType.VarChar, 10)).Value = HoraInicio;
                     command.Parameters.Add(new SqlParameter("@HoraFin", SqlDbType.VarChar, 10)).Value = HoraFin;
@@ -152,13 +151,13 @@ namespace DataLayer.Repositories.Pedidos.Menu
                 SqlCommand command = new(DLStoredProcedures.SP_ActualizarMenu, connection);
                 command.Parameters.Add(new SqlParameter("@IdProveedor", SqlDbType.Int)).Value = IdProveedor;
                 command.CommandType = CommandType.StoredProcedure;
-                reader = command.ExecuteReader();
+                reader = await command.ExecuteReaderAsync();
 
                 MenuDTO menu = null;
                 MenuDetalleDTO menuDetalle = null;
                 Object[] objetos = [];
 
-                while (reader.Read()) 
+                while (await reader.ReadAsync()) 
                 {
                     menu.IdMenu = reader.GetInt32("IdMenu");
                     menu.FechaInicio = reader.GetDateTime("FechaInicio");
