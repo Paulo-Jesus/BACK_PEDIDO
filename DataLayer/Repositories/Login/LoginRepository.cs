@@ -50,7 +50,7 @@ namespace DataLayer.Repositories.Login
 
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.Bienvenido;
-                response.Data = new { token = _utility.TokenInicioSesion(cuenta.IdRol.ToString(), usuario.Nombre) };
+                response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre) };
 
             }
             catch (Exception ex)
@@ -113,11 +113,11 @@ namespace DataLayer.Repositories.Login
                     return response;
             }
 
-                string textoAleatorio = _utility.GenerarTexto(35);
+                string textoAleatorio = Utility.GenerarTexto(35);
 
                 string tokenCuerpo = _utility.GenerarToken(textoAleatorio);
 
-                string contrasenaTemporal = _utility.GenerarTexto(10);
+                string contrasenaTemporal = Utility.GenerarTexto(10);
 
                 if (token == null)
                 {

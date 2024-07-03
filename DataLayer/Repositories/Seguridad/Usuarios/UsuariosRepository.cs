@@ -62,17 +62,17 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             {
                 SqlCommand command = new(DLStoredProcedures.SP_InsertarUsuarioConCuenta, connection);
 
-                command.Parameters.Add(new SqlParameter(DLParameters.Correo, SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
-                command.Parameters.Add(new SqlParameter(DLParameters.Contrasena, SqlDbType.VarChar, 100)).Value = _utility.EncriptarContrasena(usuarioDTO.Cedula);
-                command.Parameters.Add(new SqlParameter(DLParameters.IdRol, SqlDbType.Int)).Value = usuarioDTO.IdRol;
-                command.Parameters.Add(new SqlParameter(DLParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.Correo, SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.Contrasena, SqlDbType.VarChar, 100)).Value = _utility.EncriptarContrasena(usuarioDTO.Cedula);
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdRol, SqlDbType.Int)).Value = usuarioDTO.IdRol;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
 
 
-                command.Parameters.Add(new SqlParameter(DLParameters.Cedula, SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
-                command.Parameters.Add(new SqlParameter(DLParameters.Nombre, SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
-                command.Parameters.Add(new SqlParameter(DLParameters.Telefono, SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
-                command.Parameters.Add(new SqlParameter(DLParameters.Direccion, SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
-                command.Parameters.Add(new SqlParameter(DLParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.Cedula, SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.Nombre, SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.Telefono, SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.Direccion, SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
 
                 command.CommandType = CommandType.StoredProcedure;
 

@@ -23,8 +23,8 @@ namespace DataLayer.Repositories.Parametros
         public async Task MetodoEmpresasGuardar(SqlConnection connection, EmpresaDTO empresaDTO)
         {
             SqlCommand command = new(DLStoredProcedures.SP_InsertarEmpresa, connection);
-            command.Parameters.Add(new SqlParameter(DLParameters.RUC, SqlDbType.VarChar, 13)).Value = empresaDTO.Ruc;
-            command.Parameters.Add(new SqlParameter(DLParameters.RazonSocial, SqlDbType.VarChar, 100)).Value = empresaDTO.RazonSocial;
+            command.Parameters.Add(new SqlParameter(DLSPParameters.RUC, SqlDbType.VarChar, 13)).Value = empresaDTO.Ruc;
+            command.Parameters.Add(new SqlParameter(DLSPParameters.RazonSocial, SqlDbType.VarChar, 100)).Value = empresaDTO.RazonSocial;
             command.CommandType = CommandType.StoredProcedure;
 
             int num = await command.ExecuteNonQueryAsync();
