@@ -427,6 +427,9 @@ C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\r
 C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\API.pdb
 C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\ref\API.dll
+<<<<<<< HEAD
+C:\Users\VIAMATICA\workspace\Pedidos_Proyecto\BACK_PEDIDO\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
+=======
 C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\API\bin\Debug\net8.0\appsettings.json
 C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\API\bin\Debug\net8.0\API.exe
@@ -571,3 +574,4 @@ C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\API\obj\Debug\net8.0\refint\API.d
 C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\API\obj\Debug\net8.0\API.pdb
 C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\VIAMATICA\Desktop\Pedido3\BACK_PEDIDO\API\obj\Debug\net8.0\ref\API.dll
+>>>>>>> main

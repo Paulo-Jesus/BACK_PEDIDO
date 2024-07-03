@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DataLayer.Common;
 using EntityLayer.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,11 +35,12 @@ public partial class PedidosDatabaseContext : DbContext
 
     public virtual DbSet<Rol> Rols { get; set; }
 
+    public virtual DbSet<Token> Tokens { get; set; }
+
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=DESKTOP-TLP5NC9\\SQLEXPRESS; Database=Pedidos_Database; Trusted_Connection=True; MultipleActiveResultSets=true; TrustServerCertificate=true");
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
+        => optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable(DLVariables.ConnectionString));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -239,6 +239,21 @@ public partial class PedidosDatabaseContext : DbContext
                 .HasForeignKey(d => d.IdEstado)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Rol__IdEstado__4BAC3F29");
+        });
+
+        modelBuilder.Entity<Token>(entity =>
+        {
+            entity.HasKey(e => e.IdToken).HasName("PK__Token__D63324478147FC08");
+
+            entity.ToTable("Token");
+
+            entity.Property(e => e.FechaExpiracion).HasColumnType("datetime");
+            entity.Property(e => e.TokenCuerpo).IsUnicode(false);
+
+            entity.HasOne(d => d.IdCuentaNavigation).WithMany(p => p.Tokens)
+                .HasForeignKey(d => d.IdCuenta)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Token__IdCuenta__02FC7413");
         });
 
         modelBuilder.Entity<Usuario>(entity =>
