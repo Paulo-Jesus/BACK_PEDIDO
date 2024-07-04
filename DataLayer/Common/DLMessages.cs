@@ -28,5 +28,18 @@ namespace DataLayer.Common
         public const string ErrorMenuCreado = "Ocurrio un error al crear el Menu.";
         public const string MenuActualizado = "El menu se actualizo con exito.";
         public const string ErrorMenuActualizar = "Ocurrio un error al actualizar el producto.";
+
+        // -----
+
+        /*PROVEEDORES*/
+        public const string Msj_Registro_Exito = "Datos registrados correctamente.";
+
+        /*LOGIN*/
+        public const string Msj_Login_Exito = "Login exitoso";
+        public const string Msj_Login_Fallo = "Fallo al iniciar sesion";
+
+        /*DESBLOQUEO CUENTA*/
+        public const string Msj_Usuario_Unblock = "Cuenta Desbloqueada";
+        public const string Msj_Usuario_block = "No se pudo desbloquar el usuario seleccionado";
     }
 }
