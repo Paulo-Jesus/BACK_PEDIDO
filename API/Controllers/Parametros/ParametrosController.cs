@@ -1,4 +1,4 @@
-﻿using BusinessLayer.Services.Seguridad.Parametros;
+﻿using BusinessLayer.Services.Parametros;
 using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;

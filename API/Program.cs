@@ -1,10 +1,14 @@
 using API.Common;
 using BusinessLayer.Services.Login;
-using BusinessLayer.Services.Seguridad.Parametros;
+using BusinessLayer.Services.Parametros;
+using BusinessLayer.Services.Pedidos.HistorialPedidos;
+using BusinessLayer.Services.Seguridad.CrearPerfil;
 using BusinessLayer.Services.Seguridad.Usuarios;
 using DataLayer.Database;
+using DataLayer.Pedidos.HistorialPedidos;
 using DataLayer.Repositories.Login;
 using DataLayer.Repositories.Parametros;
+using DataLayer.Repositories.Seguridad.CrearPerfil;
 using DataLayer.Repositories.Seguridad.Usuarios;
 using DataLayer.Utilities;
 using Microsoft.EntityFrameworkCore;
@@ -39,14 +43,20 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
 });
 
-builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
-builder.Services.AddScoped<IUsuariosService, UsuariosService>();
+builder.Services.AddScoped<ILoginRepository, LoginRepository>();
+builder.Services.AddScoped<ILoginService, LoginService>();
 
 builder.Services.AddScoped<IParametrosRepository, ParametrosRepository>();
 builder.Services.AddScoped<IParametrosService, ParametrosService>();
 
-builder.Services.AddScoped<ILoginRepository, LoginRepository>();
-builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<IHistorialPedidosRepository, HistorialPedidosRepository>();
+builder.Services.AddScoped<IHistorialPedidosService, HistorialPedidosService>();
+
+builder.Services.AddScoped<ICrearPerfilRepository, CrearPerfilRepository>();
+builder.Services.AddScoped<ICrearPerfilService, CrearPerfilService>();
+
+builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
+builder.Services.AddScoped<IUsuariosService, UsuariosService>();
 
 builder.Services.AddSingleton<Utility>();
 

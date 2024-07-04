@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {}
+    "D:\\workspace\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
+    "D:\\workspace\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "D:\\workspace\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\obj\\",
+        "projectPath": "D:\\workspace\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\Paulo Jesús\\.nuget\\packages\\",
+        "outputPath": "D:\\workspace\\BACK_PEDIDO\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Paulo Jesús\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
