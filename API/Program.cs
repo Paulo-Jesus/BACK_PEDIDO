@@ -20,7 +20,13 @@ var builder = WebApplication.CreateBuilder(args);
 var key = Encoding.ASCII.GetBytes("@2024_cl@ve_de@ccesoApl1cac1on@2023_cl@_154920$#@_++&&//_2023$$0o_&%###9000");
 var jwtSettings = builder.Configuration.GetSection("Jwt");
 
-var Cors = APIVariables.Cors;
+// Cors
+builder.Services.AddCors(options => options.AddPolicy("AllowWebapp",
+                                    builder => builder
+                                                    .AllowAnyOrigin()
+                                                    .AllowAnyHeader()
+                                                    .AllowAnyMethod()));
+
 
 // Add services to the container.
 
@@ -29,13 +35,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Cors
-builder.Services.AddCors(options => options.AddPolicy(APIVariables.AllowWebapp,
-                                    builder => builder
-                                                    .AllowAnyOrigin()
-                                                    .AllowAnyHeader()
-                                                    .AllowAnyMethod()
-                                                    ));
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
@@ -63,12 +62,13 @@ builder.Services.AddSingleton<Utility>();
 //Add Context
 builder.Services.AddDbContext<PedidosDatabaseContext>
     (
-        options => options.UseSqlServer(builder.Configuration.GetConnectionString(APIVariables.ConnectionString))
+        options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"))
     );
 
 var app = builder.Build();
 
-app.UseCors(Cors);
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -76,6 +76,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowWebapp");
 
 app.UseHttpsRedirection();
 

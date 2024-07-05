@@ -74,16 +74,16 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
 
                 int num = await command.ExecuteNonQueryAsync();
 
-                if (num < 0)
+                if (num > 0)
                 {
                     response.Code = ResponseType.Success;
-                    response.Message = DLMessages.UsuarioAgregado;
+                    response.Message = "Rol Agregado";
                     response.Data = null;
                 }
                 else
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = DLMessages.UsuarioNoAgregado;
+                    response.Message = "Rol No Agregado";
                     response.Data = null;
                 }
             }
@@ -156,7 +156,7 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
                 await tx.CommitAsync();
 
                 response.Code = ResponseType.Success;
-                response.Message = DLMessages.CorreoActualizado;
+                response.Message = "Rol Editado";
                 response.Data = null;
             }
             catch (Exception ex)
@@ -164,7 +164,7 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
                 await tx.RollbackAsync();
 
                 response.Code = ResponseType.Error;
-                response.Message = ex.Message;
+                response.Message = "Rol No Editado";
                 response.Data = ex.Data;
             }
             return response;

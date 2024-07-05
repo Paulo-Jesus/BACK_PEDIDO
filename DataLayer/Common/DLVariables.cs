@@ -3,7 +3,7 @@
     public class DLVariables
     {
         public const string ConnectionString = "ConnectionString";
-        public const string ValidChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=[]{}|;:,.<>?";
+        public const string ValidChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         public const string Hexadecimal = "X2";
         public const string Rol = "Rol";
         public const string Nombre = "Nombre";

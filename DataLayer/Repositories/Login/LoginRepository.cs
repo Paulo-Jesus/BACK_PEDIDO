@@ -143,7 +143,7 @@ namespace DataLayer.Repositories.Login
                 response.Code = ResponseType.Success;
                 response.Message = "Contraseña temporal creada y token creado";
                 response.Data = $"Su contraseña temporal es: {contrasenaTemporal} \n" +
-                    $"Visite el siguiente link para continuar con el proceso: login/recuperarContrasena/{tokenCuerpo}";
+                    $"Visite el siguiente link para continuar con el proceso: http://localhost:4200/restablecer_clave/{tokenCuerpo}";
             }
             catch (Exception ex)
             {
