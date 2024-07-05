@@ -49,3 +49,16 @@ C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\
 C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
 C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
 C:\Users\VIAMATICA\Documents\Proyectos\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\bin\Debug\net8.0\EntityLayer.deps.json
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\bin\Debug\net8.0\EntityLayer.dll
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\bin\Debug\net8.0\EntityLayer.pdb
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.csproj.AssemblyReference.cache
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfoInputs.cache
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfo.cs
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.csproj.CoreCompileInputs.cache
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.sourcelink.json
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.dll
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
+D:\Desarrollo\BackEnd\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll

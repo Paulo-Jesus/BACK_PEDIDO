@@ -46,10 +46,14 @@ namespace DataLayer.Repositories.Pedidos.Productos
                     ProductoDTO productoDTO = new ProductoDTO();
                     productoDTO.IdProducto = reader.GetInt32(reader.GetOrdinal("IdProducto"));
                     productoDTO.Nombre = reader.GetString(reader.GetOrdinal("Nombre"));
+                    productoDTO.Descripcion = reader.GetString(reader.GetOrdinal("Descripcion"));
                     productoDTO.Precio = Convert.ToDouble(reader.GetDecimal(reader.GetOrdinal("Precio")));
                     productoDTO.Categoria = reader.GetString(reader.GetOrdinal("Categoria"));
                     productoDTO.IdCategoria = reader.GetInt32(reader.GetOrdinal("IdCategoria"));
-                    
+                    productoDTO.IdEstado = reader.GetInt32("IdEstado");
+                    productoDTO.ImagenBase64 = reader.IsDBNull(reader.GetOrdinal("Imagen")) ? 
+                        string.Empty : Convert.ToBase64String((byte[])reader["Imagen"]);
+
 
                     productosDTO.Add(productoDTO);
                 }

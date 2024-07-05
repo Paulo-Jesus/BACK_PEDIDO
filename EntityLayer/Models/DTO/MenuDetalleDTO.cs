@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Models.DTO
 {
-    public class MenuDetalleDTO
+    public class MenuDetalleDTO : MenuDTO
     {
         public int IdMenuDetalle { get; set; }
 

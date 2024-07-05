@@ -8,5 +8,6 @@ namespace DataLayer.Repositories.Pedidos.Menu
         Task<Response> RegistrarMenu(int idProveedor, string HoraInicio, string HoraFin, int[] IdProductos);
         Task<Response> ActualizarMenu(int IdProveedor, string HoraInicio, string HoraFin, int[] IdProductos);
         Task<Response> DatosMenu(int idProveedor, string TipoTrx);
+        Task<Response> DatosMenuCompleto(int IdProveedor);
     }
 }

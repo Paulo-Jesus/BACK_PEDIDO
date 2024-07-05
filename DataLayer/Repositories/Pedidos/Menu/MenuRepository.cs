@@ -148,30 +148,28 @@ namespace DataLayer.Repositories.Pedidos.Menu
             connection = (SqlConnection)response.Data!;
             try
             {
-                SqlCommand command = new(DLStoredProcedures.SP_ActualizarMenu, connection);
+                SqlCommand command = new(DLStoredProcedures.SP_ObtenerProductosMenu, connection);
                 command.Parameters.Add(new SqlParameter("@IdProveedor", SqlDbType.Int)).Value = IdProveedor;
                 command.CommandType = CommandType.StoredProcedure;
                 reader = await command.ExecuteReaderAsync();
 
-                MenuDTO menu = null;
-                MenuDetalleDTO menuDetalle = null;
-                Object[] objetos = [];
+                List<MenuDetalleDTO> listaMenus = new List<MenuDetalleDTO>();
 
                 while (await reader.ReadAsync()) 
                 {
-                    menu.IdMenu = reader.GetInt32("IdMenu");
-                    menu.FechaInicio = reader.GetDateTime("FechaInicio");
-                    menu.FechaFin = reader.GetDateTime("FechaFin");
+                    MenuDetalleDTO menuDetalle = new MenuDetalleDTO();
+                    menuDetalle.IdMenu = reader.GetInt32("IdMenu");
+                    menuDetalle.FechaInicio = reader.GetDateTime("FechaInicio");
+                    menuDetalle.FechaFin = reader.GetDateTime("FechaFin");
                     menuDetalle.IdMenuDetalle = reader.GetInt32("IdMenuDetalle");
                     menuDetalle.IdProducto = reader.GetInt32("IdProducto");
-                }
 
-                objetos.Append(menu);
-                objetos.Append(menuDetalle);
+                    listaMenus.Add(menuDetalle);
+                }
 
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.MenuExiste;
-                response.Data = objetos;
+                response.Data = listaMenus;
             }
             catch (Exception ex) 
             {
@@ -186,7 +184,7 @@ namespace DataLayer.Repositories.Pedidos.Menu
         /**
          * param param name="IdProveedor" Limita las consultas mostrando solo los menu de la cuenta del proveedor/restaurante
          * param name="TipoTrx" Define el tipo de transaccion a ejecutar por el SP, 
-         * Si es igual a "DLVariables.SP_ParamType_IMD" devolvera 1 si existe un menu para el restaurante y 0 si no
+         * Si es igual a "DLVariables.SP_ParamType_EMD" devolvera 1 si existe un menu para el restaurante y 0 si no
          * Si es igual a "DLVariables.SP_ParamType_IMD" devolvera la informacion basica del menu (No trae los platos)
          */
         public async Task<Response> DatosMenu(int IdProveedor, string TipoTrx)
@@ -203,7 +201,7 @@ namespace DataLayer.Repositories.Pedidos.Menu
                     int result = Convert.ToInt32(await command.ExecuteScalarAsync());
 
                     response.Code = ResponseType.Success;
-                    response.Message = DLMessages.MenuExiste;
+                    response.Message = result > 0 ? DLMessages.MenuExiste : DLMessages.SinMenu;
                     response.Data = result;
                 }
                 else if (TipoTrx.Equals(DLVariables.SP_ParamType_IMD))

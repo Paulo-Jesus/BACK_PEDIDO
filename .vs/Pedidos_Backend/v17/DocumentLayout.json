@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\",
+  "WorkspaceRootPath": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\api\\controllers\\seguridad\\desbloquearusuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\controllers\\seguridad\\desbloquearusuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\businesslayer\\services\\seguridad\\desbloquearcuenta\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\seguridad\\desbloquearcuenta\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\api\\controllers\\pedidos\\proveedor\\proveedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\controllers\\pedidos\\proveedor\\proveedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\entitylayer\\models\\entities\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\api\\controllers\\login\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\controllers\\login\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|c:\\users\\viamatica\\documents\\proyectos\\back_pedido\\api\\common\\apiroutes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|d:\\desarrollo\\backend\\back_pedido\\api\\common\\apiroutes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\common\\apiroutes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|d:\\desarrollo\\backend\\back_pedido\\datalayer\\repositories\\pedidos\\menu\\menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\pedidos\\menu\\menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|d:\\desarrollo\\backend\\back_pedido\\entitylayer\\models\\dto\\menudetalledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\dto\\menudetalledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|d:\\desarrollo\\backend\\back_pedido\\api\\controllers\\pedidos\\menu\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61A7D299-D490-479A-93A9-A995BD2B13C9}|API\\API.csproj|solutionrelative:api\\controllers\\pedidos\\menu\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|d:\\desarrollo\\backend\\back_pedido\\businesslayer\\services\\pedidos\\menu\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\pedidos\\menu\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|d:\\desarrollo\\backend\\back_pedido\\businesslayer\\services\\pedidos\\menu\\imenuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\pedidos\\menu\\imenuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +34,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -43,79 +55,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DesbloquearUsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\Controllers\\Seguridad\\DesbloquearUsuariosController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\Seguridad\\DesbloquearUsuariosController.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\Controllers\\Seguridad\\DesbloquearUsuariosController.cs",
-              "RelativeToolTip": "API\\Controllers\\Seguridad\\DesbloquearUsuariosController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAkwC4AAAANAAAA",
+              "Title": "APIRoutes.cs",
+              "DocumentMoniker": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\API\\Common\\APIRoutes.cs",
+              "RelativeDocumentMoniker": "API\\Common\\APIRoutes.cs",
+              "ToolTip": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\API\\Common\\APIRoutes.cs",
+              "RelativeToolTip": "API\\Common\\APIRoutes.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAIwAgAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T16:58:37.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioService.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\DesbloquearCuenta\\UsuarioService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Services\\Seguridad\\DesbloquearCuenta\\UsuarioService.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\DesbloquearCuenta\\UsuarioService.cs",
-              "RelativeToolTip": "BusinessLayer\\Services\\Seguridad\\DesbloquearCuenta\\UsuarioService.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAjwGkAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T16:53:13.239Z",
+              "WhenOpened": "2024-07-05T05:24:41.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Proveedor.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Proveedor.cs",
-              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Proveedor.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Proveedor.cs",
-              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Proveedor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAZAAAA",
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\API\\Controllers\\Pedidos\\Menu\\MenuController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\Pedidos\\Menu\\MenuController.cs",
+              "ToolTip": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\API\\Controllers\\Pedidos\\Menu\\MenuController.cs",
+              "RelativeToolTip": "API\\Controllers\\Pedidos\\Menu\\MenuController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAADwvzoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T16:46:53.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProveedorController.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\Controllers\\Pedidos\\Proveedor\\ProveedorController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\Pedidos\\Proveedor\\ProveedorController.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\Controllers\\Pedidos\\Proveedor\\ProveedorController.cs",
-              "RelativeToolTip": "API\\Controllers\\Pedidos\\Proveedor\\ProveedorController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T15:22:09.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\Controllers\\Login\\LoginController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\Login\\LoginController.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\Controllers\\Login\\LoginController.cs",
-              "RelativeToolTip": "API\\Controllers\\Login\\LoginController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T15:08:13.432Z",
+              "WhenOpened": "2024-07-05T04:57:27.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "APIRoutes.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\Common\\APIRoutes.cs",
-              "RelativeDocumentMoniker": "API\\Common\\APIRoutes.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\Common\\APIRoutes.cs",
-              "RelativeToolTip": "API\\Common\\APIRoutes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Title": "IMenuService.cs",
+              "DocumentMoniker": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\BusinessLayer\\Services\\Pedidos\\Menu\\IMenuService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\Pedidos\\Menu\\IMenuService.cs",
+              "ToolTip": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\BusinessLayer\\Services\\Pedidos\\Menu\\IMenuService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\Pedidos\\Menu\\IMenuService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T15:05:44.382Z",
+              "WhenOpened": "2024-07-05T04:55:47.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuService.cs",
+              "DocumentMoniker": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\BusinessLayer\\Services\\Pedidos\\Menu\\MenuService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\Pedidos\\Menu\\MenuService.cs",
+              "ToolTip": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\BusinessLayer\\Services\\Pedidos\\Menu\\MenuService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\Pedidos\\Menu\\MenuService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCIAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T04:52:16.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuDetalleDTO.cs",
+              "DocumentMoniker": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\EntityLayer\\Models\\DTO\\MenuDetalleDTO.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\DTO\\MenuDetalleDTO.cs",
+              "ToolTip": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\EntityLayer\\Models\\DTO\\MenuDetalleDTO.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\DTO\\MenuDetalleDTO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T04:48:52.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuRepository.cs",
+              "DocumentMoniker": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\DataLayer\\Repositories\\Pedidos\\Menu\\MenuRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Pedidos\\Menu\\MenuRepository.cs",
+              "ToolTip": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\DataLayer\\Repositories\\Pedidos\\Menu\\MenuRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\Pedidos\\Menu\\MenuRepository.cs",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAowKQAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T04:34:48.949Z",
               "EditorCaption": ""
             }
           ]

@@ -3,6 +3,7 @@ using BusinessLayer.Services.Seguridad.Usuarios;
 using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;
+using API.Common;
 
 namespace API.Controllers.Pedidos.Productos
 {
@@ -17,7 +18,7 @@ namespace API.Controllers.Pedidos.Productos
             _productoService = productoService;
         }
 
-        [Route("Producto/Obtener")]
+        [Route(APIRoutes.ObtenerProductos)]
         [HttpGet]
         public async Task<IActionResult> ObtenerProductos(int IdProveedor)
         {
@@ -30,7 +31,7 @@ namespace API.Controllers.Pedidos.Productos
 
         }
 
-        [Route("Producto/Ingresar")]
+        [Route(APIRoutes.IngresarProducto)]
         [HttpPost]
         public async Task<IActionResult> IngresarProducto([FromBody] ProductoDTO productoDTO)
         {
@@ -43,7 +44,7 @@ namespace API.Controllers.Pedidos.Productos
 
         }
 
-        [Route("Producto/Actualizar")]
+        [Route(APIRoutes.ActualizarProducto)]
         [HttpPut]
         public async Task<IActionResult> ActualizarProducto([FromBody] ProductoDTO productoDTO)
         {
@@ -56,7 +57,7 @@ namespace API.Controllers.Pedidos.Productos
 
         }
 
-        [Route("Producto/Estado")]
+        [Route(APIRoutes.EstadoProducto)]
         [HttpPut]
         public async Task<IActionResult> EstadoProducto(int productoId, int estado)
         {

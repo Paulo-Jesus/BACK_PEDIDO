@@ -69,7 +69,7 @@ builder.Services.AddDbContext<PedidosDatabaseContext>
 
 var app = builder.Build();
 
-app.UseCors(Cors);
+app.UseCors(APIVariables.AllowWebapp);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

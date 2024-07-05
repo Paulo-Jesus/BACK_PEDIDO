@@ -28,6 +28,7 @@ namespace DataLayer.Common
         public const string ErrorMenuCreado = "Ocurrio un error al crear el Menu.";
         public const string MenuActualizado = "El menu se actualizo con exito.";
         public const string ErrorMenuActualizar = "Ocurrio un error al actualizar el producto.";
+        public const string SinMenu = "El restaurante no ha creado el menu del dia.";
 
         // -----
 

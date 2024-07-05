@@ -7,6 +7,7 @@ namespace BusinessLayer.Services.Pedidos.Menu
     {
         Task<Response> RegistrarMenu(int idProveedor, string HoraInicio, string HoraFin, int[] IdProductos);
         Task<Response> ActualizarMenu(int IdProveedor, string HoraInicio, string HoraFin, int[] IdProductos);
-        Task<Response> ExisteMenu(int idProveedor, string TipoTrx);
+        Task<Response> TieneMenu(int idProveedor);
+        Task<Response> DatosMenuCompleto(int idProveedor);
     }
 }

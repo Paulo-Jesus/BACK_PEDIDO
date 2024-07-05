@@ -4618,19 +4618,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VIAMATICA\\.nuget\\packages\\": {}
+    "C:\\Users\\josef\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\API.csproj",
+      "projectUniqueName": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\API\\obj\\",
+      "projectPath": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\josef\\.nuget\\packages\\",
+      "outputPath": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\josef\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4645,8 +4645,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\VIAMATICA\\Documents\\Proyectos\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
+            "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "D:\\Desarrollo\\BackEnd\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
             }
           }
         }

@@ -1,6 +1,7 @@
 ﻿using DataLayer.Repositories.Pedidos.Menu;
 using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
+using DataLayer.Common;
 
 namespace BusinessLayer.Services.Pedidos.Menu
 {
@@ -25,9 +26,15 @@ namespace BusinessLayer.Services.Pedidos.Menu
             return response;
         }
 
-        public async Task<Response> ExisteMenu(int idProveedor, string TipoTrx)
+        public async Task<Response> TieneMenu(int idProveedor)
         {
-            response = await _menuRepository.DatosMenu(idProveedor, TipoTrx);
+            response = await _menuRepository.DatosMenu(idProveedor, DLVariables.SP_ParamType_EMD);
+            return response;
+        }
+
+        public async Task<Response> DatosMenuCompleto(int idProveedor)
+        {
+            response = await _menuRepository.DatosMenuCompleto(idProveedor);
             return response;
         }
     }

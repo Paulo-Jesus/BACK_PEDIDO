@@ -18,5 +18,6 @@ namespace DataLayer.Common
         public const string SP_Obtener_Todos_Usuario_Bloqueados = "SP_Obtener_Todos_Usuario_Bloqueados";
         public const string SP_ObtenerTodosProveedores = "SP_ObtenerTodosProveedores";
         public const string SP_RegistrarProveedor = "SP_RegistrarProveedor";
+        public const string SP_ObtenerProductosMenu = "OBTENER_PRODUCTOS_MENU";
     }
 }
