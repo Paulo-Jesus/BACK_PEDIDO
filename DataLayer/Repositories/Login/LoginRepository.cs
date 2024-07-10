@@ -213,6 +213,28 @@ namespace DataLayer.Repositories.Login
             return response;
         }
 
+        public async Task<Response> RecuperarContrasena(string Correo)
+        {
+            var correoExiste = await _context.Cuenta.Where(
+                    u => u.Correo == Correo
+                ).FirstOrDefaultAsync();
+
+            if (correoExiste == null)
+            {
+                response.Code = ResponseType.Error;
+                response.Message = "Ingrese un correo existente.";
+                response.Data = null;
+
+                return response;
+            }
+
+            response.Code = ResponseType.Success;
+            response.Message = "Correo de recuperación enviado!";
+            response.Data = null;
+
+            return response;
+        }
+
         public async Task<Response> RestablecerContrasena(string tokenCuerpo, string contrasenaTemporal, string contrasenaNueva) 
         {
             using var tx = await _context.Database.BeginTransactionAsync();

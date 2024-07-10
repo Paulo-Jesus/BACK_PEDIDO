@@ -86,5 +86,27 @@ namespace DataLayer.Utilities
 
             return new JwtSecurityTokenHandler().WriteToken(jwtConfig);
         }
+
+        public string generarJWT(string Rol, string Nombre)
+        {
+            Claim[] userClaims = [
+                //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
+                //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
+                new Claim("Rol",Rol),
+                new Claim("Nombre",Nombre)
+            ];
+
+            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            //SigningCredentials creadentials = new(key, SecurityAlgorithms.HmacSha256Signature); 
+            SigningCredentials creadentials = new(key, "HS256");
+
+            JwtSecurityToken jwtConfig = new(
+                    claims: userClaims,
+                    expires: DateTime.UtcNow.AddDays(1),
+                    signingCredentials: creadentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(jwtConfig);
+        }
     }
 }
