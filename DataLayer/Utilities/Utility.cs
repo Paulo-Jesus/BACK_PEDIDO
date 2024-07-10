@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using DataLayer.Common;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -16,37 +17,70 @@ namespace DataLayer.Utilities
             _configuration = configuration;
         }
 
-        public string encriptarContrasena(string texto)
+        public string EncriptarContrasena(string texto)
         {
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(texto));
+            byte[] bytes = SHA256.HashData(Encoding.UTF8.GetBytes(texto));
 
-                StringBuilder builder = new();
-                for (int i = 0; i < bytes.Length; i++)
-                {
-                    builder.Append(bytes[i].ToString("X2"));
-                }
-                return builder.ToString();
+            StringBuilder builder = new();
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                builder.Append(bytes[i].ToString(DLVariables.Hexadecimal));
             }
+            return builder.ToString();
         }
 
-        public string generarJWT(string Rol, string Nombre)
+        public static string GenerarTexto(int length)
+        {
+            string ValidChars = DLVariables.ValidChars;
+            Random random = new();
+            StringBuilder password = new();
+
+            for (int i = 0; i < length; i++)
+            {
+                int index = random.Next(ValidChars.Length);
+                password.Append(ValidChars[index]);
+            }
+
+            return password.ToString();
+        }
+
+        public string GenerarToken(string Rol, string Nombre)
         {
             Claim[] userClaims = [
                 //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
                 //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
-                new Claim("Rol",Rol),
-                new Claim("Nombre",Nombre)
+                new Claim(DLVariables.Rol,Rol),
+                new Claim(DLVariables.Nombre,Nombre)
             ];
 
-            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration[DLVariables.Jwt_Key]!));
+            //SigningCredentials creadentials = new(key, SecurityAlgorithms.HmacSha256Signature); 
+            SigningCredentials creadentials = new(key, DLVariables.HmacSha256Signature);
+
+            JwtSecurityToken jwtConfig = new(
+                    claims: userClaims,
+                    expires: DateTime.Now.AddDays(1),
+                    signingCredentials: creadentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(jwtConfig);
+        }
+
+        public string GenerarToken(string texto)
+        {
+            Claim[] userClaims = [
+                //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
+                //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
+                new Claim(DLVariables.Claim ,texto)
+            ];
+
+            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
             //SigningCredentials creadentials = new(key, SecurityAlgorithms.HmacSha256Signature); 
             SigningCredentials creadentials = new(key, "HS256");
 
             JwtSecurityToken jwtConfig = new(
                     claims: userClaims,
-                    expires: DateTime.UtcNow.AddDays(1),
+                    //expires: DateTime.Now.AddMinutes(5),
                     signingCredentials: creadentials
                 );
 

@@ -4623,11 +4623,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\API\\API.csproj",
+      "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\API.csproj",
       "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\API\\obj\\",
+      "outputPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4638,14 +4638,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\VIAMATICA\\workspace\\Pedidos_Proyecto\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
             }
           }
         }
@@ -4699,7 +4700,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
