@@ -4,8 +4,13 @@ using BusinessLayer.Services.Parametros;
 using BusinessLayer.Services.Pedidos.HistorialPedidos;
 using BusinessLayer.Services.Pedidos.Menu;
 using BusinessLayer.Services.Pedidos.Productos;
+using BusinessLayer.Services.Proveedor;
 using BusinessLayer.Services.Seguridad.CrearPerfil;
 using BusinessLayer.Services.Seguridad.Usuarios;
+using BusinessLayer.Services.Seguridad.DesbloquearCuenta;
+using BusinessLayer.Services.Seguridad.Login;
+
+
 using DataLayer.Database;
 using DataLayer.Pedidos.HistorialPedidos;
 using DataLayer.Repositories.Login;
@@ -46,26 +51,48 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
 });
 
+//Login
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 
+//Parametros
 builder.Services.AddScoped<IParametrosRepository, ParametrosRepository>();
 builder.Services.AddScoped<IParametrosService, ParametrosService>();
 
+//Pedidos 
 builder.Services.AddScoped<IHistorialPedidosRepository, HistorialPedidosRepository>();
 builder.Services.AddScoped<IHistorialPedidosService, HistorialPedidosService>();
-
-builder.Services.AddScoped<ICrearPerfilRepository, CrearPerfilRepository>();
-builder.Services.AddScoped<ICrearPerfilService, CrearPerfilService>();
-
-builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
-builder.Services.AddScoped<IProductoService, ProductoService>();
 
 builder.Services.AddScoped<IMenuRepository, MenuRepository>();
 builder.Services.AddScoped<IMenuService, MenuService>();
 
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<IProductoService, ProductoService>();
+
+//Proveedor
+builder.Services.AddScoped<IProveedor, ProveedorService>();
+
+//Seguridad
+//Crear Perfil
+builder.Services.AddScoped<ICrearPerfilRepository, CrearPerfilRepository>();
+builder.Services.AddScoped<ICrearPerfilService, CrearPerfilService>();
+
+//Desbloquear Cuenta
+builder.Services.AddScoped<IUsuario, UsuarioService>();
+builder.Services.AddScoped<IProveedordc, ProveedorServicecsdc>();
+
+//Login
+builder.Services.AddScoped<ILoginServicelg, LoginServicelg>();
+
+//Parametros
+builder.Services.AddScoped<IParametrosService, ParametrosService>();
+
+//Usuario
 builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
 builder.Services.AddScoped<IUsuariosService, UsuariosService>();
+
+
+
 
 builder.Services.AddSingleton<Utility>();
 

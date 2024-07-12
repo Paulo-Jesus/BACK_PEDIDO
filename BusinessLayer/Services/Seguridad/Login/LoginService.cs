@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services.Seguridad.Login
 {
-    public class LoginService : ILoginService
+    public class LoginServicelg : ILoginServicelg
     {
 
         private readonly ILoginRepository _loginRepository;
         private Response response = new();
 
-        public LoginService(ILoginRepository loginRepository)
+        public LoginServicelg(ILoginRepository loginRepository)
         {
             _loginRepository = loginRepository;
         }

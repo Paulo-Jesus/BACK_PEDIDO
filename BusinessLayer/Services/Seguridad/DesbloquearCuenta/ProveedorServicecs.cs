@@ -12,14 +12,14 @@ using EntityLayer.Models.DTO;
 
 namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
 {
-    public class ProveedorService : IProveedor
+    public class ProveedorServicecsdc : IProveedordc
     {
         private readonly IConfiguration _configuration;
         private readonly string _connectionString;
         List<ProveedorDTO> listaRestaurante = new();
         Response response = new();
 
-        public ProveedorService(IConfiguration configuration)
+        public ProveedorServicecsdc(IConfiguration configuration)
         {
             _configuration = configuration;
             _connectionString = configuration.GetConnectionString(DataLayer.Common.DLVariables.ConnectionString)!;

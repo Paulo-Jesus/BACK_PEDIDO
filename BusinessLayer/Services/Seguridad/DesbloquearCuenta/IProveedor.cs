@@ -9,7 +9,7 @@ using EntityLayer.Models.DTO;
 
 namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
 {
-    public interface IProveedor
+    public interface IProveedordc
     {
         Task<IEnumerable<ProveedorDTO>> GetRestaurantes();
         Task<Response> registrar(ProveedorDTO proveedor);
