@@ -36,8 +36,20 @@ namespace DataLayer.Repositories.Login
                     return response;
                 }
 
+                var usuario = await _context.Usuarios.Where(u => u.IdUsuario == cuenta.IdCuenta).FirstOrDefaultAsync();
+
+                if (usuario == null)
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = "Usuario no encontrado";
+                    response.Data = null;
+
+                    return response;
+                }
+
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.Bienvenido;
+                response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre) };
             }
             catch (Exception ex)
             {

@@ -26,5 +26,11 @@ namespace BusinessLayer.Services.Seguridad.Login
             response = await _loginRepository.IniciarSesion(request);
             return response;
         }
+
+        public async Task<Response> IniciarSesionGoogle(LoginDTO request)
+        {
+            response = await _loginRepository.IniciarSesionGoogle(request);
+            return response;
+        }
     }
 }
