@@ -2,12 +2,16 @@ using API.Common;
 using BusinessLayer.Services.Login;
 using BusinessLayer.Services.Parametros;
 using BusinessLayer.Services.Pedidos.HistorialPedidos;
+using BusinessLayer.Services.Pedidos.Menu;
+using BusinessLayer.Services.Pedidos.Productos;
 using BusinessLayer.Services.Seguridad.CrearPerfil;
 using BusinessLayer.Services.Seguridad.Usuarios;
 using DataLayer.Database;
 using DataLayer.Pedidos.HistorialPedidos;
 using DataLayer.Repositories.Login;
 using DataLayer.Repositories.Parametros;
+using DataLayer.Repositories.Pedidos.Menu;
+using DataLayer.Repositories.Pedidos.Productos;
 using DataLayer.Repositories.Seguridad.CrearPerfil;
 using DataLayer.Repositories.Seguridad.Usuarios;
 using DataLayer.Utilities;
@@ -53,6 +57,12 @@ builder.Services.AddScoped<IHistorialPedidosService, HistorialPedidosService>();
 
 builder.Services.AddScoped<ICrearPerfilRepository, CrearPerfilRepository>();
 builder.Services.AddScoped<ICrearPerfilService, CrearPerfilService>();
+
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<IProductoService, ProductoService>();
+
+builder.Services.AddScoped<IMenuRepository, MenuRepository>();
+builder.Services.AddScoped<IMenuService, MenuService>();
 
 builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
 builder.Services.AddScoped<IUsuariosService, UsuariosService>();
