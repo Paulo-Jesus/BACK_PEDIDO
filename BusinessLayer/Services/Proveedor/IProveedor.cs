@@ -9,9 +9,9 @@ using EntityLayer.Models.DTO;
 
 namespace BusinessLayer.Services.Proveedor
 {
-    public interface IProveedor
+    public interface IProveedorService
     {
-        Task<IEnumerable<ProveedorDTO>> GetRestaurantes();
+        Task<Response> GetRestaurantes();
         Task<Response> registrar(ProveedorDTO proveedor);
     }
 }

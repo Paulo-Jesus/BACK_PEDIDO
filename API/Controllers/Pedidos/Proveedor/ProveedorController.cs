@@ -11,34 +11,27 @@ namespace API.Controllers.Pedidos.Proveedor
     [ApiController]
     public class ProveedorController : ControllerBase
     {
+        private readonly IProveedorService _proveedorService;
         Response response = new();
-        ResponseType rt = new();
-        private readonly ProveedorService _serviceR;
 
-        public ProveedorController(ProveedorService service)
+        public ProveedorController(IProveedorService proveedorService)
         {
-            _serviceR = service;
+            _proveedorService = proveedorService;
         }
 
         [HttpGet]
         [Route(API.Common.APIRoutes.APIObtenerProveedores)]
-        public async Task<ActionResult<IEnumerable<Entity.Proveedor>>> GetRestaurantes()
+        public async Task<ActionResult<Response>> GetRestaurantes()
         {
-
-            IEnumerable<ProveedorDTO> data = await _serviceR.GetRestaurantes();
-
-            response.Data = data;
-            response.Message = DataLayer.Common.DLMessages.ListadoUsuarios;
-            response.Code = ResponseType.Success;
-
-            return Ok(response);
+            Response data = await _proveedorService.GetRestaurantes();
+            return Ok(data);
         }
 
         [HttpPost]
         [Route(API.Common.APIRoutes.APIRegistrarProveedores)]
         public async Task<ActionResult<Response>> GetRestaurantes([FromBody] ProveedorDTO restaurante)
         {
-            Response data = await _serviceR.registrar(restaurante);
+            Response data = await _proveedorService.registrar(restaurante);
             return Ok(new
             {
                 data

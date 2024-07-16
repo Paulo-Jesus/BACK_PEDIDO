@@ -23,6 +23,8 @@ using DataLayer.Utilities;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 using System.Text.Json.Serialization;
+using DataLayer.Repositories.Seguridad.DesbloquearCuenta;
+using DataLayer.Repositories.Proveedor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -70,7 +72,8 @@ builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 builder.Services.AddScoped<IProductoService, ProductoService>();
 
 //Proveedor
-builder.Services.AddScoped<IProveedor, ProveedorService>();
+builder.Services.AddScoped<IProveedorService, ProveedorService>();
+builder.Services.AddScoped<IProveedorRepository, ProveedorRepository>();
 
 //Seguridad
 //Crear Perfil
@@ -78,8 +81,8 @@ builder.Services.AddScoped<ICrearPerfilRepository, CrearPerfilRepository>();
 builder.Services.AddScoped<ICrearPerfilService, CrearPerfilService>();
 
 //Desbloquear Cuenta
-builder.Services.AddScoped<IUsuario, UsuarioService>();
-builder.Services.AddScoped<IProveedordc, ProveedorServicecsdc>();
+builder.Services.AddScoped<IUsuarioDcService, UsuarioDcService>();
+builder.Services.AddScoped<IUsuarioDcRepository, UsuarioDcRepository>();
 
 //Login
 builder.Services.AddScoped<ILoginServicelg, LoginServicelg>();

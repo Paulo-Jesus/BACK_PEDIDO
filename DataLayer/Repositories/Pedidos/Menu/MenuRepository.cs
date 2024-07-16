@@ -112,6 +112,8 @@ namespace DataLayer.Repositories.Pedidos.Menu
 
                 SqlCommand command = new(DLStoredProcedures.SP_ActualizarMenu, connection);
                 command.Parameters.Add(new SqlParameter("@IdMenu", SqlDbType.Int)).Value = menu?.IdMenu;
+                command.Parameters.Add(new SqlParameter("@HoraInicio", SqlDbType.VarChar, 10)).Value = HoraInicio;
+                command.Parameters.Add(new SqlParameter("@HoraFin", SqlDbType.VarChar, 10)).Value = HoraFin;
                 command.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter parameter = command.Parameters.AddWithValue("@NewValues", dtIntArray);
@@ -120,7 +122,7 @@ namespace DataLayer.Repositories.Pedidos.Menu
 
                 int newResult = await command.ExecuteNonQueryAsync();
 
-                if (newResult >= 0)
+                if (newResult < 0)
                 {
                     response.Code = ResponseType.Success;
                     response.Message = DLMessages.MenuActualizado;

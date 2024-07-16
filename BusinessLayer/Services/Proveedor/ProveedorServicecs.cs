@@ -2,87 +2,40 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using EntityLayer.Responses;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EntityLayer.Models.DTO;
+using DataLayer.Repositories.Proveedor;
+using DataLayer.Common;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace BusinessLayer.Services.Proveedor
 {
-    public class ProveedorService : IProveedor
+    public class ProveedorService : IProveedorService
     {
-        private readonly IConfiguration _configuration;
-        private readonly string _connectionString;
-        List<ProveedorDTO> listaRestaurante = new();
-        Response response = new();
+        private readonly IProveedorRepository _proveedorRepository;
+        private Response response = new();
 
-        public ProveedorService(IConfiguration configuration)
+        public ProveedorService(IProveedorRepository proveedorRepository)
         {
-            _configuration = configuration;
-            _connectionString = configuration.GetConnectionString(DataLayer.Common.DLVariables.ConnectionString)!;
+            _proveedorRepository = proveedorRepository;
         }
 
-
-        public async Task<IEnumerable<ProveedorDTO>> GetRestaurantes()
+        public async Task<Response> GetRestaurantes()
         {
-            using (SqlConnection conn = new SqlConnection(_connectionString))
-            {
-                await conn.OpenAsync();
-
-                using (SqlCommand command = new SqlCommand(DataLayer.Common.DLStoredProcedures.SP_ObtenerTodosProveedores, conn))
-                {
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-
-                    SqlDataReader reader = await command.ExecuteReaderAsync();
-
-                    while (await reader.ReadAsync())
-                    {
-                        byte[] logotipoByte = (byte[])reader[Common.BLRows.Logotipo];
-
-                        ProveedorDTO rs = new ProveedorDTO
-                        {
-                            Nombre = reader[Common.BLRows.Nombre].ToString()!,
-                            Logotipo = Convert.ToBase64String(logotipoByte),
-                        };
-                        listaRestaurante.Add(rs);
-                    }
-                    await conn.CloseAsync();
-                }
-            }
-            return listaRestaurante;
+            response = await _proveedorRepository.GetRestaurantes();
+            return response;
         }
 
         public async Task<Response> registrar(ProveedorDTO restaurante)
         {
-            using (SqlConnection conn = new SqlConnection(_connectionString))
-            {
-                SqlCommand command = new SqlCommand(DataLayer.Common.DLStoredProcedures.SP_RegistrarProveedor, conn);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
-                command.Parameters.AddWithValue(Common.BLRows.colRUC, restaurante.Ruc);
-                command.Parameters.AddWithValue(Common.BLRows.colNombre, restaurante.Nombre);
-                command.Parameters.AddWithValue(Common.BLRows.colCorreo, restaurante.Correo);
-                command.Parameters.AddWithValue(Common.BLRows.colTelefono, restaurante.Telefono);
-                command.Parameters.AddWithValue(Common.BLRows.colDireccion, restaurante.Direccion);
-                command.Parameters.AddWithValue(Common.BLRows.colLogotipo, Convert.FromBase64String(restaurante.Logotipo!));
-                command.Parameters.AddWithValue(Common.BLRows.colContrasena, restaurante.Contrasena);
-                command.Parameters.AddWithValue(Common.BLRows.colIdRol, Common.BLRows.idRolProveedor);
-                command.Parameters.AddWithValue(Common.BLRows.colIdEstado, Common.BLRows.idEstadoBloqueado);
-
-                await conn.OpenAsync();
-                SqlDataReader reader = await command.ExecuteReaderAsync();
-
-                if (await reader.ReadAsync())
-                {
-                    response.Message = DataLayer.Common.DLMessages.Msj_Registro_Exito;
-                    response.Code = ResponseType.Success;
-                    return response;
-                }
-            }
+            response = await _proveedorRepository.registrar(restaurante);
             return response;
-        }
 
+        }
     }
+
 }

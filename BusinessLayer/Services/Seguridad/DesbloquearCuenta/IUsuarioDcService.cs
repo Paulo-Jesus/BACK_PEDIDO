@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services.Seguridad.DesbloquearCuenta
 {
-    public interface IUsuario
+    public interface IUsuarioDcService
     {
         Task<Response> obtenerTodosUsuarios();
-        Task<Response> buscarUsuarioBloqueado(string nombreUsuario);
-        Task<Response> DesbloquearUsuario(string nombreUsuario);
+        Task<Response> buscarUsuarioBloqueado(string Correo);
+        Task<Response> DesbloquearUsuario(string Correo);
 
     }
 }
