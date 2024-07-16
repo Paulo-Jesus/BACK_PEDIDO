@@ -36,9 +36,11 @@ namespace DataLayer.Repositories.Login
                     return response;
                 }
 
-                var usuario = await _context.Usuarios.Where(u => u.IdUsuario == cuenta.IdCuenta).FirstOrDefaultAsync();
+                var usuario = await _context.Usuarios.Where(u => u.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
 
-                if (usuario == null)
+                var proveedor = await _context.Proveedors.Where(p => p.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
+
+                if (usuario == null && proveedor == null)
                 {
                     response.Code = ResponseType.Error;
                     response.Message = "Usuario no encontrado";
@@ -49,7 +51,14 @@ namespace DataLayer.Repositories.Login
 
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.Bienvenido;
-                response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre) };
+                if (proveedor == null)
+                {
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre) };
+                }
+                else
+                {
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre) };
+                }
             }
             catch (Exception ex)
             {
@@ -77,9 +86,11 @@ namespace DataLayer.Repositories.Login
                     return response;
                 }
 
-                var usuario = await _context.Usuarios.Where(u => u.IdUsuario == cuenta.IdCuenta).FirstOrDefaultAsync();
+                var usuario = await _context.Usuarios.Where(u => u.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
 
-                if (usuario == null)
+                var proveedor = await _context.Proveedors.Where(p => p.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
+
+                if (usuario == null && proveedor == null)
                 {
                     response.Code = ResponseType.Error;
                     response.Message = "Usuario no encontrado";
@@ -90,7 +101,15 @@ namespace DataLayer.Repositories.Login
 
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.Bienvenido;
-                response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre) };
+                if (proveedor == null)
+                {
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre) };
+                }
+                else
+                {
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre) };
+                }
+               
 
             }
             catch (Exception ex)
