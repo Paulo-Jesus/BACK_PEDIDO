@@ -13,6 +13,19 @@
         public const string SP_ParamType_EMD = "ExisteMenuDia";
         public const string SP_ParamType_IMD = "InfoMenuDia";
         public const string SP_ParamType_IP = "InfoProductos";
+        public const string IntValue = "IntValue";
+        public const string INTARRAYTYPE = "dbo.INTARRAYTYPE";
+        public const string IdMenu = "IdMenu";
+        public const string FechaInicio = "FechaInicio";
+        public const string FechaFin = "FechaFin";
+        public const string IdMenuDetalle = "IdMenuDetalle";
+        public const string IdProducto = "IdProducto";
+        public const string Descripcion = "Descripcion";
+        public const string Precio = "Precio";
+        public const string Categoria = "Categoria";
+        public const string IdCategoria = "IdCategoria";
+        public const string Imagen = "Imagen";
+        public const string usp_crearRol = "usp_crearRol";
 
 
         /*COLUMNAS TABLA USUARIO*/

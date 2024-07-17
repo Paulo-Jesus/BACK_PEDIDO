@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers.Pedidos.Menu
 {
-    [Route("api/[controller]")]
+    [Route(APIRoutes.Route)]
     [ApiController]
     public class MenuController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace API.Controllers.Pedidos.Menu
             _menuService = menuService;
         }
 
-        [Route("Menu/Ingresar")]
+        [Route(APIRoutes.MenuIngresar)]
         [HttpPost]
         public async Task<IActionResult> IngresarMenu(int idProveedor, string HoraInicio, string HoraFin, int[] IdProductos)
         {

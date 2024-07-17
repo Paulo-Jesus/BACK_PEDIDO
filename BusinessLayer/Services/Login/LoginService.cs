@@ -3,7 +3,7 @@ using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
 using System.Net.Mail;
 using System.Net;
-using DataLayer.Common;
+using BusinessLayer.Common;
 using EntityLayer.Models.Entities;
 
 namespace BusinessLayer.Services.Login
@@ -39,17 +39,17 @@ namespace BusinessLayer.Services.Login
                 response = await _loginRepository.GenerarContrasena(Correo);
 
                 // Configura el cliente SMTP con la configuración de tu servidor de correo
-                _smtpClient = new SmtpClient("smtp-mail.outlook.com")
+                _smtpClient = new SmtpClient(BLVariable.ClienteSMTP)
                 {
                     Port = 587,
-                    Credentials = new NetworkCredential("solisandrade.paulojesus@outlook.com", "MCuenta2001"),
+                    Credentials = new NetworkCredential(BLVariable.CorreoSMTP, BLVariable.ContraseñaSMTP),
                     EnableSsl = true,
                 };
 
                 MailMessage mailMessage = new()
                 {
-                    From = new MailAddress("solisandrade.paulojesus@outlook.com"),
-                    Subject = "VIAMATICA SA",
+                    From = new MailAddress(BLVariable.CorreoSMTP),
+                    Subject = BLVariable.Empresa,
 
                     //AGREGAR EL CUERPO DEL MENSAJE
                     Body = response.Data!.ToString(),
@@ -62,7 +62,7 @@ namespace BusinessLayer.Services.Login
                 await _smtpClient.SendMailAsync(mailMessage);
 
                 response.Code = ResponseType.Success;
-                response.Message = "Correo enviado correctamente";
+                response.Message = BLVariable.CorreoEnviadoCorrectamente;
                 response.Data = null;
             }
             catch (Exception ex)

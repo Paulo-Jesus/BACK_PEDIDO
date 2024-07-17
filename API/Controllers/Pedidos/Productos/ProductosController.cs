@@ -7,7 +7,7 @@ using API.Common;
 
 namespace API.Controllers.Pedidos.Productos
 {
-    [Route("api/[controller]")]
+    [Route(APIRoutes.Route)]
     [ApiController]
     public class ProductosController : ControllerBase
     {

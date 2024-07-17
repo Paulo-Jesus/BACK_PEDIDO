@@ -34,7 +34,7 @@ namespace DataLayer.Repositories.Pedidos.Menu
             try
             {
                 DataTable dtIntArray = new DataTable();
-                dtIntArray.Columns.Add("IntValue", typeof(int));
+                dtIntArray.Columns.Add(DLVariables.IntValue, typeof(int));
 
                 foreach (int idProducto in IdProductos)
                 {
@@ -47,17 +47,17 @@ namespace DataLayer.Repositories.Pedidos.Menu
                 if (Convert.ToInt32(getResp.Data) <= 0)
                 {
                     SqlCommand command = new(DLStoredProcedures.SP_RegistrarMenu, connection);
-                    command.Parameters.Add(new SqlParameter("@IdProveedor", SqlDbType.Int)).Value = IdProveedor;
-                    command.Parameters.Add(new SqlParameter("@HoraInicio", SqlDbType.VarChar, 10)).Value = HoraInicio;
-                    command.Parameters.Add(new SqlParameter("@HoraFin", SqlDbType.VarChar, 10)).Value = HoraFin;
+                    command.Parameters.Add(new SqlParameter(DLSPParameters.IdProveedor, SqlDbType.Int)).Value = IdProveedor;
+                    command.Parameters.Add(new SqlParameter(DLSPParameters.HoraInicio, SqlDbType.VarChar, 10)).Value = HoraInicio;
+                    command.Parameters.Add(new SqlParameter(DLSPParameters.HoraFin, SqlDbType.VarChar, 10)).Value = HoraFin;
                     command.CommandType = CommandType.StoredProcedure;
 
                     // Parámetro del tipo de tabla (INTARRAYTYPE)
-                    SqlParameter parameter = command.Parameters.AddWithValue("@IntArray", dtIntArray);
+                    SqlParameter parameter = command.Parameters.AddWithValue(DLSPParameters.IntArray, dtIntArray);
                     parameter.SqlDbType = SqlDbType.Structured;
 
                     // Nombre del nuevo tipo de Dato en SQL Server
-                    parameter.TypeName = "dbo.INTARRAYTYPE";
+                    parameter.TypeName = DLVariables.INTARRAYTYPE;
 
                     int newResult = await command.ExecuteNonQueryAsync();
 
@@ -100,7 +100,7 @@ namespace DataLayer.Repositories.Pedidos.Menu
             try
             {
                 DataTable dtIntArray = new DataTable();
-                dtIntArray.Columns.Add("IntValue", typeof(int));
+                dtIntArray.Columns.Add(DLVariables.IntValue, typeof(int));
 
                 foreach (int idProducto in IdProductos)
                 {
@@ -111,14 +111,14 @@ namespace DataLayer.Repositories.Pedidos.Menu
                 MenuDTO? menu = getResp.Data as MenuDTO;
 
                 SqlCommand command = new(DLStoredProcedures.SP_ActualizarMenu, connection);
-                command.Parameters.Add(new SqlParameter("@IdMenu", SqlDbType.Int)).Value = menu?.IdMenu;
-                command.Parameters.Add(new SqlParameter("@HoraInicio", SqlDbType.VarChar, 10)).Value = HoraInicio;
-                command.Parameters.Add(new SqlParameter("@HoraFin", SqlDbType.VarChar, 10)).Value = HoraFin;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdMenu, SqlDbType.Int)).Value = menu?.IdMenu;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.HoraInicio, SqlDbType.VarChar, 10)).Value = HoraInicio;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.HoraFin, SqlDbType.VarChar, 10)).Value = HoraFin;
                 command.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter parameter = command.Parameters.AddWithValue("@NewValues", dtIntArray);
+                SqlParameter parameter = command.Parameters.AddWithValue(DLSPParameters.NewValues, dtIntArray);
                 parameter.SqlDbType = SqlDbType.Structured;
-                parameter.TypeName = "dbo.INTARRAYTYPE";
+                parameter.TypeName = DLVariables.INTARRAYTYPE;
 
                 int newResult = await command.ExecuteNonQueryAsync();
 
@@ -151,7 +151,7 @@ namespace DataLayer.Repositories.Pedidos.Menu
             try
             {
                 SqlCommand command = new(DLStoredProcedures.SP_ObtenerProductosMenu, connection);
-                command.Parameters.Add(new SqlParameter("@IdProveedor", SqlDbType.Int)).Value = IdProveedor;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdProveedor, SqlDbType.Int)).Value = IdProveedor;
                 command.CommandType = CommandType.StoredProcedure;
                 reader = await command.ExecuteReaderAsync();
 
@@ -160,11 +160,11 @@ namespace DataLayer.Repositories.Pedidos.Menu
                 while (await reader.ReadAsync()) 
                 {
                     MenuDetalleDTO menuDetalle = new MenuDetalleDTO();
-                    menuDetalle.IdMenu = reader.GetInt32("IdMenu");
-                    menuDetalle.FechaInicio = reader.GetDateTime("FechaInicio");
-                    menuDetalle.FechaFin = reader.GetDateTime("FechaFin");
-                    menuDetalle.IdMenuDetalle = reader.GetInt32("IdMenuDetalle");
-                    menuDetalle.IdProducto = reader.GetInt32("IdProducto");
+                    menuDetalle.IdMenu = reader.GetInt32(DLVariables.IdMenu);
+                    menuDetalle.FechaInicio = reader.GetDateTime(DLVariables.FechaInicio);
+                    menuDetalle.FechaFin = reader.GetDateTime(DLVariables.FechaFin);
+                    menuDetalle.IdMenuDetalle = reader.GetInt32(DLVariables.IdMenuDetalle);
+                    menuDetalle.IdProducto = reader.GetInt32(DLVariables.IdProducto);
 
                     listaMenus.Add(menuDetalle);
                 }
@@ -197,8 +197,8 @@ namespace DataLayer.Repositories.Pedidos.Menu
                 if (TipoTrx.Equals(DLVariables.SP_ParamType_EMD))
                 {
                     SqlCommand command = new(DLStoredProcedures.SP_GeneralValidation, connection);
-                    command.Parameters.Add(new SqlParameter("@Type", SqlDbType.VarChar, 40)).Value = TipoTrx;
-                    command.Parameters.Add(new SqlParameter("@IdProveedor", SqlDbType.Int)).Value = IdProveedor;
+                    command.Parameters.Add(new SqlParameter(DLSPParameters.Type, SqlDbType.VarChar, 40)).Value = TipoTrx;
+                    command.Parameters.Add(new SqlParameter(DLSPParameters.IdProveedor, SqlDbType.Int)).Value = IdProveedor;
                     command.CommandType = CommandType.StoredProcedure;
                     int result = Convert.ToInt32(await command.ExecuteScalarAsync());
 
@@ -209,8 +209,8 @@ namespace DataLayer.Repositories.Pedidos.Menu
                 else if (TipoTrx.Equals(DLVariables.SP_ParamType_IMD))
                 {
                     SqlCommand command = new(DLStoredProcedures.SP_GeneralValidation, connection);
-                    command.Parameters.Add(new SqlParameter("@Type", SqlDbType.VarChar, 40)).Value = TipoTrx;
-                    command.Parameters.Add(new SqlParameter("@IdProveedor", SqlDbType.Int)).Value = IdProveedor;
+                    command.Parameters.Add(new SqlParameter(DLSPParameters.Type, SqlDbType.VarChar, 40)).Value = TipoTrx;
+                    command.Parameters.Add(new SqlParameter(DLSPParameters.IdProveedor, SqlDbType.Int)).Value = IdProveedor;
                     command.CommandType = CommandType.StoredProcedure;
                     reader = command.ExecuteReader();
 
@@ -220,10 +220,10 @@ namespace DataLayer.Repositories.Pedidos.Menu
                     {
                         menu = new MenuDTO
                         {
-                            IdMenu = reader.GetInt32("IdMenu"),
-                            FechaInicio = reader.GetDateTime("FechaInicio"),
-                            FechaFin = reader.GetDateTime("FechaFin"),
-                            IdProveedor = reader.GetInt32("IdProveedor")
+                            IdMenu = reader.GetInt32(DLVariables.IdMenu),
+                            FechaInicio = reader.GetDateTime(DLVariables.FechaInicio),
+                            FechaFin = reader.GetDateTime(DLVariables.FechaFin),
+                            IdProveedor = reader.GetInt32(DLVariables.IdProveedor)
                         };
                     }
 

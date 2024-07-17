@@ -31,7 +31,7 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
                                .Select(r => new EstadoDTO(r.Nombre))
                                .ToListAsync();
                 response.Data = estados;
-                response.Message = "Lista Generada con éxito";
+                response.Message = DLMessages.ListaGeneradaConExito;
                 response.Code = ResponseType.Success;
                 return response;
             }
@@ -49,7 +49,7 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
                 List<RolesDTO> lisRol = await _context.Rols.Select(r => new RolesDTO(r.Nombre, r.IdEstado)).ToListAsync();
 
                 response.Data = lisRol;
-                response.Message = "param.Message";
+                response.Message = DLMessages.param_Message;
                 response.Code = ResponseType.Success;
 
             }
@@ -65,10 +65,10 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
         {
             try
             {
-                SqlCommand command = new("usp_crearRol", connection);
+                SqlCommand command = new(DLVariables.usp_crearRol, connection);
 
-                command.Parameters.Add(new SqlParameter("@Nombre", SqlDbType.VarChar, 100)).Value = rol.Nombre;
-                command.Parameters.Add(new SqlParameter("@IdEstado", SqlDbType.Int)).Value = rol.Estado;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.Nombre, SqlDbType.VarChar, 100)).Value = rol.Nombre;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdEstado, SqlDbType.Int)).Value = rol.Estado;
 
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -77,13 +77,13 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
                 if (num > 0)
                 {
                     response.Code = ResponseType.Success;
-                    response.Message = "Rol Agregado";
+                    response.Message = DLMessages.RolAgregado;
                     response.Data = null;
                 }
                 else
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = "Rol No Agregado";
+                    response.Message = DLMessages.RolNoAgregado;
                     response.Data = null;
                 }
             }
@@ -156,7 +156,7 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
                 await tx.CommitAsync();
 
                 response.Code = ResponseType.Success;
-                response.Message = "Rol Editado";
+                response.Message = DLMessages.RolEditado;
                 response.Data = null;
             }
             catch (Exception ex)
@@ -164,7 +164,7 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
                 await tx.RollbackAsync();
 
                 response.Code = ResponseType.Error;
-                response.Message = "Rol No Editado";
+                response.Message = DLMessages.RolNoEditado;
                 response.Data = ex.Data;
             }
             return response;

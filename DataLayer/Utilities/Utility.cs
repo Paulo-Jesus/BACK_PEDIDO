@@ -74,9 +74,9 @@ namespace DataLayer.Utilities
                 new Claim(DLVariables.Claim ,texto)
             ];
 
-            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
+            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration[DLVariables.Jwt_Key]!));
             //SigningCredentials creadentials = new(key, SecurityAlgorithms.HmacSha256Signature); 
-            SigningCredentials creadentials = new(key, "HS256");
+            SigningCredentials creadentials = new(key, DLVariables.HmacSha256Signature);
 
             JwtSecurityToken jwtConfig = new(
                     claims: userClaims,
@@ -92,13 +92,13 @@ namespace DataLayer.Utilities
             Claim[] userClaims = [
                 //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
                 //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
-                new Claim("Rol",Rol),
-                new Claim("Nombre",Nombre)
+                new Claim(DLVariables.Rol,Rol),
+                new Claim(DLVariables.Nombre,Nombre)
             ];
 
-            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration[DLVariables.Jwt_Key]!));
             //SigningCredentials creadentials = new(key, SecurityAlgorithms.HmacSha256Signature); 
-            SigningCredentials creadentials = new(key, "HS256");
+            SigningCredentials creadentials = new(key, DLVariables.HmacSha256Signature);
 
             JwtSecurityToken jwtConfig = new(
                     claims: userClaims,

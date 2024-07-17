@@ -244,7 +244,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 if (usuario == null) 
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = "Usuario no encontrado";
+                    response.Message = DLMessages.UsuarioNoEncontrado;
                     response.Data = null;
 
                     return response;

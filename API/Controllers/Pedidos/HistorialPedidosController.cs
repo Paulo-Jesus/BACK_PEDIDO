@@ -3,10 +3,11 @@ using BusinessLayer.Services.Seguridad.Usuarios;
 using EntityLayer.Responses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using API.Common;
 
 namespace API.Controllers.Pedidos
 {
-    [Route("api/[controller]")]
+    [Route(APIRoutes.Route)]
     [ApiController]
     public class HistorialPedidosController : ControllerBase
     {
@@ -18,7 +19,7 @@ namespace API.Controllers.Pedidos
             _historialPedidosService = historialPedidosService;
         }
 
-        [Route("ObtenerPedidos")]
+        [Route(APIRoutes.ObtenerPedidos)]
         [HttpGet]
         public async Task<IActionResult> ObtenerPedidos()
         {

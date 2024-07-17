@@ -2,10 +2,11 @@
 using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;
+using API.Common;
 
 namespace API.Controllers.Login
 {
-    [Route("api/[controller]")]
+    [Route(APIRoutes.Route)]
     [ApiController]
     public class LoginController : ControllerBase
     {
@@ -17,7 +18,7 @@ namespace API.Controllers.Login
             _loginService = loginService;
         }
 
-        [Route("IniciarSesionGoogle")]
+        [Route(APIRoutes.IniciarSesionGoogle)]
         [HttpPost]
         public async Task<IActionResult> IniciarSesionGoogle(LoginDTO request)
         {
@@ -29,7 +30,7 @@ namespace API.Controllers.Login
             return Ok(response);
         }
 
-        [Route("IniciarSesion")]
+        [Route(APIRoutes.IniciarSesion)]
         [HttpPost]
         public async Task<IActionResult> IniciarSesion(LoginDTO request)
         {
@@ -41,7 +42,7 @@ namespace API.Controllers.Login
             return Ok(response);
         }
 
-        [Route("GenerarContrasena")]
+        [Route(APIRoutes.GenerarContrasena)]
         [HttpPost]
         public async Task<IActionResult> GenerarContrasena(string Correo)
         {
@@ -53,7 +54,7 @@ namespace API.Controllers.Login
             return Ok(response);
         }
 
-        [Route("ComprobarToken")]
+        [Route(APIRoutes.ComprobarToken)]
         [HttpPost]
         public async Task<IActionResult> ComprobarToekn(string tokenCuerpo)
         {
@@ -65,7 +66,7 @@ namespace API.Controllers.Login
             return Ok(response);
         }
 
-        [Route("RestablecerContrasena")]
+        [Route(APIRoutes.RestablecerContrasena)]
         [HttpPost]
         public async Task<IActionResult> RestablecerContrasena(string tokenCuerpo, string claveTemporal, string claveNueva)
         {

@@ -2,10 +2,11 @@
 using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;
+using API.Common;
 
 namespace API.Controllers.Seguridad
 {
-    [Route("api/[controller]")]
+    [Route(APIRoutes.Route)]
     [ApiController]
     public class CrearPerfilController : ControllerBase
     {
@@ -17,7 +18,7 @@ namespace API.Controllers.Seguridad
             _crearPerfilService = crearPerfilService;
         }
 
-        [Route("AddRol")]
+        [Route(APIRoutes.AddRol)]
         [HttpPost]
         public async Task<IActionResult> AddRol(RolesDTO rol)
         {
@@ -29,7 +30,7 @@ namespace API.Controllers.Seguridad
             return Ok(response);
         }
 
-        [Route("Editar")]
+        [Route(APIRoutes.Editar)]
         [HttpPut]
         public async Task<IActionResult> Editar(RolesDTO rol)
         {
@@ -41,7 +42,7 @@ namespace API.Controllers.Seguridad
             return Ok(response);
         }
 
-        [Route("GetListEstados")]
+        [Route(APIRoutes.GetListEstados)]
         [HttpGet]
         public async Task<IActionResult> GetListEstados()
         {
@@ -53,7 +54,7 @@ namespace API.Controllers.Seguridad
             return Ok(response);
         }
 
-        [Route("GetListRoles")]
+        [Route(APIRoutes.GetListRoles)]
         [HttpGet]
         public async Task<IActionResult> GetListRoles()
         {

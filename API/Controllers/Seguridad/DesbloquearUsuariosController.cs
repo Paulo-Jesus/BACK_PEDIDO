@@ -2,10 +2,10 @@
 using EntityLayer.Models.DTO;
 using Microsoft.AspNetCore.Mvc;
 using EntityLayer.Responses;
-
+using API.Common;
 namespace API.Controllers.Seguridad
 {
-    [Route("api/[controller]")]
+    [Route(APIRoutes.Route)]
     [ApiController]
     public class DesbloquearUsuariosController : ControllerBase
     {
@@ -17,7 +17,7 @@ namespace API.Controllers.Seguridad
             _usuarioDcService = serviceDC;
         }
 
-        [Route(API.Common.APIRoutes.getAPIObtenerUsuariosBloqueados)]
+        [Route(APIRoutes.getAPIObtenerUsuariosBloqueados)]
         [HttpGet]
         public async Task<IActionResult> obtenerUsuariosBloqueados()
         {
@@ -31,7 +31,7 @@ namespace API.Controllers.Seguridad
         }
 
         [HttpPost]
-        [Route(API.Common.APIRoutes.getAPIBuscarUsuarioBloqueado)]
+        [Route(APIRoutes.getAPIBuscarUsuarioBloqueado)]
         public async Task<ActionResult> buscarUsuarioBloqueado(string nombreUsuario)
         {
             response = await _usuarioDcService.buscarUsuarioBloqueado(nombreUsuario);
@@ -48,7 +48,7 @@ namespace API.Controllers.Seguridad
         }
 
         [HttpPut]
-        [Route(API.Common.APIRoutes.getAPIDesbloquearUsuario)]
+        [Route(APIRoutes.getAPIDesbloquearUsuario)]
         public async Task<ActionResult> DesbloquearUsuario(string correo)
         {
             response = await _usuarioDcService.DesbloquearUsuario(correo);

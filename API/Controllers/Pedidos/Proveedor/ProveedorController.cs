@@ -4,10 +4,11 @@ using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;
 using EntityLayer.Models.DTO;
 using BusinessLayer.Services.Proveedor;
+using API.Common;
 
 namespace API.Controllers.Pedidos.Proveedor
 {
-    [Route("api/[controller]")]
+    [Route(APIRoutes.Route)]
     [ApiController]
     public class ProveedorController : ControllerBase
     {

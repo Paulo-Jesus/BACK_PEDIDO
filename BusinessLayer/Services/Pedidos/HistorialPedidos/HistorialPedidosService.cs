@@ -2,6 +2,7 @@
 using DataLayer.Repositories.Parametros;
 using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
+using BusinessLayer.Common;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -34,11 +35,11 @@ namespace BusinessLayer.Services.Pedidos.HistorialPedidos
                     {
                         PedidosDto pedido = new()
                         {
-                            FechaPedido = row["FechaPedido"].ToString()!,
-                            NombreUsuario  = row["NombreUsuario"].ToString()!,
-                            NombrePedido = row["NombreProducto"].ToString()!,
-                            PrecioProducto = decimal.Parse(row["PrecioProducto"].ToString()!),
-                            Cantidad = int.Parse(row["Cantidad"].ToString()!)
+                            FechaPedido = row[BLVariable.FechaPedido].ToString()!,
+                            NombreUsuario  = row[BLVariable.NombreUsuario].ToString()!,
+                            NombrePedido = row[BLVariable.NombreProducto].ToString()!,
+                            PrecioProducto = decimal.Parse(row[BLVariable.PrecioProducto].ToString()!),
+                            Cantidad = int.Parse(row[BLVariable.Cantidad].ToString()!)
                         };
                         pedidos.Add(pedido);
                     }
