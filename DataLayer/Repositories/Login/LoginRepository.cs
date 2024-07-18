@@ -53,11 +53,11 @@ namespace DataLayer.Repositories.Login
                 response.Message = DLMessages.Bienvenido;
                 if (proveedor == null)
                 {
-                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre) };
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre, usuario.IdUsuario.ToString()) };
                 }
                 else
                 {
-                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre) };
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre, proveedor.IdProveedor.ToString()) };
                 }
             }
             catch (Exception ex)
@@ -103,11 +103,11 @@ namespace DataLayer.Repositories.Login
                 response.Message = DLMessages.Bienvenido;
                 if (proveedor == null)
                 {
-                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre) };
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre, usuario.IdUsuario.ToString()) };
                 }
                 else
                 {
-                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre) };
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre, proveedor.IdProveedor.ToString()) };
                 }
                
 

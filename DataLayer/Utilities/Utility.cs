@@ -44,13 +44,14 @@ namespace DataLayer.Utilities
             return password.ToString();
         }
 
-        public string GenerarToken(string Rol, string Nombre)
+        public string GenerarToken(string Rol, string Nombre, string Id)
         {
             Claim[] userClaims = [
                 //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
                 //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
                 new Claim(DLVariables.Rol,Rol),
-                new Claim(DLVariables.Nombre,Nombre)
+                new Claim(DLVariables.Nombre,Nombre),
+                new Claim(DLVariables.Id, Id)
             ];
 
             SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration[DLVariables.Jwt_Key]!));
