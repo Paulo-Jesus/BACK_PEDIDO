@@ -4164,19 +4164,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VIAMATICA\\.nuget\\packages\\": {}
+    "C:\\Users\\VIAMATICA\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
+      "projectUniqueName": "C:\\Users\\VIAMATICA\\Documents\\GitHub\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
+      "projectPath": "C:\\Users\\VIAMATICA\\Documents\\GitHub\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
       "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\DataLayer\\obj\\",
+      "outputPath": "C:\\Users\\VIAMATICA\\Documents\\GitHub\\BACK_PEDIDO\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4191,8 +4196,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
-              "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\Pedido3\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj"
+            "C:\\Users\\VIAMATICA\\Documents\\GitHub\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
+              "projectPath": "C:\\Users\\VIAMATICA\\Documents\\GitHub\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj"
             }
           }
         }

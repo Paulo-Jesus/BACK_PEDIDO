@@ -2,10 +2,11 @@
 using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;
+using API.Common;
 
 namespace API.Controllers.Seguridad
 {
-    [Route("api/[controller]")]
+    [Route(APIRoutes.Route)]
     [ApiController]
     public class UsuariosController : ControllerBase
     {
@@ -17,7 +18,7 @@ namespace API.Controllers.Seguridad
             _usuariosService = usuariosService;
         }
 
-        [Route("ObtenerTodos")]
+        [Route(APIRoutes.ObtenerTodos)]
         [HttpGet]
         public async Task<IActionResult> Obtener()
         {
@@ -30,7 +31,7 @@ namespace API.Controllers.Seguridad
 
         }        
 
-        [Route("Buscar")]
+        [Route(APIRoutes.Buscar)]
         [HttpGet]
         public async Task<IActionResult> Buscar(string? Cedula, string? Nombre, int? IdEmpresa)
         {
@@ -42,7 +43,7 @@ namespace API.Controllers.Seguridad
             return Ok(response);
         }
 
-        [Route("Agregar")]
+        [Route(APIRoutes.Agregar)]
         [HttpPost]
         public async Task<IActionResult> Agregar([FromBody] usuarioDTOEditar usuarioDTO)
         {
@@ -55,7 +56,7 @@ namespace API.Controllers.Seguridad
 
         }
 
-        [Route("Editar")]
+        [Route(APIRoutes.Editar)]
         [HttpPut]
         public async Task<IActionResult> Editar([FromBody] usuarioDTOEditar usuarioDTO)
         {
@@ -67,7 +68,7 @@ namespace API.Controllers.Seguridad
             return Ok(response);
         }
 
-        [Route("Eliminar")]
+        [Route(APIRoutes.Eliminar)]
         [HttpDelete]
         public async Task<IActionResult> Eliminar(int IdUsuario)
         {

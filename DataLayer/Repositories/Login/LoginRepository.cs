@@ -2,7 +2,7 @@
 using DataLayer.Database;
 using DataLayer.Utilities;
 using EntityLayer.Models.DTO;
-using EntityLayer.Models.Entities;
+using Entities = EntityLayer.Models.Entities;
 using EntityLayer.Responses;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,11 +20,60 @@ namespace DataLayer.Repositories.Login
             _utility = utility;
         }
 
+        public async Task<Response> IniciarSesionGoogle(LoginDTO request)
+        {
+            try
+            {
+                Entities.Cuenta? cuenta = await _context.Cuenta.Where(
+                        c => c.Correo == request.Correo).FirstOrDefaultAsync();
+
+                if (cuenta == null)
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = DLMessages.NoInicioSesion;
+                    response.Data = null;
+
+                    return response;
+                }
+
+                Entities.Usuario? usuario = await _context.Usuarios.Where(u => u.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
+
+                Entities.Proveedor? proveedor = await _context.Proveedors.Where(p => p.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
+
+                if (usuario == null && proveedor == null)
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = DLMessages.UsuarioNoEncontrado;
+                    response.Data = null;
+
+                    return response;
+                }
+
+                response.Code = ResponseType.Success;
+                response.Message = DLMessages.Bienvenido;
+                if (proveedor == null)
+                {
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre, usuario.IdUsuario.ToString()) };
+                }
+                else
+                {
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre, proveedor.IdProveedor.ToString()) };
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Code = ResponseType.Error;
+                response.Message = ex.Message;
+                response.Data = null;
+            }
+            return response;
+        }
+
         public async Task<Response> IniciarSesion(LoginDTO request)
         {
             try
             {
-                var cuenta = await _context.Cuenta.Where(
+                Entities.Cuenta? cuenta = await _context.Cuenta.Where(
                         c => c.Correo == request.Correo && c.Contrasena == _utility.EncriptarContrasena(request.Contrasena)
                     ).FirstOrDefaultAsync();
 
@@ -37,12 +86,14 @@ namespace DataLayer.Repositories.Login
                     return response;
                 }
 
-                var usuario = await _context.Usuarios.Where(u => u.IdUsuario == cuenta.IdCuenta).FirstOrDefaultAsync();
+                Entities.Usuario? usuario = await _context.Usuarios.Where(u => u.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
 
-                if (usuario == null)
+                Entities.Proveedor? proveedor = await _context.Proveedors.Where(p => p.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
+
+                if (usuario == null && proveedor == null)
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = "Usuario no encontrado";
+                    response.Message = DLMessages.UsuarioNoEncontrado;
                     response.Data = null;
 
                     return response;
@@ -50,7 +101,15 @@ namespace DataLayer.Repositories.Login
 
                 response.Code = ResponseType.Success;
                 response.Message = DLMessages.Bienvenido;
-                response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre) };
+                if (proveedor == null)
+                {
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre, usuario.IdUsuario.ToString()) };
+                }
+                else
+                {
+                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre, proveedor.IdProveedor.ToString()) };
+                }
+               
 
             }
             catch (Exception ex)
@@ -66,12 +125,12 @@ namespace DataLayer.Repositories.Login
         {
             try 
             {
-                var cuenta = await _context.Cuenta.Where(u => u.Correo == Correo).FirstOrDefaultAsync();
+                Entities.Cuenta? cuenta = await _context.Cuenta.Where(u => u.Correo == Correo).FirstOrDefaultAsync();
 
                 if (cuenta == null)
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = "Ingrese un correo existente";
+                    response.Message = DLMessages.IngreseCorreoExistente;
                     response.Data = null;
 
                     return response;
@@ -100,14 +159,14 @@ namespace DataLayer.Repositories.Login
 
             try
             {
-                var token = await _context.Tokens.Where(u => u.IdCuenta == IdCuenta).FirstOrDefaultAsync();
+                Entities.Token? token = await _context.Tokens.Where(u => u.IdCuenta == IdCuenta).FirstOrDefaultAsync();
 
-                var cuenta = await _context.Cuenta.Where(u => u.Correo == Correo).FirstOrDefaultAsync();
+                Entities.Cuenta? cuenta = await _context.Cuenta.Where(u => u.Correo == Correo).FirstOrDefaultAsync();
 
                 if (cuenta == null) 
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = "Cuenta inexistente";
+                    response.Message = DLMessages.CuentaInexistente;
                     response.Data = null;
                     
                     return response;
@@ -121,7 +180,7 @@ namespace DataLayer.Repositories.Login
 
                 if (token == null)
                 {
-                    Token tokenDTO = new()
+                    Entities.Token? tokenDTO = new()
                     {
                         TokenCuerpo = tokenCuerpo,
                         IdCuenta = IdCuenta,
@@ -141,9 +200,8 @@ namespace DataLayer.Repositories.Login
                 await tx.CommitAsync();
 
                 response.Code = ResponseType.Success;
-                response.Message = "Contraseña temporal creada y token creado";
-                response.Data = $"Su contraseña temporal es: {contrasenaTemporal} \n" +
-                    $"Visite el siguiente link para continuar con el proceso: login/recuperarContrasena/{tokenCuerpo}";
+                response.Message = DLMessages.ContraseniaTemporalCreada;
+                response.Data = DLMessages.EnvioContraseniaTemporal(contrasenaTemporal, tokenCuerpo);
             }
             catch (Exception ex)
             {
@@ -160,20 +218,20 @@ namespace DataLayer.Repositories.Login
         {
             try
             {
-                var token = await _context.Tokens.Where(u => u.TokenCuerpo == tokenCuerpo).FirstOrDefaultAsync();
+                Entities.Token? token = await _context.Tokens.Where(u => u.TokenCuerpo == tokenCuerpo).FirstOrDefaultAsync();
 
                 if (token == null)
                 {
 
                     response.Code = ResponseType.Error;
-                    response.Message = "Se va a el login";
+                    response.Message = DLMessages.SeFueAlLogin;
                     response.Data = false;
 
                     return response;
                 }
 
                 response.Code = ResponseType.Success;
-                response.Message = "Se mantiene en la pantalla";
+                response.Message = DLMessages.SeMantiene;
                 response.Data = true;
             }
             catch (Exception ex)
@@ -185,29 +243,51 @@ namespace DataLayer.Repositories.Login
             return response;
         }
 
+        public async Task<Response> RecuperarContrasena(string Correo)
+        {
+            Entities.Cuenta? correoExiste = await _context.Cuenta.Where(
+                    u => u.Correo == Correo
+                ).FirstOrDefaultAsync();
+
+            if (correoExiste == null)
+            {
+                response.Code = ResponseType.Error;
+                response.Message = DLMessages.IngreseCorreoExistente;
+                response.Data = null;
+
+                return response;
+            }
+
+            response.Code = ResponseType.Success;
+            response.Message = DLMessages.CorreoRecuperacionEnviado;
+            response.Data = null;
+
+            return response;
+        }
+
         public async Task<Response> RestablecerContrasena(string tokenCuerpo, string contrasenaTemporal, string contrasenaNueva) 
         {
             using var tx = await _context.Database.BeginTransactionAsync();
             
             try
             {
-                var token = await _context.Tokens.Where(u => u.TokenCuerpo == tokenCuerpo).FirstOrDefaultAsync();
+                Entities.Token? token = await _context.Tokens.Where(u => u.TokenCuerpo == tokenCuerpo).FirstOrDefaultAsync();
 
                 if (token == null)
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = "Error, token invalido";
+                    response.Message = DLMessages.TokenInvalido;
                     response.Data = null;
 
                     return response;
                 }
 
-                var cuenta = await _context.Cuenta.Where(u => u.IdCuenta == token.IdCuenta).FirstOrDefaultAsync();
+                Entities.Cuenta? cuenta = await _context.Cuenta.Where(u => u.IdCuenta == token.IdCuenta).FirstOrDefaultAsync();
                 
                 if (cuenta == null)
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = "Error, cuenta inexistente";
+                    response.Message = DLMessages.CuentaInexistente;
                     response.Data = null;
 
                     return response;
@@ -216,7 +296,7 @@ namespace DataLayer.Repositories.Login
                 if (!cuenta.Contrasena.Equals(_utility.EncriptarContrasena(contrasenaTemporal)))
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = "Error, clave temporal incorrecta";
+                    response.Message = DLMessages.ClaveTemprotalIncorrecta;
                     response.Data = null;
 
                     return response;
@@ -228,7 +308,7 @@ namespace DataLayer.Repositories.Login
                 await tx.CommitAsync();
 
                 response.Code = ResponseType.Success;
-                response.Message = "Cambio de clave exitoso";
+                response.Message = DLMessages.CambioClaveExitoso;
                 response.Data = null;
             }
             catch (Exception ex)

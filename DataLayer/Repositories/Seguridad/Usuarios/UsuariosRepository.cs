@@ -32,6 +32,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 List<Usuario> usuarios = await _context.Usuarios
                     .Where(u => u.IdEstado == 1)
                     .ToListAsync();
+
                 List<UsuarioDTO> usuariosDTO = usuarios.Select(usuarios => usuarioMapper.UsuarioToUsuarioDTO(usuarios)).ToList();
 
                 if (usuarios.Count < 1)
@@ -65,7 +66,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Correo, SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Contrasena, SqlDbType.VarChar, 100)).Value = _utility.EncriptarContrasena(usuarioDTO.Cedula);
                 command.Parameters.Add(new SqlParameter(DLSPParameters.IdRol, SqlDbType.Int)).Value = usuarioDTO.IdRol;
-                command.Parameters.Add(new SqlParameter(DLSPParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdEstado, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
 
 
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Cedula, SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
@@ -243,7 +244,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 if (usuario == null) 
                 {
                     response.Code = ResponseType.Error;
-                    response.Message = "Usuario no encontrado";
+                    response.Message = DLMessages.UsuarioNoEncontrado;
                     response.Data = null;
 
                     return response;
