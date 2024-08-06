@@ -20,11 +20,7 @@ namespace API.Controllers.Seguridad
 
         [Route(APIRoutes.AddRol)]
         [HttpPost]
-<<<<<<< Updated upstream
-        public async Task<IActionResult> AddRol(RolesDTO rol)
-=======
         public async Task<IActionResult> AddRol(RolDTO rol)
->>>>>>> Stashed changes
         {
             response = await _crearPerfilService.AddRol(rol);
 
@@ -36,11 +32,7 @@ namespace API.Controllers.Seguridad
 
         [Route(APIRoutes.Editar)]
         [HttpPut]
-<<<<<<< Updated upstream
-        public async Task<IActionResult> Editar(RolesDTO rol)
-=======
         public async Task<IActionResult> Editar(RolDTO rol)
->>>>>>> Stashed changes
         {
             response = await _crearPerfilService.Editar(rol);
 

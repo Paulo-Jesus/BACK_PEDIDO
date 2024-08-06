@@ -58,19 +58,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-      "projectUniqueName": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
-      "projectName": "EntityLayer",
-      "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
-      "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\EntityLayer\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\EntityLayer\\EntityLayer.csproj",
       "projectName": "EntityLayer",
       "projectPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\EntityLayer\\EntityLayer.csproj",
       "packagesPath": "C:\\Users\\VIAMATICA S.A\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\EntityLayer\\obj\\",
->>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

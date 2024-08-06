@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "dIiUEpVtC4A=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\API.csproj",
-=======
   "dgSpecHash": "r9o8JyOHvO8=",
   "success": true,
   "projectFilePath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\API\\API.csproj",
->>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\VIAMATICA S.A\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\VIAMATICA S.A\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

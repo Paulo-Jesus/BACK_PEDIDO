@@ -122,8 +122,6 @@ C:\Users\VIAMATICA\Documents\BACK_PEDIDO\BusinessLayer\obj\Debug\net8.0\Business
 C:\Users\VIAMATICA\Documents\BACK_PEDIDO\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll
 C:\Users\VIAMATICA\Documents\BACK_PEDIDO\BusinessLayer\obj\Debug\net8.0\BusinessLayer.pdb
 C:\Users\VIAMATICA\Documents\BACK_PEDIDO\BusinessLayer\obj\Debug\net8.0\ref\BusinessLayer.dll
-<<<<<<< Updated upstream
-=======
 C:\Users\VIAMATICA\Documents\GitHub\BACK_PEDIDO\BusinessLayer\bin\Debug\net8.0\BusinessLayer.deps.json
 C:\Users\VIAMATICA\Documents\GitHub\BACK_PEDIDO\BusinessLayer\bin\Debug\net8.0\BusinessLayer.dll
 C:\Users\VIAMATICA\Documents\GitHub\BACK_PEDIDO\BusinessLayer\bin\Debug\net8.0\BusinessLayer.pdb
@@ -159,4 +157,3 @@ C:\Users\VIAMATICA S.A\Downloads\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BACK_PEDIDO-BAC
 C:\Users\VIAMATICA S.A\Downloads\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll
 C:\Users\VIAMATICA S.A\Downloads\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BusinessLayer\obj\Debug\net8.0\BusinessLayer.pdb
 C:\Users\VIAMATICA S.A\Downloads\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BusinessLayer\obj\Debug\net8.0\ref\BusinessLayer.dll
->>>>>>> Stashed changes

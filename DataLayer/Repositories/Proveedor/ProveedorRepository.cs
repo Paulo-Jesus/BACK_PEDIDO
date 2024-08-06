@@ -53,10 +53,7 @@ namespace DataLayer.Repositories.Proveedor
 
                         ProveedorDTO rs = new ProveedorDTO
                         {
-<<<<<<< Updated upstream
-=======
                             IdProveedor = Convert.ToInt32(reader[DLVariables.IdProveedor]),
->>>>>>> Stashed changes
                             Nombre = reader[DLVariables.Nombre].ToString()!,
                             Logotipo = Convert.ToBase64String(logotipoByte),
                         };

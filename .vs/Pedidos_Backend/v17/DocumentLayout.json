@@ -1,18 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\",
+  "WorkspaceRootPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\documents\\back_pedido\\datalayer\\repositories\\login\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\login\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\documents\\back_pedido\\datalayer\\utilities\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\utilities\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica\\documents\\back_pedido\\datalayer\\common\\dlvariables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\common\\dlvariables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica s.a\\downloads\\back_pedido-back_pedido_roberto\\back_pedido-back_pedido_roberto\\datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,46 +13,20 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 88,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginRepository.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\Repositories\\Login\\LoginRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Login\\LoginRepository.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\Repositories\\Login\\LoginRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repositories\\Login\\LoginRepository.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowGkAAACNAAAA",
+              "Title": "UsuariosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwKIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T17:04:37.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DLVariables.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\Common\\DLVariables.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Common\\DLVariables.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\Common\\DLVariables.cs",
-              "RelativeToolTip": "DataLayer\\Common\\DLVariables.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T17:03:08.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Utility.cs",
-              "DocumentMoniker": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\Utilities\\Utility.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Utilities\\Utility.cs",
-              "ToolTip": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\Utilities\\Utility.cs",
-              "RelativeToolTip": "DataLayer\\Utilities\\Utility.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAwwDUAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T17:02:36.064Z",
+              "WhenOpened": "2024-08-05T19:57:54.172Z",
               "EditorCaption": ""
             }
           ]

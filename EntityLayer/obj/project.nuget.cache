@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "B81auF3ZkBY=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
-=======
   "dgSpecHash": "vkU2ZTVOxfU=",
   "success": true,
   "projectFilePath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\EntityLayer\\EntityLayer.csproj",
->>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\VIAMATICA S.A\\.nuget\\packages\\riok.mapperly\\3.5.1\\riok.mapperly.3.5.1.nupkg.sha512"
   ],

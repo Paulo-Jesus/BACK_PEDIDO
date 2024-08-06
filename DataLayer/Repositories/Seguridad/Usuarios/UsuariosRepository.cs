@@ -35,8 +35,6 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                     .Where(u => u.IdEstado == 1)
                     .ToListAsync();
 
-<<<<<<< Updated upstream
-=======
                 Entities.Cuenta? cuenta = await _context.Cuenta.FirstOrDefaultAsync();
 
                 if (cuenta == null)
@@ -50,7 +48,6 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 
                 Entities.Usuario? usuario = await _context.Usuarios.Where(u => u.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
 
->>>>>>> Stashed changes
                 List<UsuarioDTO> usuariosDTO = usuarios.Select(usuarios => usuarioMapper.UsuarioToUsuarioDTO(usuarios)).ToList();
 
                 if (usuarios.Count < 1)
@@ -130,13 +127,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
 
                
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Contrasena, SqlDbType.VarChar, 100)).Value = _utility.EncriptarContrasena(usuarioDTO.Cedula);
-<<<<<<< Updated upstream
-                command.Parameters.Add(new SqlParameter(DLSPParameters.IdRol, SqlDbType.Int)).Value = usuarioDTO.IdRol;
-                command.Parameters.Add(new SqlParameter(DLSPParameters.IdEstado, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
-
-=======
                
->>>>>>> Stashed changes
 
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Cedula, SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Nombre, SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;

@@ -9,11 +9,7 @@ using BusinessLayer.Services.Seguridad.CrearPerfil;
 using BusinessLayer.Services.Seguridad.Usuarios;
 using BusinessLayer.Services.Seguridad.DesbloquearCuenta;
 using BusinessLayer.Services.Seguridad.Login;
-<<<<<<< Updated upstream
-
-=======
 using BusinessLayer.Services.Seguridad.Rol;
->>>>>>> Stashed changes
 
 using DataLayer.Database;
 using DataLayer.Pedidos.HistorialPedidos;
@@ -99,12 +95,9 @@ builder.Services.AddScoped<IParametrosService, ParametrosService>();
 builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
 builder.Services.AddScoped<IUsuariosService, UsuariosService>();
 
-<<<<<<< Updated upstream
-=======
 //Roll
 //builder.Services.AddScoped<IRolRepository, RolRepository>();
 //builder.Services.AddScoped<IRolService, RolService>();
->>>>>>> Stashed changes
 
 
 

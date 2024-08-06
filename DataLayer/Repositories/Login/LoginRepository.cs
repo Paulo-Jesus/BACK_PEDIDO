@@ -53,19 +53,11 @@ namespace DataLayer.Repositories.Login
                 response.Message = DLMessages.Bienvenido;
                 if (proveedor == null)
                 {
-<<<<<<< Updated upstream
-                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre, usuario.IdUsuario.ToString()) };
-                }
-                else
-                {
-                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre, proveedor.IdProveedor.ToString()) };
-=======
                     response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre, usuario.IdUsuario.ToString(),cuenta.Correo.ToString()) };
                 }
                 else
                 {
                     response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre, proveedor.IdProveedor.ToString(), cuenta.Correo.ToString()) };
->>>>>>> Stashed changes
                 }
             }
             catch (Exception ex)
@@ -111,19 +103,11 @@ namespace DataLayer.Repositories.Login
                 response.Message = DLMessages.Bienvenido;
                 if (proveedor == null)
                 {
-<<<<<<< Updated upstream
-                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre, usuario.IdUsuario.ToString()) };
-                }
-                else
-                {
-                    response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre, proveedor.IdProveedor.ToString()) };
-=======
                     response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), usuario.Nombre, usuario.IdUsuario.ToString(), cuenta.Correo.ToString()) };
                 }
                 else
                 {
                     response.Data = new { token = _utility.GenerarToken(cuenta.IdRol.ToString(), proveedor.Nombre, proveedor.IdProveedor.ToString(), cuenta.Correo.ToString()) };
->>>>>>> Stashed changes
                 }
                
 

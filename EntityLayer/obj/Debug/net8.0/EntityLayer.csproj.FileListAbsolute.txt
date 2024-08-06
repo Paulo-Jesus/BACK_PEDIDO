@@ -87,8 +87,6 @@ C:\Users\VIAMATICA\Documents\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLaye
 C:\Users\VIAMATICA\Documents\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
 C:\Users\VIAMATICA\Documents\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
 C:\Users\VIAMATICA\Documents\BACK_PEDIDO\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
-<<<<<<< Updated upstream
-=======
 C:\Users\VIAMATICA\Documents\GitHub\BACK_PEDIDO\EntityLayer\bin\Debug\net8.0\EntityLayer.deps.json
 C:\Users\VIAMATICA\Documents\GitHub\BACK_PEDIDO\EntityLayer\bin\Debug\net8.0\EntityLayer.dll
 C:\Users\VIAMATICA\Documents\GitHub\BACK_PEDIDO\EntityLayer\bin\Debug\net8.0\EntityLayer.pdb
@@ -114,4 +112,3 @@ C:\Users\VIAMATICA S.A\Downloads\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BACK_PEDIDO-BAC
 C:\Users\VIAMATICA S.A\Downloads\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
 C:\Users\VIAMATICA S.A\Downloads\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
 C:\Users\VIAMATICA S.A\Downloads\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
->>>>>>> Stashed changes

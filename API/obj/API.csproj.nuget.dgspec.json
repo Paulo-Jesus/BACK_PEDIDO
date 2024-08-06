@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\API.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\API.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\API.csproj",
-        "projectName": "API",
-        "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\obj\\",
-=======
     "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\API\\API.csproj": {}
   },
   "projects": {
@@ -25,7 +12,6 @@
         "projectPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\API\\API.csproj",
         "packagesPath": "C:\\Users\\VIAMATICA S.A\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\API\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -47,13 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
-=======
               "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BusinessLayer\\BusinessLayer.csproj": {
                 "projectPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BusinessLayer\\BusinessLayer.csproj"
->>>>>>> Stashed changes
               }
             }
           }
@@ -111,16 +92,6 @@
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj",
-        "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\BusinessLayer\\obj\\",
-=======
     "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -129,7 +100,6 @@
         "projectPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\VIAMATICA S.A\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BusinessLayer\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -151,13 +121,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj"
-=======
               "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\DataLayer\\DataLayer.csproj": {
                 "projectPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\DataLayer\\DataLayer.csproj"
->>>>>>> Stashed changes
               }
             }
           }
@@ -196,16 +161,6 @@
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
-        "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\DataLayer\\obj\\",
-=======
     "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -214,7 +169,6 @@
         "projectPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\VIAMATICA S.A\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\DataLayer\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -236,13 +190,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj"
-=======
               "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\EntityLayer\\EntityLayer.csproj": {
                 "projectPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\EntityLayer\\EntityLayer.csproj"
->>>>>>> Stashed changes
               }
             }
           }
@@ -293,16 +242,6 @@
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
-        "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\EntityLayer\\obj\\",
-=======
     "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -311,7 +250,6 @@
         "projectPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\VIAMATICA S.A\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\VIAMATICA S.A\\Downloads\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\\EntityLayer\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
