@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BusinessLayer
-build_property.ProjectDir = C:\Users\VIAMATICA\Documents\BACK_PEDIDO\BusinessLayer\
+build_property.ProjectDir = C:\Users\VIAMATICA S.A\Documents\GitHub\BACK_PEDIDO\BusinessLayer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

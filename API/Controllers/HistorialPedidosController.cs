@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using API.Common;
 
-namespace API.Controllers.Pedidos
+namespace API.Controllers
 {
     [Route(APIRoutes.Route)]
     [ApiController]

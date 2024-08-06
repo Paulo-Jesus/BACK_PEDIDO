@@ -15,13 +15,13 @@ namespace BusinessLayer.Services.Seguridad.CrearPerfil
             _crearPerfilRepository = crearPerfilRepository;
         }   
 
-        public async Task<Response> AddRol(RolesDTO rol)
+        public async Task<Response> AddRol(RolDTO rol)
         {
             response = await _crearPerfilRepository.AddRol(rol);
             return response;
         }
 
-        public async Task<Response> Editar(RolesDTO rolDTO)
+        public async Task<Response> Editar(RolDTO rolDTO)
         {
             response = await _crearPerfilRepository.Editar(rolDTO);
             return response;

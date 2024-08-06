@@ -53,6 +53,7 @@ namespace DataLayer.Repositories.Proveedor
 
                         ProveedorDTO rs = new ProveedorDTO
                         {
+                            IdProveedor = Convert.ToInt32(reader[DLVariables.IdProveedor]),
                             Nombre = reader[DLVariables.Nombre].ToString()!,
                             Logotipo = Convert.ToBase64String(logotipoByte),
                         };

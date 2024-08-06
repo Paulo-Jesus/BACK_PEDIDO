@@ -4,7 +4,7 @@ using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;
 using API.Common;
 
-namespace API.Controllers.Login
+namespace API.Controllers
 {
     [Route(APIRoutes.Route)]
     [ApiController]

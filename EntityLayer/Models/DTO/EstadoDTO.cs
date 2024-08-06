@@ -8,13 +8,15 @@ namespace EntityLayer.Models.DTO
 {
     public class EstadoDTO
     {
-
+        public string IdEstado { get; set; }
         public string Nombre { get; set; }
 
         public EstadoDTO(string nombre)
         {
 
             Nombre = nombre;
+           // IdEstado = idEstado;
+
         }
 
     }

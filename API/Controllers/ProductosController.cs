@@ -5,7 +5,7 @@ using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;
 using API.Common;
 
-namespace API.Controllers.Pedidos.Productos
+namespace API.Controllers
 {
     [Route(APIRoutes.Route)]
     [ApiController]

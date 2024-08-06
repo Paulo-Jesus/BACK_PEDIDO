@@ -5,7 +5,7 @@ using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API.Controllers.Pedidos.Menu
+namespace API.Controllers
 {
     [Route(APIRoutes.Route)]
     [ApiController]
@@ -14,7 +14,7 @@ namespace API.Controllers.Pedidos.Menu
         private readonly IMenuService _menuService;
         private Response response = new();
 
-        public MenuController(IMenuService menuService) 
+        public MenuController(IMenuService menuService)
         {
             _menuService = menuService;
         }

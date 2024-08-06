@@ -20,7 +20,7 @@ namespace API.Controllers.Seguridad
 
         [Route(APIRoutes.AddRol)]
         [HttpPost]
-        public async Task<IActionResult> AddRol(RolesDTO rol)
+        public async Task<IActionResult> AddRol(RolDTO rol)
         {
             response = await _crearPerfilService.AddRol(rol);
 
@@ -32,7 +32,7 @@ namespace API.Controllers.Seguridad
 
         [Route(APIRoutes.Editar)]
         [HttpPut]
-        public async Task<IActionResult> Editar(RolesDTO rol)
+        public async Task<IActionResult> Editar(RolDTO rol)
         {
             response = await _crearPerfilService.Editar(rol);
 

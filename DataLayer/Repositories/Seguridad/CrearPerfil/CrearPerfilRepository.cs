@@ -26,10 +26,9 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
             try
             {
 
-                List<EstadoDTO> estados = await _context.Estados
-                               .Take(2)
-                               .Select(r => new EstadoDTO(r.Nombre))
-                               .ToListAsync();
+                List<EstadoDTO> estados = await _context.Estados.Select(r => new EstadoDTO(r.Nombre)).ToListAsync();
+                //.Take(2)
+                await _context.Rols.Select(r => new RolDTO(r.IdRol, r.Nombre, r.IdEstado)).ToListAsync();
                 response.Data = estados;
                 response.Message = DLMessages.ListaGeneradaConExito;
                 response.Code = ResponseType.Success;
@@ -46,8 +45,9 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
             try
             {
 
-                List<RolesDTO> lisRol = await _context.Rols.Select(r => new RolesDTO(r.Nombre, r.IdEstado)).ToListAsync();
+                // List<RolDTO> lisRol = await _context.Rols.Select(r => new RolDTO()).ToListAsync();
 
+                List<RolDTO> lisRol = await _context.Rols.Select(r => new RolDTO(r.IdRol, r.Nombre, r.IdEstado)).ToListAsync();
                 response.Data = lisRol;
                 response.Message = DLMessages.param_Message;
                 response.Code = ResponseType.Success;
@@ -61,14 +61,14 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
             return response;
         }
 
-        public async Task MetodoAgregar(SqlConnection connection, RolesDTO rol)
+        public async Task MetodoAgregar(SqlConnection connection, RolDTO rol)
         {
             try
             {
                 SqlCommand command = new(DLVariables.usp_crearRol, connection);
 
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Nombre, SqlDbType.VarChar, 100)).Value = rol.Nombre;
-                command.Parameters.Add(new SqlParameter(DLSPParameters.IdEstado, SqlDbType.Int)).Value = rol.Estado;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdEstado, SqlDbType.Int)).Value = rol.IdEstado;
 
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -93,7 +93,7 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
             }
         }
 
-        public async Task<Response> AddRol(RolesDTO rol)
+        public async Task<Response> AddRol(RolDTO rol)
         {
             using var tx = await _context.Database.BeginTransactionAsync();
 
@@ -139,7 +139,7 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
             return response;
         }
 
-        public async Task<Response> Editar(RolesDTO rolDTO)
+        public async Task<Response> Editar(RolDTO rolDTO)
         {
             using var tx = await _context.Database.BeginTransactionAsync();
 
@@ -150,7 +150,7 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
                 //usuario!.Contrasena = _utility.EncriptarContrasena(usuarioDTOEditar.Cedula);
 
                 rol!.Nombre = rolDTO.Nombre;
-                rol.IdEstado = rolDTO.Estado;
+               rol.IdEstado = rolDTO.IdEstado;
 
                 await _context.SaveChangesAsync();
                 await tx.CommitAsync();

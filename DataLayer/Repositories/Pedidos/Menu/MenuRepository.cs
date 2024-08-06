@@ -14,7 +14,7 @@ namespace DataLayer.Repositories.Pedidos.Menu
     public class MenuRepository : IMenuRepository
     {
         private readonly PedidosDatabaseContext _context;
-        private readonly MenuMapper menuMapper = new();
+        private readonly EntityLayer.Models.Mappers.RolMapper menuMapper = new();
         private readonly Response response = new PedidosDatabase().DatabaseConnection;
         private Response getResp = new Response();
         private SqlConnection connection = new();

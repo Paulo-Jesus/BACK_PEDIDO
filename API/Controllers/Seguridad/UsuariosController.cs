@@ -33,9 +33,9 @@ namespace API.Controllers.Seguridad
 
         [Route(APIRoutes.Buscar)]
         [HttpGet]
-        public async Task<IActionResult> Buscar(string? Cedula, string? Nombre, int? IdEmpresa)
+        public async Task<IActionResult> Buscar(string? Cedula, string? Nombre, int? IdEmpresa, int?IdUsuario)
         {
-            response = await _usuariosService.Buscar(Cedula, Nombre, IdEmpresa);
+            response = await _usuariosService.Buscar(Cedula, Nombre, IdEmpresa, IdUsuario);
 
             if (response.Code == ResponseType.Error)
                 return BadRequest(response);

@@ -4618,19 +4618,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VIAMATICA\\.nuget\\packages\\": {}
+    "C:\\Users\\VIAMATICA S.A\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\API\\obj\\",
+      "projectPath": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\VIAMATICA S.A\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\VIAMATICA S.A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4645,8 +4650,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\VIAMATICA\\Documents\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\BusinessLayer\\BusinessLayer.csproj"
             }
           }
         }
@@ -4700,7 +4705,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

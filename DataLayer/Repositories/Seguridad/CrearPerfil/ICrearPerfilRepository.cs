@@ -9,8 +9,8 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
 
         public Task<Response> GetListRoles();
 
-        public Task<Response> AddRol(RolesDTO rol);
+        public Task<Response> AddRol(RolDTO rol);
 
-        public Task<Response> Editar(RolesDTO rolDTO);
+        public Task<Response> Editar(RolDTO rolDTO);
     }
 }

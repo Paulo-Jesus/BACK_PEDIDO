@@ -6,7 +6,7 @@ using EntityLayer.Models.DTO;
 using BusinessLayer.Services.Proveedor;
 using API.Common;
 
-namespace API.Controllers.Pedidos.Proveedor
+namespace API.Controllers
 {
     [Route(APIRoutes.Route)]
     [ApiController]
@@ -21,7 +21,7 @@ namespace API.Controllers.Pedidos.Proveedor
         }
 
         [HttpGet]
-        [Route(API.Common.APIRoutes.APIObtenerProveedores)]
+        [Route(APIRoutes.APIObtenerProveedores)]
         public async Task<ActionResult<Response>> GetRestaurantes()
         {
             Response data = await _proveedorService.GetRestaurantes();
@@ -29,7 +29,7 @@ namespace API.Controllers.Pedidos.Proveedor
         }
 
         [HttpPost]
-        [Route(API.Common.APIRoutes.APIRegistrarProveedores)]
+        [Route(APIRoutes.APIRegistrarProveedores)]
         public async Task<ActionResult<Response>> GetRestaurantes([FromBody] ProveedorDTO restaurante)
         {
             Response data = await _proveedorService.registrar(restaurante);

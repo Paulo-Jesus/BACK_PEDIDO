@@ -68,6 +68,8 @@
         public const string Msj_Usuario_block = "No se pudo desbloquar el usuario seleccionado";
 
         //Rol
+        public const string NoRolsRegistrados = "No hay Rols registrados";
+        public const string ListadoDeRols = "No se pudo listar";
         public const string RolAgregado = "Rol Agregado";
         public const string RolNoAgregado = "Rol No Agregado";
         public const string RolEditado = "Rol Editado";
