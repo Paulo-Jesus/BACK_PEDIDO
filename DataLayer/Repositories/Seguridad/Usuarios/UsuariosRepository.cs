@@ -1,4 +1,5 @@
-﻿using DataLayer.Common;
+﻿using Azure.Core;
+using DataLayer.Common;
 using DataLayer.Database;
 using DataLayer.Utilities;
 using EntityLayer.Models.DTO;
@@ -8,6 +9,7 @@ using EntityLayer.Responses;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
+using Entities = EntityLayer.Models.Entities;
 
 namespace DataLayer.Repositories.Seguridad.Usuarios
 {
@@ -33,6 +35,22 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                     .Where(u => u.IdEstado == 1)
                     .ToListAsync();
 
+<<<<<<< Updated upstream
+=======
+                Entities.Cuenta? cuenta = await _context.Cuenta.FirstOrDefaultAsync();
+
+                if (cuenta == null)
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = DLMessages.NoInicioSesion;
+                    response.Data = null;
+
+                    return response;
+                }
+
+                Entities.Usuario? usuario = await _context.Usuarios.Where(u => u.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
+
+>>>>>>> Stashed changes
                 List<UsuarioDTO> usuariosDTO = usuarios.Select(usuarios => usuarioMapper.UsuarioToUsuarioDTO(usuarios)).ToList();
 
                 if (usuarios.Count < 1)
@@ -57,23 +75,77 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             return response;
         }
 
+
+        public async Task<Response> ObtenerTodosUsuarios()
+        {
+            try
+            {
+                List<Usuario> usuarios = await _context.Usuarios
+                    .Where(u => u.IdEstado == 1)
+                    .ToListAsync();
+
+                Entities.Cuenta? cuenta = await _context.Cuenta.FirstOrDefaultAsync();
+
+                if (cuenta == null)
+                {
+                    response.Code = ResponseType.Error;
+                    response.Message = DLMessages.NoInicioSesion;
+                    response.Data = null;
+
+                    return response;
+                }
+
+                Entities.Usuario? usuario = await _context.Usuarios.Where(u => u.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
+
+                List<UsuarioDTO> usuariosDTO = usuarios.Select(usuarios => usuarioMapper.UsuarioToUsuarioDTO(usuarios)).ToList();
+
+                if (usuarios.Count < 1)
+                {
+                    response.Code = ResponseType.Success;
+                    response.Message = DLMessages.NoUsuariosRegistrados;
+                    response.Data = null;
+
+                    return response;
+                }
+
+                response.Code = ResponseType.Success;
+                response.Message = DLMessages.ListadoDeUsuarios;
+                response.Data = usuariosDTO;
+            }
+            catch (Exception ex)
+            {
+                response.Code = ResponseType.Error;
+                response.Message = ex.Message;
+                response.Data = ex.Data;
+            }
+            return response;
+        }
+
+
         public async Task MetodoAgregar(SqlConnection connection, usuarioDTOEditar usuarioDTO)
         {
             try 
             {
                 SqlCommand command = new(DLStoredProcedures.SP_InsertarUsuarioConCuenta, connection);
 
-                command.Parameters.Add(new SqlParameter(DLSPParameters.Correo, SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
+               
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Contrasena, SqlDbType.VarChar, 100)).Value = _utility.EncriptarContrasena(usuarioDTO.Cedula);
+<<<<<<< Updated upstream
                 command.Parameters.Add(new SqlParameter(DLSPParameters.IdRol, SqlDbType.Int)).Value = usuarioDTO.IdRol;
                 command.Parameters.Add(new SqlParameter(DLSPParameters.IdEstado, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
 
+=======
+               
+>>>>>>> Stashed changes
 
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Cedula, SqlDbType.VarChar, 10)).Value = usuarioDTO.Cedula;
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Nombre, SqlDbType.VarChar, 100)).Value = usuarioDTO.Nombre;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.Correo, SqlDbType.VarChar, 100)).Value = usuarioDTO.Correo;
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Telefono, SqlDbType.VarChar, 10)).Value = usuarioDTO.Telefono;
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Direccion, SqlDbType.VarChar, 100)).Value = usuarioDTO.Direccion;
                 command.Parameters.Add(new SqlParameter(DLSPParameters.IdEmpresa, SqlDbType.Int)).Value = usuarioDTO.IdEmpresa;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdRol, SqlDbType.Int)).Value = usuarioDTO.IdRol;
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdEstado, SqlDbType.Int)).Value = usuarioDTO.IdEstado;
 
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -144,7 +216,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             return response;
         }
 
-        public async Task<Response> Buscar(string? Cedula, string? Nombre, int? IdEmpresa)
+        public async Task<Response> Buscar(string? Cedula, string? Nombre, int? IdEmpresa, int? IdUsuario)
         {
             try
             {
@@ -168,6 +240,12 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 {
                     List<Usuario> query3 = await query.Where(u => u.IdEmpresa == IdEmpresa).ToListAsync();
                     usuarios = [.. usuarios, .. query3];
+                }
+
+                if (IdUsuario>0)
+                {
+                    List<Usuario> query4 = await query.Where(u => u.IdUsuario == IdUsuario).ToListAsync();
+                    usuarios = [.. usuarios, .. query4];
                 }
 
                 if (usuarios.Count < 1)

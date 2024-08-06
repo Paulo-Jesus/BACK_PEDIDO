@@ -26,10 +26,16 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
             try
             {
 
+<<<<<<< Updated upstream
                 List<EstadoDTO> estados = await _context.Estados
                                .Take(2)
                                .Select(r => new EstadoDTO(r.Nombre))
                                .ToListAsync();
+=======
+                List<EstadoDTO> estados = await _context.Estados.Select(r => new EstadoDTO(r.Nombre)).ToListAsync();
+                //.Take(2)
+                await _context.Rols.Select(r => new RolDTO(r.IdRol, r.Nombre, r.IdEstado)).ToListAsync();
+>>>>>>> Stashed changes
                 response.Data = estados;
                 response.Message = DLMessages.ListaGeneradaConExito;
                 response.Code = ResponseType.Success;
@@ -46,8 +52,14 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
             try
             {
 
+<<<<<<< Updated upstream
                 List<RolesDTO> lisRol = await _context.Rols.Select(r => new RolesDTO(r.Nombre, r.IdEstado)).ToListAsync();
 
+=======
+                // List<RolDTO> lisRol = await _context.Rols.Select(r => new RolDTO()).ToListAsync();
+
+                List<RolDTO> lisRol = await _context.Rols.Select(r => new RolDTO(r.IdRol, r.Nombre, r.IdEstado)).ToListAsync();
+>>>>>>> Stashed changes
                 response.Data = lisRol;
                 response.Message = DLMessages.param_Message;
                 response.Code = ResponseType.Success;
@@ -61,14 +73,22 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
             return response;
         }
 
+<<<<<<< Updated upstream
         public async Task MetodoAgregar(SqlConnection connection, RolesDTO rol)
+=======
+        public async Task MetodoAgregar(SqlConnection connection, RolDTO rol)
+>>>>>>> Stashed changes
         {
             try
             {
                 SqlCommand command = new(DLVariables.usp_crearRol, connection);
 
                 command.Parameters.Add(new SqlParameter(DLSPParameters.Nombre, SqlDbType.VarChar, 100)).Value = rol.Nombre;
+<<<<<<< Updated upstream
                 command.Parameters.Add(new SqlParameter(DLSPParameters.IdEstado, SqlDbType.Int)).Value = rol.Estado;
+=======
+                command.Parameters.Add(new SqlParameter(DLSPParameters.IdEstado, SqlDbType.Int)).Value = rol.IdEstado;
+>>>>>>> Stashed changes
 
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -93,7 +113,11 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
             }
         }
 
+<<<<<<< Updated upstream
         public async Task<Response> AddRol(RolesDTO rol)
+=======
+        public async Task<Response> AddRol(RolDTO rol)
+>>>>>>> Stashed changes
         {
             using var tx = await _context.Database.BeginTransactionAsync();
 
@@ -139,7 +163,11 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
             return response;
         }
 
+<<<<<<< Updated upstream
         public async Task<Response> Editar(RolesDTO rolDTO)
+=======
+        public async Task<Response> Editar(RolDTO rolDTO)
+>>>>>>> Stashed changes
         {
             using var tx = await _context.Database.BeginTransactionAsync();
 
@@ -150,7 +178,11 @@ namespace DataLayer.Repositories.Seguridad.CrearPerfil
                 //usuario!.Contrasena = _utility.EncriptarContrasena(usuarioDTOEditar.Cedula);
 
                 rol!.Nombre = rolDTO.Nombre;
+<<<<<<< Updated upstream
                 rol.IdEstado = rolDTO.Estado;
+=======
+               rol.IdEstado = rolDTO.IdEstado;
+>>>>>>> Stashed changes
 
                 await _context.SaveChangesAsync();
                 await tx.CommitAsync();

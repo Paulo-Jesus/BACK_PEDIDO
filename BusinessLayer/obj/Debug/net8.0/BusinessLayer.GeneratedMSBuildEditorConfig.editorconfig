@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BusinessLayer
+<<<<<<< Updated upstream
 build_property.ProjectDir = C:\Users\VIAMATICA\Documents\BACK_PEDIDO\BusinessLayer\
+=======
+build_property.ProjectDir = C:\Users\VIAMATICA S.A\Downloads\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BACK_PEDIDO-BACK_PEDIDO_ROBERTO\BusinessLayer\
+>>>>>>> Stashed changes
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

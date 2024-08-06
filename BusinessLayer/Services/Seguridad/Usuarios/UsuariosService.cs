@@ -26,9 +26,9 @@ namespace BusinessLayer.Services.Seguridad.Usuarios
             return response;
         }
 
-        public async Task<Response> Buscar(string? Cedula, string? Nombre, int? IdEmpresa)
+        public async Task<Response> Buscar(string? Cedula, string? Nombre, int? IdEmpresa, int? IdUsuario)
         {
-            response = await _usuariosRepository.Buscar(Cedula, Nombre, IdEmpresa);
+            response = await _usuariosRepository.Buscar(Cedula, Nombre, IdEmpresa,IdUsuario);
             return response;
         }
 

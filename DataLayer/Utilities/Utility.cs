@@ -44,14 +44,23 @@ namespace DataLayer.Utilities
             return password.ToString();
         }
 
+<<<<<<< Updated upstream
         public string GenerarToken(string Rol, string Nombre, string Id)
+=======
+        public string GenerarToken(string Rol, string Nombre, string Id, string correo)
+>>>>>>> Stashed changes
         {
             Claim[] userClaims = [
                 //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
                 //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
                 new Claim(DLVariables.Rol,Rol),
                 new Claim(DLVariables.Nombre,Nombre),
+<<<<<<< Updated upstream
                 new Claim(DLVariables.Id, Id)
+=======
+                new Claim(DLVariables.Id, Id),
+                new Claim(DLVariables.Correo,correo )
+>>>>>>> Stashed changes
             ];
 
             SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration[DLVariables.Jwt_Key]!));

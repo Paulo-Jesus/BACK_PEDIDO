@@ -9,7 +9,11 @@ using BusinessLayer.Services.Seguridad.CrearPerfil;
 using BusinessLayer.Services.Seguridad.Usuarios;
 using BusinessLayer.Services.Seguridad.DesbloquearCuenta;
 using BusinessLayer.Services.Seguridad.Login;
+<<<<<<< Updated upstream
 
+=======
+using BusinessLayer.Services.Seguridad.Rol;
+>>>>>>> Stashed changes
 
 using DataLayer.Database;
 using DataLayer.Pedidos.HistorialPedidos;
@@ -19,6 +23,7 @@ using DataLayer.Repositories.Pedidos.Menu;
 using DataLayer.Repositories.Pedidos.Productos;
 using DataLayer.Repositories.Seguridad.CrearPerfil;
 using DataLayer.Repositories.Seguridad.Usuarios;
+using DataLayer.Repositories.RolRepository;
 using DataLayer.Utilities;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
@@ -94,6 +99,12 @@ builder.Services.AddScoped<IParametrosService, ParametrosService>();
 builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
 builder.Services.AddScoped<IUsuariosService, UsuariosService>();
 
+<<<<<<< Updated upstream
+=======
+//Roll
+//builder.Services.AddScoped<IRolRepository, RolRepository>();
+//builder.Services.AddScoped<IRolService, RolService>();
+>>>>>>> Stashed changes
 
 
 
