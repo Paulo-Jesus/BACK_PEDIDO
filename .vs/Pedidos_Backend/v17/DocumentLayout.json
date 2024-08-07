@@ -5,6 +5,38 @@
     {
       "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica s.a\\documents\\github\\back_pedido\\datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\seguridad\\usuarios\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica s.a\\documents\\github\\back_pedido\\datalayer\\repositories\\login\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\login\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica s.a\\documents\\github\\back_pedido\\entitylayer\\models\\entities\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica s.a\\documents\\github\\back_pedido\\entitylayer\\models\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica s.a\\documents\\github\\back_pedido\\entitylayer\\models\\entities\\cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\entities\\cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|c:\\users\\viamatica s.a\\documents\\github\\back_pedido\\entitylayer\\models\\dto\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874A4A8-8A12-4E9B-8F11-0976248E23DC}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\models\\dto\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|c:\\users\\viamatica s.a\\documents\\github\\back_pedido\\datalayer\\repositories\\seguridad\\usuarios\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B356F2A-231E-49CB-A0DA-D8E264D5077C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\seguridad\\usuarios\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\viamatica s.a\\documents\\github\\back_pedido\\businesslayer\\services\\seguridad\\usuarios\\usuariosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\seguridad\\usuarios\\usuariosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\viamatica s.a\\documents\\github\\back_pedido\\businesslayer\\services\\seguridad\\usuarios\\iusuariosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C76E4C7-7C1D-4BA4-81A2-4619FAE818DE}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\seguridad\\usuarios\\iusuariosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +46,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 88,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Proveedor.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Proveedor.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Proveedor.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Proveedor.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Proveedor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:44:02.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Usuario.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:43:57.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Cuenta.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Cuenta.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\Entities\\Cuenta.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\EntityLayer\\Models\\Entities\\Cuenta.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\Entities\\Cuenta.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:43:49.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\DataLayer\\Repositories\\Login\\LoginRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Login\\LoginRepository.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\DataLayer\\Repositories\\Login\\LoginRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\Login\\LoginRepository.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:26:50.284Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,10 +104,58 @@
               "RelativeDocumentMoniker": "DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
               "ToolTip": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
               "RelativeToolTip": "DataLayer\\Repositories\\Seguridad\\Usuarios\\UsuariosRepository.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAwwKMAAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAkwB0AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-05T19:57:54.172Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\EntityLayer\\Models\\DTO\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "EntityLayer\\Models\\DTO\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\EntityLayer\\Models\\DTO\\UsuarioDTO.cs",
+              "RelativeToolTip": "EntityLayer\\Models\\DTO\\UsuarioDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:07:29.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUsuariosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\IUsuariosRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\Seguridad\\Usuarios\\IUsuariosRepository.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\DataLayer\\Repositories\\Seguridad\\Usuarios\\IUsuariosRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\Seguridad\\Usuarios\\IUsuariosRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T14:58:05.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsuariosService.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Usuarios\\UsuariosService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\Seguridad\\Usuarios\\UsuariosService.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Usuarios\\UsuariosService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\Seguridad\\Usuarios\\UsuariosService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:01:47.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUsuariosService.cs",
+              "DocumentMoniker": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Usuarios\\IUsuariosService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\Seguridad\\Usuarios\\IUsuariosService.cs",
+              "ToolTip": "C:\\Users\\VIAMATICA S.A\\Documents\\GitHub\\BACK_PEDIDO\\BusinessLayer\\Services\\Seguridad\\Usuarios\\IUsuariosService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\Seguridad\\Usuarios\\IUsuariosService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:01:51.958Z"
             }
           ]
         }

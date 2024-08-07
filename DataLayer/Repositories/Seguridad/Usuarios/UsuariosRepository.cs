@@ -27,7 +27,7 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
             _utility = utility; 
         }
 
-        public async Task<Response> ObtenerTodos()
+        public async Task<Response> ObtenerTodosUsuarios()
         {
             try
             {
@@ -73,30 +73,30 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
         }
 
 
-        public async Task<Response> ObtenerTodosUsuarios()
+        public async Task<Response> ObtenerTodos()
         {
             try
             {
-                List<Usuario> usuarios = await _context.Usuarios
-                    .Where(u => u.IdEstado == 1)
+                var usuarios = await _context.Usuarios.Join(_context.Cuenta,
+                          usuario => usuario.IdCuenta,
+                          cuenta => cuenta.IdCuenta,
+                          (usuario, cuenta) => new { usuario, cuenta })
                     .ToListAsync();
 
-                Entities.Cuenta? cuenta = await _context.Cuenta.FirstOrDefaultAsync();
-
-                if (cuenta == null)
+                List<UsuarioDTO> usuariosDTO = usuarios.Select(u => new UsuarioDTO
                 {
-                    response.Code = ResponseType.Error;
-                    response.Message = DLMessages.NoInicioSesion;
-                    response.Data = null;
+                    IdUsuario = u.usuario.IdUsuario,
+                    Cedula = u.usuario.Cedula,
+                    Nombre = u.usuario.Nombre,
+                    Telefono = u.usuario.Telefono,
+                    Direccion = u.usuario.Direccion,
+                    IdCuenta = u.usuario.IdCuenta,
+                    IdEmpresa = u.usuario.IdEmpresa,
+                    IdEstado = u.usuario.IdEstado,
+                    Correo = u.cuenta.Correo
+                }).ToList();
 
-                    return response;
-                }
-
-                Entities.Usuario? usuario = await _context.Usuarios.Where(u => u.IdCuenta == cuenta.IdCuenta).FirstOrDefaultAsync();
-
-                List<UsuarioDTO> usuariosDTO = usuarios.Select(usuarios => usuarioMapper.UsuarioToUsuarioDTO(usuarios)).ToList();
-
-                if (usuarios.Count < 1)
+                if (usuariosDTO.Count < 1)
                 {
                     response.Code = ResponseType.Success;
                     response.Message = DLMessages.NoUsuariosRegistrados;
@@ -116,6 +116,8 @@ namespace DataLayer.Repositories.Seguridad.Usuarios
                 response.Data = ex.Data;
             }
             return response;
+
+
         }
 
 
