@@ -1,11 +1,12 @@
-﻿using BusinessLayer.Services.Seguridad.Parametros;
+﻿using BusinessLayer.Services.Parametros;
 using EntityLayer.Models.DTO;
 using EntityLayer.Responses;
 using Microsoft.AspNetCore.Mvc;
+using API.Common;
 
 namespace API.Controllers.Parametros
 {
-    [Route("api/[controller]")]
+    [Route(APIRoutes.Route)]
     [ApiController]
     public class ParametrosController : ControllerBase
     {
@@ -17,7 +18,7 @@ namespace API.Controllers.Parametros
             _parametrosService = parametrosService;
         }
 
-        [Route("Guardar")]
+        [Route(APIRoutes.Guardar)]
         [HttpPost]
         public async Task<IActionResult> UsuariosAgregar([FromBody] EmpresaDTO empresaDTO)
         {

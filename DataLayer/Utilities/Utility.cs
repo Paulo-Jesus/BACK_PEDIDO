@@ -44,13 +44,14 @@ namespace DataLayer.Utilities
             return password.ToString();
         }
 
-        public string GenerarToken(string Rol, string Nombre)
+        public string GenerarToken(string Rol, string Nombre, string Id)
         {
             Claim[] userClaims = [
                 //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
                 //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
                 new Claim(DLVariables.Rol,Rol),
-                new Claim(DLVariables.Nombre,Nombre)
+                new Claim(DLVariables.Nombre,Nombre),
+                new Claim(DLVariables.Id, Id)
             ];
 
             SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration[DLVariables.Jwt_Key]!));
@@ -74,13 +75,35 @@ namespace DataLayer.Utilities
                 new Claim(DLVariables.Claim ,texto)
             ];
 
-            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
+            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration[DLVariables.Jwt_Key]!));
             //SigningCredentials creadentials = new(key, SecurityAlgorithms.HmacSha256Signature); 
-            SigningCredentials creadentials = new(key, "HS256");
+            SigningCredentials creadentials = new(key, DLVariables.HmacSha256Signature);
 
             JwtSecurityToken jwtConfig = new(
                     claims: userClaims,
                     //expires: DateTime.Now.AddMinutes(5),
+                    signingCredentials: creadentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(jwtConfig);
+        }
+
+        public string generarJWT(string Rol, string Nombre)
+        {
+            Claim[] userClaims = [
+                //new Claim(ClaimTypes.NameIdentifier,usuario.Nombre),
+                //new Claim(ClaimTypes.Role,usuario.IdRol.ToString())
+                new Claim(DLVariables.Rol,Rol),
+                new Claim(DLVariables.Nombre,Nombre)
+            ];
+
+            SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_configuration[DLVariables.Jwt_Key]!));
+            //SigningCredentials creadentials = new(key, SecurityAlgorithms.HmacSha256Signature); 
+            SigningCredentials creadentials = new(key, DLVariables.HmacSha256Signature);
+
+            JwtSecurityToken jwtConfig = new(
+                    claims: userClaims,
+                    expires: DateTime.UtcNow.AddDays(1),
                     signingCredentials: creadentials
                 );
 
